@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/layout_user_info"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/img_item_bg"
+    android:paddingTop="30dip" 
+    android:paddingBottom="30dp"
+    android:paddingLeft="18dp"
+    android:paddingRight="18dp">
+
+    <com.jinju.android.widget.CircleImageView
+        android:id="@id/img_user"
+        android:layout_width="40.0dip"
+        android:layout_height="40.0dip"
+        android:src="@mipmap/img_avatar_default"
+     	android:layout_centerVertical="true"/>
+    
+    <TextView
+        android:id="@id/txt_name"
+        style="@style/custom_word_black_big_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/img_user"
+        android:layout_toEndOf="@id/img_user"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"/>
+
+    <TextView
+        android:id="@id/txt_nickname"
+        style="@style/custom_word_black_gray_small_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/img_user"
+        android:layout_toEndOf="@id/img_user"
+        android:layout_below="@id/txt_name"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/no_nickname"/>
+    
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/icon_small_arrow"/>
+
+</RelativeLayout>

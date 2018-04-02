@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android_custom="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/img_item_bg"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.0px"
+        android:background="@color/separator" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@id/txt_name"
+            style="@style/custom_word_black_middle_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginStart="18dp"
+            android:singleLine="true"
+            android:text="夺夺专项福利标"/>
+
+        <TextView
+            android:id="@id/txt_activity_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/main_tag_text_red"
+            android:layout_toRightOf="@id/txt_name"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/solid_tag_red_bg"
+            android:layout_alignBaseline="@id/txt_name"
+           />
+
+        <ImageView
+            android:id="@id/icon_new"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:src="@mipmap/icon_new"
+            android:visibility="gone"/>
+
+        <com.jinju.android.widget.RoundProgressBar
+            android:id="@+id/round_progress"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_alignParentRight="true"
+            android_custom:roundColor="@color/separator"
+            android_custom:roundProgressColor="@color/main_blue"
+            android_custom:roundWidth="2dip"
+            android_custom:percentTextSize="10sp"
+            android_custom:percentTextColor="@color/main_red"
+            android_custom:symbolTextSize="10sp"
+            android_custom:symbolTextColor="@color/main_red"
+            android_custom:max="100"
+            android:layout_below="@id/txt_name"
+            android:layout_marginRight="30dp"
+            />
+           <view
+               android:layout_width="1dp"
+               android:layout_height="52dp"
+               android:layout_below="@id/txt_name"
+
+               android:layout_alignParentRight="true"/>
+
+        <LinearLayout
+            android:id="@id/layout_year_interest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            android:layout_below="@id/txt_name"
+            android:layout_alignBottom="@id/round_progress"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="-2dp"
+            android:layout_alignLeft="@id/txt_name">
+
+            <TextView
+                style="@style/custom_text_view"
+                android:textSize="26sp"
+                android:textColor="@color/main_red"
+                android:id="@id/txt_year_interest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/default_number"
+                android:singleLine="true"/>
+
+            <TextView
+                style="@style/custom_main_red_big_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/percent_unit"
+                android:singleLine="true"/>
+        </LinearLayout>
+
+        <TextView
+            android:textColor="@color/word_black"
+            android:textSize="20sp"
+            android:layout_below="@id/txt_name"
+            android:id="@id/txt_loan_period"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:singleLine="true"
+            android:layout_centerHorizontal="true"
+            android:layout_alignBottom="@id/round_progress"
+            android:layout_marginBottom="2dp"
+            />
+
+        <TextView
+            style="@style/custom_word_black_gray_small_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:text="@string/except_year_interest"
+            android:singleLine="true"
+            android:layout_below="@id/layout_year_interest"
+            android:layout_alignLeft="@id/layout_year_interest"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"/>
+
+        <TextView
+            style="@style/custom_word_black_gray_small_text"
+            android:id="@id/txt_loan_period_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="投资期限"
+            android:singleLine="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp"
+            android:layout_below="@id/txt_loan_period"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/home_background"/>
+
+</LinearLayout>

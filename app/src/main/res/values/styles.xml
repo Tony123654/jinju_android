@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="AppTheme" parent="@android:style/Theme">
+        <item name="android:windowBackground">@color/background</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <!--主题色-->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+    </style>
+
+    <style name="custom_activity_animation" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/activity_in_from_right</item>
+        <item name="android:activityOpenExitAnimation">@anim/activity_out_from_left</item>
+        <item name="android:activityCloseEnterAnimation">@anim/activity_in_from_left</item>
+        <item name="android:activityCloseExitAnimation">@anim/activity_out_from_right</item>
+    </style>
+    
+    <style name="PayDialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">#00000000</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="custom_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="custom_animation_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowAnimationStyle">@style/custom_dialog_animation</item>
+    </style>
+
+    <style name="custom_dialog_animation" parent="@android:style/Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/dialog_in</item>
+        <item name="android:windowExitAnimation">@anim/dialog_out</item>
+    </style>
+
+    <style name="custom_text_view" parent="@android:style/Widget.TextView">
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="custom_tab_text" parent="@style/custom_text_view">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:textColor">@color/tab_text</item>
+    </style>
+
+    <style name="custom_light_gray_small_text" parent="@style/custom_text_view">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:textColor">@color/light_gray</item>
+    </style>
+
+    <style name="custom_light_gray_middle_text" parent="@style/custom_text_view">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">@color/light_gray</item>
+    </style>
+
+    <style name="custom_light_gray_big_text" parent="@style/custom_text_view">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">@color/light_gray</item>
+    </style>
+
+    <style name="custom_gray_small_text" parent="@style/custom_text_view">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+    <style name="custom_gray_middle_text" parent="@style/custom_text_view">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+    <style name="custom_gray_big_text" parent="@style/custom_text_view">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+    <style name="custom_dark_gray_small_text" parent="@style/custom_text_view">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:textColor">@color/dark_gray</item>
+    </style>
+
+    <style name="custom_dark_gray_middle_text" parent="@style/custom_text_view">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">@color/dark_gray</item>
+    </style>
+
+    <style name="custom_dark_gray_big_text" parent="@style/custom_text_view">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">@color/dark_gray</item>
+    </style>
+    
+    <style name="custom_light_green_middle_text" parent="@style/custom_text_view">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">@color/light_green</item>
+    </style>
+    
+    <style name="custom_dark_gray_big_big_text" parent="@style/custom_text_view">
+        <item name="android:textSize">18.0sp</item>
+        <item name="android:textColor">@color/dark_gray</item>
+    </style>
+
+    <style name="custom_white_small_text" parent="@style/custom_text_view">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="custom_white_middle_text" parent="@style/custom_text_view">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="custom_white_big_text" parent="@style/custom_text_view">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    
+    <style name="custom_blue_small_text" parent="@style/custom_text_view">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:textColor">@color/blue</item>
+    </style>
+
+    <style name="custom_blue_middle_text" parent="@style/custom_text_view">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">@color/blue</item>
+    </style>
+
+    <style name="custom_blue_big_text" parent="@style/custom_text_view">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">@color/blue</item>
+    </style>
+    
+    <style name="custom_white_big_text_title" parent="@style/custom_text_view">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="custom_green_small_text" parent="@style/custom_text_view">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:textColor">@color/green</item>
+    </style>
+
+    <style name="custom_green_middle_text" parent="@style/custom_text_view">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">@color/green</item>
+    </style>
+
+    <style name="custom_green_big_text" parent="@style/custom_text_view">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">@color/green</item>
+    </style>
+
+    <style name="custom_red_small_text" parent="@style/custom_text_view">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:textColor">@color/red</item>
+    </style>
+
+    <style name="custom_red_middle_text" parent="@style/custom_text_view">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">@color/red</item>
+    </style>
+
+    <style name="custom_protocol_text" parent="@style/custom_text_view">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">@color/light_orange</item>
+    </style>
+    <style name="custom_light_orange_middle_text" parent="@style/custom_text_view">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">@color/light_orange</item>
+    </style>
+    <style name="custom_light_orange_big_text" parent="@style/custom_text_view">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">@color/light_orange</item>
+    </style>
+    <style name="custom_phonenum_notify_text" parent="@style/custom_text_view">
+        <item name="android:textSize">40.0sp</item>
+        <item name="android:textColor">#E36F23</item>
+    </style>
+
+    <style name="custom_red_big_text" parent="@style/custom_text_view">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">@color/red</item>
+    </style>
+    
+    <style name="custom_light_red_small_text" parent="@style/custom_text_view">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:textColor">@color/light_red</item>
+    </style>
+    
+    <style name="custom_light_red_middle_text" parent="@style/custom_text_view">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">@color/light_red</item>
+    </style>
+    
+    <style name="custom_light_red_big_text" parent="@style/custom_text_view">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">@color/light_red</item>
+    </style>
+
+    <style name="custom_brown_middle_text" parent="@style/custom_text_view">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">@color/brown</item>
+    </style>
+
+    <style name="custom_orange_small_text" parent="@style/custom_text_view">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:textColor">@color/orange</item>
+    </style>
+
+    <style name="custom_orange_middle_text" parent="@style/custom_text_view">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">@color/orange</item>
+    </style>
+
+    <style name="custom_white_red_middle_text" parent="@style/custom_text_view">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">@color/white_red_text</item>
+    </style>
+    
+    <style name="custom_red_white_middle_text" parent="@style/custom_text_view">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">@color/red_white_text</item>
+    </style>
+
+    <style name="custom_red_big_button" parent="@android:style/Widget.Button">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">@color/red</item>
+    </style>
+
+    <style name="custom_white_middle_button" parent="@android:style/Widget.Button">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="custom_white_big_button" parent="@android:style/Widget.Button">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/btn_orange_solid_bg</item>
+        <item name="android:layout_height">@dimen/button_height</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="custom_gray_big_button" parent="@android:style/Widget.Button">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+    <style name="custom_gray_middle_edit" parent="@android:style/Widget.EditText">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">@color/dark_gray</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColorHint">@color/gray</item>
+    </style>
+
+    <style name="custom_gray_big_edit" parent="@android:style/Widget.EditText">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/dark_gray</item>
+        <item name="android:textColorHint">@color/gray</item>
+    </style>
+    
+    
+    <style name="custom_title_text" parent="@style/custom_text_view">
+        <item name="android:textSize">18.0sp</item>
+        <item name="android:textColor">@color/word_black</item>
+    </style>
+    
+    <style name="custom_white_title_text" parent="@style/custom_text_view">
+        <item name="android:textSize">18.0sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="custom_main_red_big_text" parent="@style/custom_text_view">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">@color/main_red</item>
+    </style>
+    <style name="custom_main_red_middle_text" parent="@style/custom_text_view">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">@color/main_red</item>
+    </style>
+    
+    <style name="custom_main_red_small_text" parent="@style/custom_text_view">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:textColor">@color/main_red</item>
+    </style>
+    
+    <style name="custom_word_black_big_text" parent="@style/custom_text_view">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">@color/word_black</item>
+    </style>
+    
+    <style name="custom_word_black_middle_text" parent="@style/custom_text_view">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">@color/word_black</item>
+    </style>
+    
+    <style name="custom_word_black_small_text" parent="@style/custom_text_view">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:textColor">@color/word_black</item>
+    </style>
+    
+    <style name="custom_word_black_gray_big_text" parent="@style/custom_text_view">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">@color/word_black_gray</item>
+    </style>
+    
+    <style name="custom_word_black_gray_middle_text" parent="@style/custom_text_view">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">@color/word_black_gray</item>
+    </style>
+    
+    <style name="custom_word_black_gray_small_text" parent="@style/custom_text_view">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:textColor">@color/word_black_gray</item>
+    </style>
+    
+    <style name="custom_word_gray_big_text" parent="@style/custom_text_view">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">@color/word_gray</item>
+    </style>
+    
+    <style name="custom_word_gray_middle_text" parent="@style/custom_text_view">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">@color/word_gray</item>
+    </style>
+    
+    <style name="custom_word_gray_small_text" parent="@style/custom_text_view">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:textColor">@color/word_gray</item>
+    </style>
+    
+    <style name="custom_main_blue_middle_text" parent="@style/custom_text_view">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">@color/main_blue</item>
+    </style>
+    
+    <style name="custom_main_blue_small_text" parent="@style/custom_text_view">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:textColor">@color/main_blue</item>
+    </style>
+    
+    <style name="custom_main_blue_big_text" parent="@style/custom_text_view">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">@color/main_blue</item>
+    </style>
+    
+    <style name="custom_word_black_middle_edit" parent="@android:style/Widget.EditText">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/word_black</item>
+        <item name="android:textColorHint">@color/word_gray</item>
+    </style>
+    
+    <style name="InputTextView">
+        <item name="android:textColor">#000000</item>
+        <item name="android:gravity">center</item>
+        <item name="android:inputType">textPassword</item>
+        <item name="android:textSize">30sp</item>
+    </style>
+
+    <style name="custome_round_dialog" parent="@android:style/Theme.Dialog">
+
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.6</item> <!--设置昏暗度为0-->
+
+    </style>
+
+    <style name="anim_action_dialog" >
+        <item name="android:windowEnterAnimation">@anim/action_dialog_in</item>
+        <item name="android:windowExitAnimation">@anim/action_dialog_out</item>
+    </style>
+    <style name="scroll_picture_dialog" parent="@android:style/Theme.Dialog">
+
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@color/colorAccent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.6</item> <!--设置昏暗度为0-->
+
+    </style>
+    <style name="select_red_packet_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.6</item> <!--设置昏暗度为0-->
+    </style>
+
+    <style name="mydialog_style" parent="@android:style/Theme.Holo.DialogWhenLarge">
+        <item name="android:windowBackground"> @android:color/transparent </item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="PopupAnimation" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/push_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/push_bottom_out</item>
+    </style>
+
+</resources>

@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_charge_top_date"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:background="@color/home_background">
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="10dp"
+            android:layout_marginBottom="14dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="14dp"
+            android:background="@color/charge_top_red" />
+
+        <TextView
+            android:id="@+id/txt_top_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@id/txt_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/word_black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@id/txt_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_status"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/charge_content_time_txt"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@id/txt_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="19dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="19dp"
+            android:textColor="@color/word_black"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_state_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/home_background"
+        android:visibility="gone">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@mipmap/img_withdraw_detail_bg"/>
+        <!--步骤1-->
+        <LinearLayout
+            android:id="@+id/layout_state_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="26dp"
+                android:layout_height="32dp">
+
+                <ImageView
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_centerInParent="true"
+                    android:background="@mipmap/img_withdraw_detail"
+                    android:scaleType="fitXY"/>
+                <View
+                    android:id="@+id/view_state_line_1"
+                    android:layout_width="1dp"
+                    android:layout_height="12dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/charge_top_red" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp">
+                <TextView
+                    android:id="@+id/txt_state_1"
+                    style="@style/custom_word_black_small_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/charge_top_red" />
+                <TextView
+                    style="@style/custom_word_black_small_text"
+                    android:id="@+id/txt_state_time_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/charge_content_time_txt" />
+            </RelativeLayout>
+        </LinearLayout>
+        <!--步骤2-->
+        <LinearLayout
+            android:id="@+id/layout_state_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="26dp"
+                android:layout_height="32dp">
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="12dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/charge_top_red" />
+                <ImageView
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_centerInParent="true"
+                    android:background="@mipmap/img_withdraw_detail"
+                    android:scaleType="fitXY"/>
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="12dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/charge_top_red" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp">
+
+                <TextView
+                    android:id="@+id/txt_state_2"
+                    style="@style/custom_word_black_small_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/charge_top_red" />
+
+                <TextView
+                    style="@style/custom_word_black_small_text"
+                    android:id="@+id/txt_state_time_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/charge_content_time_txt" />
+            </RelativeLayout>
+        </LinearLayout>
+        <!--步骤3-->
+        <LinearLayout
+            android:id="@+id/layout_state_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="26dp"
+                android:layout_height="32dp">
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="12dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/charge_top_red" />
+                <ImageView
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_centerInParent="true"
+                    android:background="@mipmap/img_withdraw_detail"
+                    android:scaleType="fitXY"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp">
+
+                <TextView
+                    android:id="@+id/txt_state_3"
+                    style="@style/custom_word_black_small_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/charge_top_red" />
+
+                <TextView
+                    style="@style/custom_word_black_small_text"
+                    android:id="@+id/txt_state_time_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/charge_content_time_txt" />
+            </RelativeLayout>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@mipmap/img_withdraw_detail_bg"/>
+    </LinearLayout>
+
+</LinearLayout>

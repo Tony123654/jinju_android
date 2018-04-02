@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+	<include layout="@layout/top_title_bar"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/separator"/>
+    <LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@drawable/shape_corner_item"
+		android:layout_marginLeft="16dp"
+		android:layout_marginRight="16dp"
+		android:layout_marginBottom="10dp"
+		android:layout_marginTop="10dp"
+		android:orientation="vertical">
+		<TextView
+			android:id="@id/txt_name"
+			style="@style/custom_word_black_big_text"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="@color/white"
+			android:paddingLeft="12dp"
+			android:paddingRight="12dp"
+			android:layout_marginBottom="5dp"
+			android:layout_marginTop="10dp" />
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="2dp"
+			android:layout_marginLeft="12dp"
+			android:layout_marginRight="12dp"
+			android:layerType="software"
+			android:background="@drawable/bg_dotted_line"/>
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+			<!--年化-->
+			<RelativeLayout
+				android:layout_width="0dp"
+				android:layout_weight="1"
+				android:layout_height="70dp">
+
+				<LinearLayout
+					android:id="@+id/layout_year_interest"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerVertical="true"
+					android:layout_marginLeft="12dp"
+					android:orientation="horizontal">
+					<TextView
+						android:id="@id/txt_year_interest"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:textColor="@color/main_red"
+						android:textSize="36sp"/>
+
+					<TextView
+						style="@style/custom_main_red_big_text"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="@string/percent_unit"/>
+				</LinearLayout>
+			</RelativeLayout>
+			<!--期限，可投-->
+			<RelativeLayout
+				android:layout_width="0dp"
+				android:layout_weight="1"
+				android:layout_height="70dp">
+
+				<LinearLayout
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerVertical="true"
+					android:orientation="vertical">
+
+					<LinearLayout
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:orientation="horizontal"
+						android:gravity="center">
+
+						<TextView
+							style="@style/custom_word_black_middle_text"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="投资期限"/>
+
+						<LinearLayout
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_marginLeft="5dp"
+							android:orientation="horizontal">
+
+							<TextView
+								style="@style/custom_main_red_big_text"
+								android:id="@id/txt_loan_period"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"/>
+
+							<TextView
+								style="@style/custom_word_black_middle_text"
+								android:id="@id/txt_loan_period_unit"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"/>
+						</LinearLayout>
+					</LinearLayout>
+
+					<LinearLayout
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:orientation="horizontal"
+						android:gravity="center">
+
+						<TextView
+							style="@style/custom_word_black_middle_text"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="@string/home_funds_amount"/>
+
+						<LinearLayout
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_marginLeft="5dp"
+							android:orientation="horizontal">
+
+							<TextView
+								style="@style/custom_main_red_big_text"
+								android:id="@id/txt_has_funds_amount"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"/>
+
+							<TextView
+								style="@style/custom_word_black_middle_text"
+								android:id="@id/txt_has_funds_amount_unit"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"/>
+						</LinearLayout>
+					</LinearLayout>
+				</LinearLayout>
+			</RelativeLayout>
+
+		</LinearLayout>
+	</LinearLayout>
+
+    <LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginRight="16dp"
+		android:layout_marginLeft="16dp"
+		android:orientation="vertical">
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="42.0dp"
+			android:background="@color/white"
+			android:paddingLeft="12dp"
+			android:paddingRight="12dp">
+
+			<TextView
+				android:id="@+id/txt_financial_amount_hint"
+				style="@style/custom_word_black_middle_text"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:singleLine="true"
+				android:layout_centerVertical="true"
+				android:text="@string/financial_amount_hint"/>
+
+			<TextView
+				android:id="@+id/txt_money_unit"
+				style="@style/custom_word_black_middle_text"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentRight="true"
+				android:layout_centerVertical="true" />
+
+			<com.jinju.android.widget.LastInputEditText
+				android:id="@id/edit_financial_amount"
+				android:textSize="14sp"
+				android:textColor="@color/word_black"
+				android:textColorHint="#888A8A"
+				android:layout_width="match_parent"
+				android:layout_height="42dp"
+				android:layout_toLeftOf="@id/txt_money_unit"
+				android:layout_toRightOf="@id/txt_financial_amount_hint"
+				android:layout_alignBaseline="@id/txt_money_unit"
+				android:layout_marginLeft="20dp"
+				android:singleLine="true"
+				android:background="@null"
+				android:maxLength="8"
+				android:inputType="number"
+				android:layout_centerVertical="true"
+				android:gravity="right"/>
+		</RelativeLayout>
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="1px"
+			android:background="@color/separator"/>
+
+		<LinearLayout
+			android:id="@id/layout_coupon"
+			android:layout_width="match_parent"
+			android:layout_height="42.0dp"
+			android:background="@color/white"
+			android:orientation="horizontal"
+			android:gravity="center_vertical">
+
+			<TextView
+				style="@style/custom_word_black_middle_text"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="3"
+				android:layout_marginLeft="12dp"
+				android:singleLine="true"
+				android:text="@string/profile_coupon"/>
+
+			<RelativeLayout
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_marginRight="12dp"
+				android:layout_marginEnd="12dp"
+				android:layout_weight="8">
+
+				<ImageView
+					android:id="@+id/img_small_arrow"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="16dp"
+					android:src="@mipmap/icon_small_arrow"
+					android:layout_alignParentRight="true"
+					android:layout_centerVertical="true"/>
+
+				<TextView
+					android:id="@id/txt_coupon"
+					android:textColor="@color/gray"
+					android:textSize="14sp"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:singleLine="true"
+					android:background="@null"
+					android:layout_toLeftOf="@id/img_small_arrow"
+					android:layout_centerVertical="true"/>
+
+				<ImageView
+					android:id="@id/img_coupon_enable"
+					android:layout_width="15dp"
+					android:layout_height="15dp"
+					android:layout_marginRight="10dp"
+					android:src="@mipmap/icon_coupon_disable"
+					android:layout_toLeftOf="@id/txt_coupon"
+					android:layout_centerVertical="true"
+					android:visibility="gone"/>
+
+
+			</RelativeLayout>
+		</LinearLayout>
+	</LinearLayout>
+
+    <View
+        android:id="@id/view_coupon_separator"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/separator"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@id/txt_financial_income"
+        android:textColor="#A7A7A7"
+		android:textSize="12sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+		android:layout_marginBottom="10dp"
+		android:layout_gravity="center"/>
+
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="42dp"
+		android:background="@color/white"
+		android:gravity="center_vertical"
+		android:layout_marginLeft="16dp"
+		android:layout_marginRight="16dp">
+
+		<TextView
+			style="@style/custom_word_black_middle_text"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="12dp"
+			android:singleLine="true"
+			android:text="可用余额"/>
+		<LinearLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:layout_marginRight="12dp"
+			android:layout_alignParentRight="true">
+			<TextView
+				android:id="@id/txt_can_use_balance"
+				style="@style/custom_main_red_middle_text"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:singleLine="true" />
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentRight="true"
+				style="@style/custom_main_red_middle_text"
+				android:text="元"/>
+
+		</LinearLayout>
+
+	</RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="40dp"/>
+
+	<Button
+		android:id="@id/btn_next"
+		android:textSize="16sp"
+		android:textColor="@color/btn_text_disabled"
+		android:layout_width="match_parent"
+		android:layout_height="45dp"
+		android:background="@drawable/button_radius_disabled"
+		android:layout_marginLeft="16dp"
+		android:layout_marginRight="16dp"
+		android:text="@string/financial_buy"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+		android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp">
+
+        <TextView
+            android:id="@id/check_accept"
+            style="@style/custom_word_gray_small_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+			android:layout_marginLeft="5dp"
+            android:text="@string/agree_and_accept" />
+
+        <TextView
+            android:id="@id/txt_protocol"
+            style="@style/custom_main_blue_small_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/product_protocol" />
+    </LinearLayout>
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+		<TextView
+			android:id="@+id/txt_safe_message"
+			style="@style/custom_word_gray_small_text"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerHorizontal="true"
+			android:layout_alignParentBottom="true"
+			android:layout_marginBottom="20dp"
+			android:drawableLeft="@mipmap/icon_safe"
+			android:drawableStart="@mipmap/icon_safe"
+			android:drawablePadding="5dp" />
+	</RelativeLayout>
+
+</LinearLayout>

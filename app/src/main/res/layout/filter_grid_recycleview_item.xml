@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="5dp">
+    <com.jinju.android.widget.TagView
+        style="@style/custom_word_black_middle_text"
+        android:id="@+id/txt_tag"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textColor="@color/filter_tag_txt"
+        android:background="@drawable/bg_filter_tag_normal"/>
+
+</FrameLayout>

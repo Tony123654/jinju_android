@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<color name="common_top_tab_index_select_color">#0091ff</color>
+	<color name="font_black_50">#505050</color>
+	<color name="grey_listview_divider">#FFFFFF</color>
+
+    <color name="white">#ffffffff</color>
+    <color name="black">#ff000000</color>
+    <color name="half_black">#7f000000</color>
+    <color name="light_black">#ff202020</color>
+    <color name="red">#ffcb2000</color>
+    <color name="green">#039552</color>
+    <color name="light_green">#1174b3</color>
+    <color name="brown">#ff75462f</color>
+    <color name="dark_gray">#2b2b2b</color>
+    <color name="gray">#8b8b8b</color>
+    <color name="light_gray">#ffa9a9a9</color>
+    <color name="white_gray">#fff5f5f5</color>
+    <color name="transparent">#00000000</color>
+	<color name="light_orange">#fd5f38</color>
+	<color name="light_red">#fe0000</color>
+	<color name="phonenum_bgcolor">#F6EAE2</color>
+	<color name="blue">#4691ee</color>
+	
+	<color name="background">#F2F3F7</color>
+
+	<color name="main_blue">#6095F1</color>
+	<color name="blue_selected">#80a6e8</color>
+
+	<color name="main_red">#ec4137</color>
+	<color name="main_tag_text_red">#ff8079</color>
+	<color name="main_tag_text_yellow">#ffad35</color>
+	<color name="main_tag_text_blue">#526afc</color>
+	<color name="main_tag_background_red">#ffe5e3</color>
+	<color name="main_tag_background_yellow">#ffeed5</color>
+	<color name="main_tag_background_blue">#e5e9ff</color>
+	<color name="word_black">#212121</color>
+	<color name="word_black_gray">#999999</color>
+	<color name="word_gray">#C7C7C7</color>
+	<color name="tab_gray">#BCBCBC</color>
+	<color name="window_background">#FFB3B3B3</color>
+
+	<color name="title_color">#ffffff</color>
+	<color name="separator">#e8e8e8</color>
+
+	<color name="home_background">#f6f6f6</color>
+
+	<color name="disabled">#ECEBF0</color>
+
+	<color name="touch_red">#ff8079</color>
+	<color name="touch_blue">#4487CD</color>
+	<color name="pink">#FFF0EB</color>
+	<color name="orange">#f17336</color>
+	<color name="btn_text_disabled">#D3D2D7</color>
+
+	<color name="colorPrimary">#3F51B5</color>
+	<color name="colorPrimaryDark">#303F9F</color>
+	<color name="colorAccent">#ffad35</color>
+
+	<color name="srl_text_color">#515151</color>
+	<color name="srl_pull_background">#FFFFFF</color>
+
+	<color name="charge_top_red">#ec4137</color>
+	<color name="charge_content_txt">#333333</color>
+	<color name="charge_content_time_txt">#999999</color>
+	<color name="charge_detail_background">#EEEEEE</color>
+	<color name="charge_detail_statu_txt">#EC4137</color>
+
+	<color name="shadow">#524d49</color>
+	<color name="background_tab_pressed">#6633B5E5</color>
+	<color name="filter_tag_default_background">#f6f6f6</color>
+	<color name="filter_tag_select_background">#FDE9E8</color>
+	<color name="filter_tag_txt">#666666</color>
+	<color name="profile_font_color">#4D4D4D</color>
+	<color name="line_color">#E6E6E6</color>
+	<color name="color_loan_amount">#FFBF51</color>
+	<color name="color_amount_frozen">#E6E6E6</color>
+
+	<color name="canUsebalance">#FF5151</color>
+	<color name="loanAmount">#FFBF51</color>
+	<color name="amountFrozen">#D9D9D9</color>
+	<color name="backCircle">#F0F0F0</color>
+</resources>

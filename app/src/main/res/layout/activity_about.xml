@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tab="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white" >
+
+        <Button
+            android:id="@+id/btn_back"
+            style="@style/custom_word_black_big_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:focusable="true"
+            android:paddingLeft="10.0dp"
+            android:paddingRight="10.0dp"
+            android:drawableLeft="@mipmap/icon_back"
+            android:drawableStart="@mipmap/icon_back"
+            android:background="@android:color/transparent"/>
+        <TextView
+            android:id="@+id/txt_finish"
+            style="@style/custom_word_black_big_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/btn_back"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:visibility="gone"
+            android:text="关闭"/>
+        <TextView
+            android:id="@id/txt_title"
+            style="@style/custom_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/word_black"
+            android:layout_centerInParent="true" />
+        <TextView
+            android:id="@+id/tv_title_right"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:clickable="true"
+            android:textColor="@color/word_black"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+    <com.jinju.android.widget.SlidingTabStrip
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        tab:pstsIndicatorColor="@color/main_red"
+        tab:pstsIndicatorHeight="2dp"/>
+    <com.github.lzyzsd.jsbridge.BridgeWebView
+
+        android:id="@+id/activity_web_wv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

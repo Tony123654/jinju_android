@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/transparence_dialog_bg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:adjustViewBounds="true"
+            android:background="@mipmap/img_download_title"
+            />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_radius_dialog_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/word_black"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="温馨提示"/>
+        <TextView
+            android:id="@+id/txt_network_warning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="20dp"
+            android:text="你当处于移动网路下，此次安装将会消耗流量100M，是否继续安装？" />
+        <View
+            android:background="@color/separator"
+            android:layout_width="match_parent"
+            android:layout_height="1px" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:textColor="@color/gray"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/transparent"
+                android:text="@string/download_cancel"/>
+            <View
+                android:id="@+id/separator"
+                android:background="@color/separator"
+                android:layout_width="1px"
+                android:layout_height="match_parent" />
+            <Button
+                android:id="@+id/btn_confirm"
+                style="@style/custom_white_big_button"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:textColor="@color/main_red"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/transparent"
+                android:text="@string/download_continue"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="true">
+
+    <item android:drawable="@drawable/guide_redpacket_coin01" android:duration="50"></item>
+    <item android:drawable="@drawable/guide_redpacket_coin02" android:duration="50"></item>
+    <item android:drawable="@drawable/guide_redpacket_coin03" android:duration="50"></item>
+    <item android:drawable="@drawable/guide_redpacket_coin04" android:duration="50"></item>
+    <item android:drawable="@drawable/guide_redpacket_coin05" android:duration="50"></item>
+    <item android:drawable="@drawable/guide_redpacket_coin06" android:duration="50"></item>
+    <item android:drawable="@drawable/guide_redpacket_coin07" android:duration="50"></item>
+    <item android:drawable="@drawable/guide_redpacket_coin08" android:duration="50"></item>
+    <item android:drawable="@drawable/guide_redpacket_coin09" android:duration="50"></item>
+    <item android:drawable="@drawable/guide_redpacket_coin10" android:duration="50"></item>
+    <item android:drawable="@drawable/guide_redpacket_coin11" android:duration="50"></item>
+    <item android:drawable="@drawable/guide_redpacket_coin12" android:duration="50"></item>
+    <item android:drawable="@drawable/guide_redpacket_coin13" android:duration="50"></item>
+    <item android:drawable="@drawable/guide_redpacket_coin14" android:duration="50"></item>
+    <item android:drawable="@drawable/guide_redpacket_coin15" android:duration="50"></item>
+    <item android:drawable="@drawable/guide_redpacket_coin16" android:duration="50"></item>
+    <item android:drawable="@drawable/guide_redpacket_coin17" android:duration="50"></item>
+    <item android:drawable="@drawable/guide_redpacket_coin18" android:duration="50"></item>
+    <item android:drawable="@drawable/guide_redpacket_coin19" android:duration="50"></item>
+    <item android:drawable="@drawable/guide_redpacket_coin20" android:duration="50"></item>
+    <item android:drawable="@drawable/guide_redpacket_coin21" android:duration="50"></item>
+    <item android:drawable="@drawable/guide_redpacket_coin22" android:duration="50"></item>
+    <item android:drawable="@drawable/guide_redpacket_coin23" android:duration="50"></item>
+    <item android:drawable="@drawable/guide_redpacket_coin24" android:duration="50"></item>
+    <item android:drawable="@drawable/guide_redpacket_coin25" android:duration="50"></item>
+    <item android:drawable="@drawable/guide_redpacket_coin26" android:duration="50"></item>
+</animation-list>

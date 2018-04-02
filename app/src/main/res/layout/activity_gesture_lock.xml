@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/top_title_bar"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.0px"
+        android:background="@color/separator" />
+    <RelativeLayout
+        android:id="@+id/layout_gesture_alter"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/img_item_bg"
+        android:gravity="center"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp" >
+
+        <TextView
+            style="@style/custom_word_black_middle_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gesture_password_guide_alter_btn"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:src="@mipmap/icon_small_arrow"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.0px"
+        android:background="@color/separator" />
+
+    <RelativeLayout
+        android:id="@+id/layout_gesture_forget"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/img_item_bg"
+        android:gravity="center"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp" >
+
+        <TextView
+            style="@style/custom_word_black_middle_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gesture_password_guide_forget_btn"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:src="@mipmap/icon_small_arrow"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/separator" />
+
+    <RelativeLayout
+        android:id="@+id/layout_gesture_switch"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/img_item_bg"
+        android:gravity="center"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp" >
+
+        <TextView
+            style="@style/custom_word_black_middle_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gesture_password_guide_switch_btn"/>
+
+        <ImageView
+            android:id="@+id/img_gesture_status"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:src="@mipmap/img_switch_off" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.0px"
+        android:background="@color/separator" />
+
+
+</LinearLayout>

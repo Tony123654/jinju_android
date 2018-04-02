@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <include layout="@layout/top_title_bar"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/separator"/>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <TextView
+                android:id="@id/txt_my_red_packet"
+                style="@style/custom_gray_middle_text"
+                android:layout_width="0.0dip"
+                android:layout_height="40dp"
+                android:layout_weight="5"
+                android:background="@mipmap/bg_loan_tab"
+                android:gravity="center"
+                android:text="@string/red_packet" />
+
+            <View
+                android:layout_width="1.0px"
+                android:layout_height="fill_parent"
+                android:background="@color/separator" />
+
+            <TextView
+                android:id="@id/txt_history_red_packet"
+                style="@style/custom_gray_middle_text"
+                android:layout_width="0dip"
+                android:layout_weight="5"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="@string/add_rate_ticket" />
+        </LinearLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </android.support.v4.view.ViewPager>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_check_red_packet"
+        android:layout_width="40dp"
+        android:layout_height="108dp"
+        android:background="@mipmap/img_check_red_packet"
+        android:layout_gravity="center_vertical|right"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <TextView
+            style="@style/custom_white_small_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="5dp"
+            android:textColor="#FBDF27"
+            android:textSize="10sp"
+            android:text="查"/>
+        <TextView
+            style="@style/custom_white_small_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="5dp"
+            android:textColor="#FBDF27"
+            android:textSize="10sp"
+            android:text="看"/>
+        <TextView
+            style="@style/custom_white_small_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="5dp"
+            android:textColor="#FBDF27"
+            android:textSize="10sp"
+            android:text="可"/>
+        <TextView
+            style="@style/custom_white_small_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="5dp"
+            android:textColor="#FBDF27"
+            android:textSize="10sp"
+            android:text="用"/>
+        <TextView
+            style="@style/custom_white_small_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="5dp"
+            android:textColor="#FBDF27"
+            android:textSize="10sp"
+            android:text="红"/>
+        <TextView
+            style="@style/custom_white_small_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#FBDF27"
+            android:textSize="10sp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="8dp"
+            android:text="包"/>
+    </LinearLayout>
+
+</FrameLayout>

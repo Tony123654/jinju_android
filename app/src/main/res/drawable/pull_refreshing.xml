@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+    <item android:drawable="@drawable/icon_refreshing_00" android:duration="50"></item>
+    <item android:drawable="@drawable/icon_refreshing_01" android:duration="50"></item>
+    <item android:drawable="@drawable/icon_refreshing_02" android:duration="50"></item>
+    <item android:drawable="@drawable/icon_refreshing_03" android:duration="50"></item>
+    <item android:drawable="@drawable/icon_refreshing_04" android:duration="50"></item>
+    <item android:drawable="@drawable/icon_refreshing_05" android:duration="50"></item>
+    <item android:drawable="@drawable/icon_refreshing_06" android:duration="50"></item>
+    <item android:drawable="@drawable/icon_refreshing_07" android:duration="50"></item>
+    <item android:drawable="@drawable/icon_refreshing_08" android:duration="50"></item>
+    <item android:drawable="@drawable/icon_refreshing_09" android:duration="50"></item>
+    <item android:drawable="@drawable/icon_refreshing_10" android:duration="50"></item>
+    <item android:drawable="@drawable/icon_refreshing_11" android:duration="50"></item>
+    <item android:drawable="@drawable/icon_refreshing_12" android:duration="50"></item>
+    <item android:drawable="@drawable/icon_refreshing_13" android:duration="50"></item>
+    <item android:drawable="@drawable/icon_refreshing_14" android:duration="50"></item>
+    <item android:drawable="@drawable/icon_refreshing_15" android:duration="50"></item>
+    <item android:drawable="@drawable/icon_refreshing_16" android:duration="50"></item>
+    <item android:drawable="@drawable/icon_refreshing_17" android:duration="50"></item>
+    <item android:drawable="@drawable/icon_refreshing_18" android:duration="50"></item>
+    <item android:drawable="@drawable/icon_refreshing_19" android:duration="50"></item>
+    <item android:drawable="@drawable/icon_refreshing_20" android:duration="50"></item>
+    <item android:drawable="@drawable/icon_refreshing_21" android:duration="50"></item>
+    <item android:drawable="@drawable/icon_refreshing_22" android:duration="50"></item>
+    <item android:drawable="@drawable/icon_refreshing_23" android:duration="50"></item>
+    <item android:drawable="@drawable/icon_refreshing_24" android:duration="50"></item>
+    <item android:drawable="@drawable/icon_refreshing_25" android:duration="50"></item>
+    <item android:drawable="@drawable/icon_refreshing_26" android:duration="50"></item>
+    <item android:drawable="@drawable/icon_refreshing_27" android:duration="50"></item>
+    <item android:drawable="@drawable/icon_refreshing_28" android:duration="50"></item>
+    <item android:drawable="@drawable/icon_refreshing_29" android:duration="50"></item>
+
+</animation-list>

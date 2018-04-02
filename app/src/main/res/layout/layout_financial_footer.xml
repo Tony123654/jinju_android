@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:paddingBottom="8dp"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:textColor="#A8A8A8"
+        android:layout_marginTop="5dp"
+        android:drawableLeft="@mipmap/icon_small_close"
+        android:drawablePadding="5dp"
+        android:text="下拉查看更多"/>
+
+</LinearLayout>

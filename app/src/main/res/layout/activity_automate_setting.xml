@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <include layout="@layout/top_title_bar"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.0px"
+        android:background="@color/separator" />
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.0px"
+        android:background="@color/separator" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45.0dip"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="18.0dip"
+        android:paddingRight="18.0dip"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <TextView
+            style="@style/custom_word_black_middle_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/automate_min_amount" />
+
+        <EditText
+            android:id="@id/edit_min_amount"
+            android:textColor="#A3A3A3"
+            android:textSize="14sp"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginStart="10.0dip"
+            android:layout_weight="1.0"
+            android:gravity="end"
+            android:singleLine="true"
+            android:background="@null"
+            android:inputType="numberDecimal"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.0px"
+        android:background="@color/separator" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45.0dip"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="18.0dip"
+        android:paddingRight="18.0dip"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <TextView
+            style="@style/custom_word_black_middle_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/automate_retain_amount" />
+
+        <EditText
+            android:id="@id/edit_retain_amount"
+            android:textColor="#A3A3A3"
+            android:textSize="14sp"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginStart="10.0dip"
+            android:layout_weight="1.0"
+            android:gravity="end"
+            android:singleLine="true"
+            android:inputType="numberDecimal"
+            android:background="@null"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.0px"
+        android:background="@color/separator" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.0px"
+        android:background="@color/separator" />
+    
+    <LinearLayout
+        android:id="@id/layout_cycle"
+        android:layout_width="match_parent"
+        android:layout_height="45.0dip"
+        android:background="@drawable/img_item_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="18.0dip"
+        android:paddingRight="18.0dip" >
+
+        <TextView
+            style="@style/custom_word_black_middle_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/automate_cycle" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="right">
+
+            <TextView
+                android:id="@+id/txt_min_time_limit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="#A3A3A3"
+                android:background="@drawable/solid_gray_bg"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/custom_word_black_middle_text"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="至"/>
+
+            <TextView
+                android:id="@+id/txt_max_time_limit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="#A3A3A3"
+                android:background="@drawable/solid_gray_bg"/>
+
+        </LinearLayout>
+    </LinearLayout>
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.0px"
+        android:background="@color/separator" />
+    
+    <LinearLayout
+        android:id="@id/layout_year_interest"
+        android:layout_width="match_parent"
+        android:layout_height="45.0dip"
+        android:background="@drawable/img_item_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="18.0dip"
+        android:paddingRight="18.0dip">
+
+        <TextView
+            style="@style/custom_word_black_middle_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/automate_min_year_rate" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right">
+
+            <TextView
+                android:id="@id/txt_year_interest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="#A3A3A3"
+                android:background="@drawable/solid_gray_bg"/>
+        </LinearLayout>
+    </LinearLayout>
+        
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.0px"
+        android:background="@color/separator" />
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.0px"
+        android:background="@color/separator" />
+    
+    <com.jinju.android.widget.DrawableCenterButton
+        android:id="@id/btn_confirm"
+        style="@style/custom_white_big_text"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/btn_red_solid_bg"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:drawableLeft="@mipmap/icon_auto_set"
+        android:gravity="center_vertical"
+        android:drawablePadding="5dp"
+        android:text="@string/save_update"/>
+
+</LinearLayout>

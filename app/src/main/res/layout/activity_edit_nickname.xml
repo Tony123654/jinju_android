@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <include layout="@layout/top_title_bar"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/separator"/>
+    
+    <TextView
+        style="@style/custom_white_middle_text"
+        android:id="@id/txt_activity_tag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/pink"
+        android:gravity="center"
+        android:textColor="#ff8079"
+        android:padding="5dp"
+        android:text="@string/nickname_input_desc"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+    
+    <TextView
+        style="@style/custom_word_black_small_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nickname_hint"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"/>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/img_edit_white_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="18.0dp"
+            android:src="@mipmap/icon_account" />
+
+        <EditText
+            android:id="@id/edit_name"
+            style="@style/custom_gray_middle_edit"
+            android:layout_width="match_parent"
+            android:layout_height="30.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip"
+            android:background="@null"
+            android:hint="@string/info_nickname"
+            android:maxLength="20"
+            android:singleLine="true" />
+    </LinearLayout>
+
+    <Button
+        android:id="@id/btn_submit"
+        style="@style/custom_white_middle_text"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/button_disabled"
+        android:textColor="@color/btn_text_disabled"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="@string/confirm"/>
+</LinearLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/JsBridgeLib/JsBridgeLib.iml" filepath="$PROJECT_DIR$/JsBridgeLib/JsBridgeLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SmartRefreshLayout/SmartRefreshLayout.iml" filepath="$PROJECT_DIR$/SmartRefreshLayout/SmartRefreshLayout.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/easypermissions/easypermissions.iml" filepath="$PROJECT_DIR$/easypermissions/easypermissions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jinju_android.iml" filepath="$PROJECT_DIR$/jinju_android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lm_banner_library/lm_banner_library.iml" filepath="$PROJECT_DIR$/lm_banner_library/lm_banner_library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/marqueelibrary/marqueelibrary.iml" filepath="$PROJECT_DIR$/marqueelibrary/marqueelibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pullToRefreshLib/pullToRefreshLib.iml" filepath="$PROJECT_DIR$/pullToRefreshLib/pullToRefreshLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/volley/volley.iml" filepath="$PROJECT_DIR$/volley/volley.iml" />
+    </modules>
+  </component>
+</project>

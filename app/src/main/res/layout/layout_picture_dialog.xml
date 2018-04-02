@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:background="@drawable/photo_title_bg"
+        android:textSize="12sp"
+        android:gravity="center"
+        android:text="选择照片"/>
+
+    <TextView android:background="#DAD9DB"
+        android:layout_height="0.5dp"
+        android:layout_width="match_parent"/>
+    <Button
+        android:id="@+id/bt_photograph"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/blue"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:background="@drawable/photo_camera_selector"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:text="拍照"/>
+    <TextView android:background="#DAD9DB"
+        android:layout_height="0.5dp"
+        android:layout_width="match_parent"/>
+    <Button
+        android:id="@+id/bt_select"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/blue"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:background="@drawable/photo_gallery_selector"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:text="从相册中选择"/>
+    <Button
+        android:id="@+id/bt_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/blue"
+        android:background="@drawable/photo_cancel_selector"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:layout_marginTop="5dp"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:text="取消"/>
+
+</LinearLayout>

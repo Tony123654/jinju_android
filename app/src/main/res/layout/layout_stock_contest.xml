@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:gravity="center"
+        android:padding="5dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="38dp">
+        <TextView
+            android:gravity="center"
+            android:id="@+id/txt_trading_zone"
+            style="@style/custom_main_blue_middle_text"
+            android:text="@string/trading_zone"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <View
+            android:background="@color/separator"
+            android:layout_width="1px"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:id="@+id/txt_prize_contest"
+            android:gravity="center"
+            style="@style/custom_word_black_middle_text"
+            android:text="@string/prize_contest"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fragment_stock_context"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

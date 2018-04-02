@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	    android:padding="5.0dip"
+	    android:baselineAligned="false">
+	    
+	    <RelativeLayout
+	        android:layout_width="0.0dip"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1">
+	        
+	        <ImageView
+	            android:id="@id/img_entrust_bs"
+	            android:layout_width="20dip"
+	            android:layout_height="20dip"
+	            android:layout_alignParentLeft="true"
+	            android:layout_alignParentStart="true"
+	            android:layout_centerVertical="true"/>
+	        
+	        <TextView 
+	            android:id="@id/txt_stock_name"
+	            style="@style/custom_gray_middle_text"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="5.0dip"
+	            android:layout_marginStart="5.0dip"
+	            android:layout_toRightOf="@id/img_entrust_bs"
+	            android:layout_toEndOf="@id/img_entrust_bs"
+	            android:singleLine="true"/>
+	        
+	        <TextView 
+	            android:id="@id/txt_stock_code"
+	            style="@style/custom_gray_middle_text"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="5.0dip"
+	            android:layout_marginStart="5.0dip"
+	            android:layout_toRightOf="@id/img_entrust_bs"
+	            android:layout_toEndOf="@id/img_entrust_bs"
+	            android:layout_below="@id/txt_stock_name"
+	            android:singleLine="true"/>
+	        
+	    </RelativeLayout>
+	    
+	    <LinearLayout
+	        android:layout_width="0.0dip"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:orientation="vertical"
+	        android:gravity="center">
+	        
+	        <TextView 
+	            android:id="@id/txt_entrust_no"
+	            style="@style/custom_gray_middle_text"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:singleLine="true"/>
+	        
+	        <TextView 
+	            android:id="@id/txt_entrust_price"
+	            style="@style/custom_gray_middle_text"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:singleLine="true"/> 
+	    </LinearLayout>
+	    
+	    <LinearLayout
+	        android:layout_width="0.0dip"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:orientation="vertical"
+	        android:gravity="center">
+	        
+	        <TextView 
+	            android:id="@id/txt_entrust_amount"
+	            style="@style/custom_gray_middle_text"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:singleLine="true"/>
+	        
+	        <TextView 
+	            android:id="@id/txt_business_amount"
+	            style="@style/custom_gray_middle_text"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:singleLine="true"/> 
+	    </LinearLayout>
+	    
+	    <LinearLayout
+	        android:layout_width="0.0dip"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:orientation="vertical"
+	        android:gravity="center">
+	        
+	        <TextView 
+	            android:id="@id/txt_entrust_bs"
+	            style="@style/custom_gray_middle_text"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:singleLine="true"/>
+	        
+	        <TextView 
+	            android:id="@id/txt_entrust_status"
+	            style="@style/custom_gray_middle_text"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:singleLine="true"/> 
+	    </LinearLayout>
+	    
+	</LinearLayout>
+	
+	<View
+	    android:layout_width="match_parent"
+	    android:layout_height="1.0px"
+	    android:background="@color/separator"/>
+
+</LinearLayout>

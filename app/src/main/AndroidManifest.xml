@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jinju.android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <!--  小米推送 -->
+    <uses-permission android:name="android.permission.REORDER_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <permission android:name="com.jinju.android.permission.MIPUSH_RECEIVE" android:protectionLevel="signature" />
+    <!--这里com.xiaomi.mipushdemo改成app的包名-->
+    <uses-permission android:name="com.jinju.android.permission.MIPUSH_RECEIVE" />
+    <!--这里com.xiaomi.mipushdemo改成app的包名-->
+
+    <!--友盟分享-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+
+    <!--点击通知栏收起权限-->
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
+    <!--日历事件-->
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <application
+        android:name="com.jinju.android.base.DdApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <!--友盟多渠道打包-->
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${UMENG_CHANNEL_VALUE}" />
+        <!--友盟分享-->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="591455617f2c745275001271" >
+        </meta-data>
+        <activity
+            android:name="com.jinju.android.activity.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.jinju.android.activity.AutomateActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jinju.android.activity.AutomateSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jinju.android.activity.ChargeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jinju.android.activity.EditBankActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jinju.android.activity.EditNicknameActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jinju.android.activity.FinancialConfirmActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jinju.android.activity.LoanSuccessActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jinju.android.activity.FindPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jinju.android.activity.HomeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jinju.android.activity.LoanActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jinju.android.activity.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jinju.android.activity.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jinju.android.activity.ModifyPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jinju.android.activity.ModifyPhoneActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jinju.android.activity.MyAssetActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jinju.android.activity.MyFinancialActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jinju.android.activity.ProfileActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jinju.android.activity.RegisterSubmitActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jinju.android.activity.ResetPhoneActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jinju.android.activity.SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jinju.android.activity.WebActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jinju.android.activity.WithdrawActivity"
+            android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jinju.android.activity.WithdrawPasswordFindActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jinju.android.activity.WithdrawPasswordModifyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jinju.android.activity.WithdrawPasswordCodeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jinju.android.activity.WithdrawPasswordSetActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jinju.android.activity.WithdrawPasswordConfirmActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jinju.android.activity.ManageBankCardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jinju.android.activity.VerifyBankCardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jinju.android.activity.BankListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jinju.android.activity.PositionDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jinju.android.activity.VerifyCodeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jinju.android.activity.InfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jinju.android.activity.WithdrawPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jinju.android.activity.WithdrawPasswordNewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jinju.android.activity.WithdrawPasswordNewConfirmActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jinju.android.activity.ModifyNewPhoneActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jinju.android.activity.ChargeSuccessActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jinju.android.activity.WithdrawSuccessActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jinju.android.activity.ChargeRecordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jinju.android.activity.WithdrawRecordActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.jinju.android.activity.LoginInAdvanceActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.jinju.android.activity.RedPacketActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.jinju.android.activity.SelectRedPacketActivity"
+            android:screenOrientation="portrait" />
+
+        <activity android:name="com.jinju.android.webview.BaseJsBridgeWebViewActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.jinju.android.activity.FinancialMoreActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.jinju.android.activity.lock.CreateGestureActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.jinju.android.activity.GestureLockActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.jinju.android.activity.lock.UnlockGestureActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.jinju.android.activity.ForgetGesturePasswordActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.jinju.android.activity.NoticeActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.jinju.android.activity.lock.AlterGestureLockActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.jinju.android.activity.ContactUsActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.jinju.android.activity.CallCenterActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.jinju.android.activity.OpinionFeedbackActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.jinju.android.activity.NavigationActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.jinju.android.activity.HomeNoticeActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.jinju.android.activity.HomeNoticeDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.jinju.android.activity.DiscoverActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.jinju.android.activity.FinancialDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.jinju.android.activity.AboutActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.jinju.android.activity.FundAccountActivity"
+            android:screenOrientation="portrait"/>
+
+        <!--小米推送service-->
+        <service
+            android:enabled="true"
+            android:process=":pushservice"
+            android:name="com.xiaomi.push.service.XMPushService"/>
+        <service
+            android:name="com.xiaomi.push.service.XMJobService"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:process=":pushservice" />
+        <!--注：此service必须在3.0.1版本以后（包括3.0.1版本）加入-->
+        <service
+            android:enabled="true"
+            android:exported="true"
+            android:name="com.xiaomi.mipush.sdk.PushMessageHandler" />
+        <service android:enabled="true"
+            android:name="com.xiaomi.mipush.sdk.MessageHandleService" />
+        <!--注：此service必须在2.2.5版本以后（包括2.2.5版本）加入-->
+        <receiver
+            android:exported="true"
+            android:name="com.xiaomi.push.service.receivers.NetworkStatusReceiver" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:exported="false"
+            android:process=":pushservice"
+            android:name="com.xiaomi.push.service.receivers.PingReceiver" >
+            <intent-filter>
+                <action android:name="com.xiaomi.push.PING_TIMER" />
+            </intent-filter>
+        </receiver>
+        <!--注册小米推送receiver-->
+        <receiver
+            android:exported="true"
+            android:name="com.jinju.android.receiver.PushMessageReceiver">
+            <!--这里com.xiaomi.mipushdemo.DemoMessageRreceiver改成app中定义的完整类名-->
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.RECEIVE_MESSAGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.MESSAGE_ARRIVED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.ERROR" />
+            </intent-filter>
+        </receiver>
+        <!--QQ分享-->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true" >
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="tencent1105969333" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
+        <!--微信分享-->
+        <activity
+            android:name="com.jinju.android.wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!--apk更新下载-->
+        <service android:name="com.jinju.android.service.DownloadService"></service>
+        <!--7.0路径适配-->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+
+            android:authorities="com.jinju.android.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+        <meta-data
+            android:name="android.support.FILE_PROVIDER_PATHS"
+        android:resource="@xml/filepaths"/>
+    </provider>
+    </application>
+
+</manifest>

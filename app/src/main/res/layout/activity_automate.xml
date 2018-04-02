@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/top_title_bar"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.0px"
+        android:background="@color/separator" />
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.0px"
+        android:background="@color/separator" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingTop="20dp"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp"
+        android:paddingBottom="20dp">
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/custom_word_black_middle_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我的投标设置" />
+
+        <TextView
+            style="@style/custom_word_gray_small_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:text="@string/automate_notify"/>
+
+        <ImageView
+            android:id="@id/img_automate_status"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:src="@mipmap/img_switch_off" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.0px"
+        android:background="@color/separator" />
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"/>
+    
+    <LinearLayout
+        android:id="@id/layout_automate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/separator"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45.0dip"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="18.0dip"
+            android:paddingRight="18.0dip" >
+
+            <TextView
+                style="@style/custom_word_black_middle_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/automate_min_amount" />
+
+            <TextView
+                android:id="@id/txt_min_amount"
+                android:textColor="@color/main_red"
+                android:textSize="14sp"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginStart="10.0dip"
+                android:layout_weight="1.0"
+                android:gravity="end"
+                android:singleLine="true"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/separator"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45.0dip"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="18.0dip"
+            android:paddingRight="18.0dip" >
+
+            <TextView
+                style="@style/custom_word_black_middle_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/automate_retain_amount" />
+
+            <TextView
+                android:id="@id/txt_retain_amount"
+                android:textColor="@color/main_red"
+                android:textSize="14sp"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginStart="10.0dip"
+                android:layout_weight="1.0"
+                android:gravity="end"
+                android:singleLine="true"/>
+        </LinearLayout>
+        
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/separator"/>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45.0dip"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="18.0dip"
+            android:paddingRight="18.0dip" >
+
+            <TextView
+                style="@style/custom_word_black_middle_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/automate_cycle" />
+
+            <TextView
+                android:id="@id/txt_cycle"
+                android:textColor="@color/main_red"
+                android:textSize="14sp"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginStart="10.0dip"
+                android:layout_weight="1.0"
+                android:gravity="end"
+                android:singleLine="true"/>
+        </LinearLayout>
+        
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/separator"/>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45.0dip"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="18.0dip"
+            android:paddingRight="18.0dip" >
+
+            <TextView
+                style="@style/custom_word_black_middle_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/automate_min_year_rate" />
+
+            <TextView
+                android:id="@id/txt_year_interest"
+                android:textColor="@color/main_red"
+                android:textSize="14sp"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginStart="10.0dip"
+                android:layout_weight="1.0"
+                android:gravity="end"
+                android:singleLine="true"/>
+        </LinearLayout>
+        
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/separator"/>
+        
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+    </LinearLayout>
+    
+    <TextView
+        android:id="@id/txt_setting"
+        style="@style/custom_main_blue_small_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="20dp"
+        android:drawableRight="@mipmap/icon_blue_arrow"
+        android:drawablePadding="5dp"
+        android:text="自助设置"/>
+</LinearLayout>

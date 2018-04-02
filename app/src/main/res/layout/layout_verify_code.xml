@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@mipmap/img_edit_white_bg"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <TextView
+        style="@style/custom_dark_gray_middle_text"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="18dp"
+        android:text="@string/verify_code"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_weight="10"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@id/edit_code"
+            style="@style/custom_gray_middle_edit"
+            android:layout_width="0dip"
+            android:layout_weight="8"
+            android:layout_height="@dimen/edittext_height"
+            android:layout_marginLeft="@dimen/edge_blank_width"
+            android:layout_marginRight="@dimen/edge_blank_width"
+            android:background="@null"
+            android:inputType="number"
+            android:maxLength="6"
+            android:singleLine="true"
+            android:hint="@string/code_hint"/>
+
+        <View
+            android:layout_height="25dip"
+            android:layout_width="1.0px"
+            android:background="@color/separator"/>
+
+        <TextView
+            style="@style/custom_main_blue_middle_text"
+            android:id="@id/txt_code"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:gravity="center"
+            android:text="@string/get_verify_code"/>
+    </LinearLayout>
+
+</LinearLayout>

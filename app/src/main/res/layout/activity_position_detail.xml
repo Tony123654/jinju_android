@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:orientation="vertical">
+	<include layout="@layout/top_title_bar"/>
+    
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@id/layout_scroll">
+        
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"> 
+            
+            <LinearLayout 
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:background="@color/main_red"
+				android:gravity="center_horizontal"
+			    android:orientation="vertical">
+			     
+			    <TextView 
+			        style="@style/custom_white_middle_text"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_marginTop="10dp"
+			        android:text="@string/position_income"
+			        android:singleLine="true"/>
+			     
+			    <TextView 
+			        android:id="@id/txt_position_income"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:textSize="50sp"
+			        android:textColor="@color/white"
+			        android:layout_marginBottom="5dp"
+			        android:singleLine="true"/>
+			</LinearLayout>
+            
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/separator"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="18dp"
+                android:paddingRight="18dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:background="@color/white">
+
+                <TextView
+                    style="@style/custom_word_black_middle_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_yesterday_income"
+                    android:singleLine="true"/>
+
+                <TextView
+                    android:id="@id/txt_today_income"
+                    style="@style/custom_word_black_gray_middle_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:singleLine="true"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/separator"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="18dp"
+                android:paddingRight="18dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:background="@color/white">
+
+                <TextView
+                    style="@style/custom_word_black_middle_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/loan_expect_year_interest"
+                    android:singleLine="true"/>
+
+                <TextView
+                    android:id="@id/txt_year_interest"
+                    style="@style/custom_word_black_gray_middle_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:singleLine="true"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/separator"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="18dp"
+                android:paddingRight="18dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:background="@color/white">
+
+                <TextView
+                    style="@style/custom_word_black_middle_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/curr_position_hint"
+                    android:singleLine="true"/>
+
+                <TextView
+                    android:id="@id/txt_current_position"
+                    style="@style/custom_word_black_gray_middle_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:singleLine="true"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/separator"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="18dp"
+                android:paddingRight="18dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:background="@color/white">
+
+                <TextView
+                    style="@style/custom_word_black_middle_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/loan_end_date"
+                    android:singleLine="true"/>
+
+                <TextView
+                    android:id="@id/txt_end_date"
+                    style="@style/custom_word_black_gray_middle_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:singleLine="true"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/separator"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="18dp"
+                android:paddingRight="18dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:background="@color/white">
+
+                <TextView
+                    style="@style/custom_word_black_middle_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/loan_fund_return_date_hint"
+                    android:singleLine="true"/>
+
+                <TextView
+                    android:id="@id/txt_return_date"
+                    style="@style/custom_word_black_gray_middle_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:singleLine="true"/>
+            </RelativeLayout>
+            
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/separator"/>
+            
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+            
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/separator"/>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:paddingLeft="18dp"
+                android:paddingRight="18dp">
+                
+                <TextView
+                    style="@style/custom_word_black_middle_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/position_history"/>
+                
+                <View
+	                android:layout_width="match_parent"
+	                android:layout_height="1px"
+	                android:background="@color/separator"/>
+                
+                <LinearLayout 
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+                    
+                    <TextView
+                        style="@style/custom_word_black_gray_small_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/time"/>
+                    
+                    <TextView
+                        style="@style/custom_word_black_gray_small_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/withdraw_record_status"/>
+                    
+                    <TextView
+                        style="@style/custom_word_black_gray_small_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/position_accrual_red_packet"/>
+
+                    <TextView
+                        style="@style/custom_word_black_gray_small_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:text="@string/position_amount"/>
+                </LinearLayout>
+                
+                <View
+	                android:layout_width="match_parent"
+	                android:layout_height="1px"
+	                android:background="@color/separator"/>
+                
+                <LinearLayout
+                    android:id="@id/layout_trade_history"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+					android:paddingTop="5dp"
+					android:paddingBottom="5dp"
+                    android:orientation="vertical">
+                    
+                </LinearLayout>
+            </LinearLayout>
+	        
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/separator"/>
+            
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+            
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/separator"/>
+	        
+	        <TextView 
+	            android:id="@id/txt_name"
+	            style="@style/custom_word_black_middle_text"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:background="@color/white"
+	            android:paddingLeft="18dp"
+	            android:paddingRight="18dp"
+	            android:paddingTop="10dp"
+	            android:paddingBottom="10dp"
+	            android:drawableRight="@mipmap/icon_small_arrow"
+	            android:drawableEnd="@mipmap/icon_small_arrow"/>
+	        
+	        <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/separator"/>
+	        
+	        <TextView 
+	            android:id="@id/txt_product_protocol"
+	            style="@style/custom_word_black_middle_text"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:background="@color/white"
+	            android:paddingLeft="18dp"
+	            android:paddingRight="18dp"
+	            android:paddingTop="10dp"
+	            android:paddingBottom="10dp"
+	            android:drawableRight="@mipmap/icon_small_arrow"
+	            android:drawableEnd="@mipmap/icon_small_arrow"
+	            android:text="@string/position_product_protocol"/>
+
+	        <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/separator"/>
+	        
+	        <View
+	            android:layout_width="match_parent"
+	            android:layout_height="30dp"/>
+        </LinearLayout>
+    </ScrollView>
+	    
+</LinearLayout>

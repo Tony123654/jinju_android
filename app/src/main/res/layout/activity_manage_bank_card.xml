@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+
+	<include layout="@layout/top_title_bar"/>
+
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="1px"
+		android:background="@color/separator"/>
+	<LinearLayout
+		android:id="@+id/layout_no_bank_card"
+		android:visibility="visible"
+		android:paddingTop="20dp"
+		android:paddingBottom="40dp"
+		android:gravity="center"
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+		<ImageView
+			android:background="@mipmap/icon_no_bank_card"
+			android:layout_width="60dp"
+			android:layout_height="60dp" />
+		<TextView
+			android:layout_margin="20dp"
+			android:id="@id/txt_no_bank_card"
+			style="@style/custom_gray_middle_text"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/no_bank_card"
+			android:visibility="visible"/>
+	</LinearLayout>
+	<ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+		<LinearLayout
+			android:visibility="gone"
+			android:layout_marginTop="20dp"
+			android:layout_marginBottom="10dp"
+			android:id="@+id/layout_bank_list"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical" />
+	</ScrollView>
+	<LinearLayout
+		android:id="@id/btn_add"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:paddingTop="10dp"
+		android:paddingBottom="10dp"
+		android:layout_margin="10dp"
+		android:background="@drawable/btn_red_solid_bg">
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:textColor="@color/white"
+			android:gravity="center"
+			android:text="@string/bank_add_card"/>
+	</LinearLayout>
+</LinearLayout>

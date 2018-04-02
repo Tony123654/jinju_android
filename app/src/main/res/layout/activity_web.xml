@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45.0dip"
+        android:background="@color/main_red" >
+
+        <Button
+            android:id="@id/btn_back"
+            style="@style/custom_word_black_big_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:paddingLeft="10.0dp"
+            android:paddingRight="10.0dp"
+
+            android:drawableLeft="@mipmap/icon_back_white"
+            android:drawableStart="@mipmap/icon_back_white"
+            android:background="@android:color/transparent"/>
+
+        <TextView
+            android:id="@id/txt_title"
+            style="@style/custom_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/separator"/>
+
+    <WebView
+        android:id="@id/web_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

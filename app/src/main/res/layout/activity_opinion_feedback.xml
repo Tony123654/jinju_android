@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/top_title_bar"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.0px"
+        android:background="@color/separator" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+        <EditText
+            android:id="@+id/edit_feedback"
+            style="@style/custom_word_black_middle_text"
+            android:layout_width="match_parent"
+            android:paddingRight="15dp"
+            android:paddingTop="15dp"
+            android:paddingLeft="15dp"
+            android:paddingBottom="20dp"
+            android:layout_height="200dp"
+            android:hint="@string/opinion_feedback_hint"
+            android:background="@color/white"
+            android:maxLength="300"
+            android:gravity="start"/>
+        <TextView
+            android:id="@+id/txt_input_limit"
+            style="@style/custom_gray_middle_text"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:paddingRight="15dp"
+            android:layout_gravity="bottom|right"
+            android:gravity="center"
+            android:text="0/300"/>
+    </FrameLayout>
+
+
+    <Button
+        android:id="@id/btn_submit"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/btn_red_solid_radius_bg"
+        android:layout_margin="20dp"
+        android:text="@string/opinion_feedback_submit"/>
+</LinearLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <include layout="@layout/top_title_bar"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/separator"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:background="@color/white">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/txt_register_red_packet"
+                style="@style/custom_word_black_middle_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"/>
+            <TextView
+                android:id="@+id/txt_register_welfare"
+                style="@style/custom_word_black_gray_big_text"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login_register_welfare"/>
+            <View
+                android:layout_width="50dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/main_red"/>
+        </LinearLayout>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/img_welfare"/>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/img_edit_white_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_weight="2"
+            style="@style/custom_word_black_middle_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:text="@string/phone_number"/>
+
+        <com.jinju.android.widget.WithClearEditText
+            android:id="@+id/edit_phone"
+            style="@style/custom_gray_middle_edit"
+            android:layout_width="0dip"
+            android:layout_height="@dimen/edittext_height"
+            android:layout_weight="10"
+            android:layout_marginLeft="@dimen/edge_blank_width"
+            android:layout_marginRight="18dp"
+            android:background="@null"
+            android:inputType="number"
+            android:maxLength="13"
+            android:singleLine="true"
+            android:hint="@string/phone_number_notify_hint" />
+    </LinearLayout>
+
+    <TextView
+        style="@style/custom_phonenum_notify_text"
+        android:id="@id/txt_phone"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:gravity="center_horizontal"
+        android:singleLine="true"
+        android:visibility="gone"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:background="@color/phonenum_bgcolor"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+    
+    <Button
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@id/btn_next"
+        android:textSize="16sp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textColor="@color/btn_text_disabled"
+        android:background="@drawable/button_disabled"
+        android:text="@string/next_step" />
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="30dp"/>
+
+</LinearLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <include layout="@layout/top_title_bar"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/separator"/>
+
+    <TextView
+        android:id="@id/txt_login_welcome"
+        android:textColor="#9B9CA0"
+        android:textSize="14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18.0dip"
+        android:layout_marginRight="18dip"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/img_edit_white_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/custom_dark_gray_middle_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginLeft="18dp"
+
+            android:text="@string/password"/>
+
+        <com.jinju.android.widget.WithClearEditText
+            android:id="@+id/edit_password"
+            style="@style/custom_gray_middle_edit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:background="@null"
+            android:inputType="textPassword"
+            android:digits="@string/rule_password"
+            android:maxLength="20"
+            android:singleLine="true"
+            android:hint="@string/login_password_hint" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_login_forget"
+        android:paddingTop="10dp"
+        android:paddingRight="18dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="18dp"
+        android:layout_gravity="right"
+        style="@style/custom_blue_small_text"
+        android:text="@string/login_forget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:id="@id/btn_confirm"
+        android:textSize="16sp"
+        android:textColor="@color/btn_text_disabled"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/button_disabled"
+        android:text="@string/confirm" />
+
+</LinearLayout>

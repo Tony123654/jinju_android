@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <include layout="@layout/top_title_bar"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/separator"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/blank_view_large_height"
+        android:gravity="center"
+        android:orientation="vertical">
+    
+	    <TextView
+	        android:textColor="#9B9CA0"
+            android:textSize="14sp"
+	        android:id="@+id/txt_register_notify"
+	        android:layout_height="wrap_content"
+	        android:layout_width="fill_parent"
+	        android:gravity="center_horizontal"
+	        android:singleLine="true"/>
+
+        <TextView
+            android:textColor="#9B9CA0"
+            android:textSize="14sp"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:gravity="center_horizontal"
+            android:text="请注意查收"
+            android:singleLine="true"/>
+    </LinearLayout>
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_verify_code"
+        />
+    
+	<View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/blank_view_normal_height"/>
+
+	<LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/img_edit_white_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/custom_dark_gray_middle_text"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:layout_marginStart="18dp"
+            android:layout_marginLeft="@dimen/edge_blank_width"
+            android:text="@string/password"/>
+        
+        <com.jinju.android.widget.WithClearEditText
+            android:id="@id/edit_password"
+            style="@style/custom_gray_middle_edit"
+            android:layout_width="0dip"
+            android:layout_weight="9"
+            android:layout_height="@dimen/edittext_height"
+            android:layout_marginLeft="@dimen/edge_blank_width"
+            android:layout_marginRight="18dp"
+            android:background="@null"
+            android:maxLength="20"
+            android:inputType="textPassword"
+            android:digits="@string/rule_password"
+            android:singleLine="true" 
+            android:hint="请设置登录密码"/>
+    </LinearLayout>
+
+    <Button
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:id="@id/btn_submit"
+        android:textSize="16sp"
+        android:textColor="@color/btn_text_disabled"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/button_disabled"
+        android:text="@string/confirm" />
+
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:textSize="12sp"
+            android:textColor="#C0C0C0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:drawablePadding="5dp"
+            android:text="@string/agree_and_accept" />
+
+        <TextView
+            android:id="@+id/txt_protocol"
+            style="@style/custom_main_blue_small_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register_protocol" />
+    </LinearLayout>
+</LinearLayout>

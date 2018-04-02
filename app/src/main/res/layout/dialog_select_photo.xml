@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background"
+    android:orientation="vertical">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.0px"
+        android:background="@color/separator" />
+    <Button
+        android:id="@id/btn_photo_library"
+        style="@style/custom_gray_big_button"
+        android:layout_width="match_parent"
+        android:layout_height="45.0dip"
+        android:background="@drawable/btn_gray_hollow_bg"
+        android:text="@string/photo_library" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.0px"
+        android:background="@color/separator" />
+
+    <Button
+        android:id="@id/btn_image_capture"
+        style="@style/custom_gray_big_button"
+        android:layout_width="match_parent"
+        android:layout_height="45.0dip"
+        android:background="@drawable/btn_gray_hollow_bg"
+        android:text="@string/image_capture" />
+    <Button
+        android:id="@id/btn_cancel"
+        style="@style/custom_gray_big_button"
+        android:layout_width="match_parent"
+        android:layout_height="45.0dip"
+        android:layout_marginTop="10dip"
+        android:background="@drawable/btn_gray_hollow_bg"
+        android:text="@string/cancel" />
+
+</LinearLayout>

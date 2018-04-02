@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45.0dip"
+        android:background="@color/main_red" >
+
+        <TextView
+            style="@style/custom_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:text="@string/bank_add_card" />
+        
+        <ImageView
+            android:id="@id/img_finish"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:padding="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/white"
+            android:src="@mipmap/icon_cancel_white"/>
+    </RelativeLayout>
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/separator"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/txt_verify_name"
+                    style="@style/custom_word_black_middle_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bank_add_card"/>
+
+                <TextView
+                    android:id="@+id/txt_bank_add_card"
+                    style="@style/custom_word_black_middle_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/sms_verify_code"/>
+
+                <TextView
+                    android:id="@+id/txt_trans_password"
+                    style="@style/custom_word_black_middle_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:text="@string/my_withfund_trans_password"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_verify_name"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginTop="10dp">
+
+                    <ImageView
+                        android:id="@+id/img_verify_name"
+                        android:layout_width="7dp"
+                        android:layout_height="7dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:src="@mipmap/icon_red"/>
+
+                    <ImageView
+                        android:id="@+id/img_bank_add_card"
+                        android:layout_width="7dp"
+                        android:layout_height="7dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@mipmap/icon_gray"/>
+
+                    <ImageView
+                        android:id="@+id/img_trans_password"
+                        android:layout_width="7dp"
+                        android:layout_height="7dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:src="@mipmap/icon_gray"/>
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="2dp"
+                        android:layout_toRightOf="@id/img_verify_name"
+                        android:layout_toEndOf="@id/img_verify_name"
+                        android:layout_toLeftOf="@id/img_bank_add_card"
+                        android:layout_toStartOf="@id/img_bank_add_card"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/separator"/>
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="2dp"
+                        android:layout_toRightOf="@id/img_bank_add_card"
+                        android:layout_toEndOf="@id/img_bank_add_card"
+                        android:layout_toLeftOf="@id/img_trans_password"
+                        android:layout_toStartOf="@id/img_trans_password"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/separator"/>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <TextView
+                style="@style/custom_word_black_middle_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginBottom="15dp"
+                android:text="持卡人信息"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/separator"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="41dp"
+                android:paddingRight="18dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/icon_user_name"/>
+
+                <com.jinju.android.widget.WithClearEditText
+                    android:id="@id/edit_name"
+                    style="@style/custom_word_black_middle_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:singleLine="true"
+                    android:background="@null"
+                    android:layout_marginLeft="19dp"
+                    android:maxLength="15"
+                    android:hint="@string/verify_name_hint"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/separator"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="40dp"
+                android:paddingRight="18dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/icon_user_code"/>
+
+                <com.jinju.android.widget.WithClearEditText
+                    android:id="@id/edit_card"
+                    style="@style/custom_word_black_middle_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:singleLine="true"
+                    android:background="@null"
+                    android:layout_marginLeft="18dp"
+                    android:maxLength="18"
+                    android:hint="@string/verify_card_hint"
+                    android:digits="1234567890xX"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/separator"/>
+
+            <TextView
+                style="@style/custom_word_gray_small_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/verify_name_notify"/>
+
+            <TextView
+                style="@style/custom_word_black_middle_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:text="@string/confirm_bank_info"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/separator"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="40dp"
+                android:paddingRight="18dp"
+                android:background="@color/white">
+
+                <EditText
+                    android:id="@id/edit_bank"
+                    style="@style/custom_word_black_middle_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:drawableLeft="@mipmap/icon_bank_card"
+                    android:drawablePadding="18dp"
+                    android:layout_toLeftOf="@id/txt_support_bank"
+                    android:layout_centerVertical="true"
+                    android:focusable="false"
+                    android:hint="请选择银行卡类型"/>
+
+                <TextView
+                    android:id="@id/txt_support_bank"
+                    style="@style/custom_main_red_middle_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="点击选择"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/separator"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="40dp"
+                android:paddingRight="18dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/icon_bank_card_no"/>
+
+                <com.jinju.android.widget.WithClearEditText
+                    android:id="@id/edit_bank_card_no"
+                    style="@style/custom_word_black_middle_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:singleLine="true"
+                    android:background="@null"
+                    android:layout_marginLeft="18dp"
+                    android:maxLength="25"
+                    android:inputType="number"
+                    android:hint="@string/bank_card_hint"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/separator"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="44dp"
+                android:paddingRight="18dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/icon_bank_tel"/>
+
+                <com.jinju.android.widget.WithClearEditText
+                    android:id="@id/edit_bank_tel"
+                    style="@style/custom_word_black_middle_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:singleLine="true"
+                    android:background="@null"
+                    android:layout_marginLeft="21dp"
+                    android:maxLength="11"
+                    android:inputType="number"
+                    android:hint="@string/bank_tel_hint"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/separator"/>
+
+            <TextView
+                android:id="@id/txt_notice"
+                style="@style/custom_word_gray_small_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                android:layout_marginTop="10dp"/>
+
+            <Button
+                android:id="@id/btn_next"
+                android:textSize="16sp"
+                android:textColor="@color/btn_text_disabled"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/button_disabled"
+                android:layout_margin="20dp"
+                android:clickable="false"
+                android:text="@string/next_step"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
