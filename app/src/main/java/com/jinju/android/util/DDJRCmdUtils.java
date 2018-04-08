@@ -14,7 +14,7 @@ import java.util.Map;
 
 /**
  * Created by Libra on 2017/5/5.
- * 处理 朵朵金融自定义协议
+ * 处理 金桔理財自定义协议
  * ddjr://j?random=XXX&t=XXX
  */
 

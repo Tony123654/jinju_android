@@ -119,8 +119,8 @@ public class MyAssetActivity extends BaseActivity {
             }
 
             mProgressDialog.dismiss();
-        }
 
+        }
     };
 
 }

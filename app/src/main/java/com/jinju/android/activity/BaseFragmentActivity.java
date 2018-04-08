@@ -32,6 +32,7 @@ public class BaseFragmentActivity extends FragmentActivity {
 		super.onDestroy();
 	}
 
+
 	@Override
 	public Resources getResources() {
 		Resources res = super.getResources();

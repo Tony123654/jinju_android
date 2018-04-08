@@ -115,6 +115,7 @@ public class ModifyPasswordActivity extends BaseActivity {
 
 		AppUtils.checkNeedHideSoftInput(this, (int) event.getX(), (int) event.getY(), viewList);
 		return super.dispatchTouchEvent(event);
+
 	}
 
 	private OnClickListener mBtnBackOnClickListener = new OnClickListener() {

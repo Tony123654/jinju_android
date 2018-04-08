@@ -173,7 +173,7 @@ public class DiscoverActivity extends AppCompatActivity implements View.OnClickL
     };
 
     /**
-     * 推进合规、安全保障、新手引导、关于朵朵
+     * 推进合规、安全保障、新手引导、关于金桔
      */
     @Override
     public void onClick(View v) {
@@ -223,7 +223,7 @@ public class DiscoverActivity extends AppCompatActivity implements View.OnClickL
                 }
 
                 break;
-            case R.id.discover_top_pic4: //关于朵朵
+            case R.id.discover_top_pic4: //关于金桔
                 if (mDiscoverTopImgList != null && mDiscoverTopImgList.size() > 3) {
                     url = mDiscoverTopImgList.get(3).getLinkUrl();
                 }

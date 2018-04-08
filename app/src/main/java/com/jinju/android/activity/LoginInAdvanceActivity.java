@@ -84,7 +84,7 @@ public class LoginInAdvanceActivity extends BaseActivity{
         AppUtils.checkNeedHideSoftInput(this, (int) event.getX(), (int) event.getY(), viewList);
         return super.dispatchTouchEvent(event);
     }
-    
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);

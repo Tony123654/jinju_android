@@ -158,7 +158,7 @@ public class HomeActivity extends BaseFragmentActivity implements View.OnClickLi
 
         mConfigManager = DdApplication.getConfigManager();
 
-        mLayoutCompanyIntroduce = findViewById(R.id.layout_company_introduce);    //了解朵朵
+        mLayoutCompanyIntroduce = findViewById(R.id.layout_company_introduce);    //了解金桔
         ll_introduce_invite = (LinearLayout) findViewById(R.id.ll_introduce_invite);
 
         mLayoutInviteFriends = findViewById(R.id.layout_invite_friends);
@@ -360,7 +360,7 @@ public class HomeActivity extends BaseFragmentActivity implements View.OnClickLi
         mAdvertList = mIndex.getAdvertList();
         mLBanners.setAdapter(mUrlImgAdapter, mAdvertList);
 
-        //获取关于朵朵控件
+        //获取关于金桔控件
         getIntroduceSize();
         
         mProductList = mIndex.getProductList();
@@ -430,7 +430,7 @@ public class HomeActivity extends BaseFragmentActivity implements View.OnClickLi
     }
 
     /**
-     * 关于朵朵布局尺寸获取
+     * 关于金桔布局尺寸获取
      */
     private void getIntroduceSize() {
 

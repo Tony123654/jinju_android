@@ -655,6 +655,8 @@ public class UserManager implements IManager {
 
 	public interface OnLoginFinishedListener {
 
+
+
 		public void onLoginFinished(Response response, int memberStep);
 
 	}
@@ -829,4 +831,6 @@ public class UserManager implements IManager {
 	public interface  OnSubmitFeedbackFinishedListener {
 		public void OnSubmitFeedbackFinished(Response response);
 	}
+
+
 }

@@ -90,14 +90,14 @@
 
                 </RelativeLayout>
 
-                <!--了解朵朵，邀请有礼-->
+                <!--了解金桔，邀请有礼-->
                 <LinearLayout
                     android:id="@+id/ll_introduce_invite"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:background="@color/white">
-                    <!--了解朵朵-->
+                    <!--了解金桔-->
                     <RelativeLayout
                         android:id="@+id/layout_company_introduce"
                         android:layout_width="0dp"

@@ -58,7 +58,7 @@ public class UmengTouchType {
     public static final String RP105_9 = "rp105_9";//我的银行卡
     public static final String RP105_10 = "rp105_10";//帮助中心
     public static final String RP105_11 = "rp105_11";//联系我们
-    public static final String RP105_12 = "rp105_12";//关于朵朵金融
+    public static final String RP105_12 = "rp105_12";//关于金桔理財
     /**
      *rp106 设置
      */

@@ -174,6 +174,7 @@ public class MainActivity extends TabActivity {
         super.onDestroy();
         if (mUpdateDialog != null) {
             mUpdateDialog.dismiss();
+
         }
         unregisterReceiver();
     }
@@ -194,6 +195,7 @@ public class MainActivity extends TabActivity {
     }
 
     @Override
+
     public boolean dispatchKeyEvent(KeyEvent event) {
         if (event.getKeyCode() != KeyEvent.KEYCODE_BACK || event.getAction() != KeyEvent.ACTION_DOWN)
             return super.dispatchKeyEvent(event);
@@ -404,7 +406,7 @@ public class MainActivity extends TabActivity {
     }
 
     /**
-     * 首页了解朵朵蒙层
+     * 首页了解金桔蒙层
      */
     private void setHomeNewbieView() {
         NewbieGuideManager newbieGuideManager = new NewbieGuideManager(MainActivity.this, NewbieGuideManager.TYPE_HOME_GUIDE, new NewbieGuideManager.OnGuideRemoveListener() {

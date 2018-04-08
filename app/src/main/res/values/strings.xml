@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">金桔理财</string>
-    <string name="about_duoduo">关于金桔</string>
+    <string name="about_jinju">关于金桔</string>
     <string name="company_introduce">公司介绍</string>
     <string name="dialog_tips">温馨提示</string>
     <string name="call">拨打</string>
@@ -172,7 +172,7 @@
     <string name="contact_us_qq_code">3478866203</string>
     <string name="contact_us_qq_group_code">638745517</string>
     <string name="contact_us_official_accounts">微信公众号</string>
-    <string name="contact_us_official_accounts_desc">朵朵金融(duoduojr88)</string>
+    <string name="contact_us_official_accounts_desc">金桔理财(duoduojr88)</string>
     <string name="contact_us_official_accounts_id">duoduojr88</string>
     <string name="contact_us_dialog_remind">请务必认准金桔理财%1$s，谨防诈骗！%2$s已复制到剪切板！</string>
     <string name="home_duoduo_handpick">金桔精选</string>

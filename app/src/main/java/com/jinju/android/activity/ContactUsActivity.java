@@ -123,7 +123,7 @@ public class ContactUsActivity extends BaseActivity {
             customRoundDialog.setPositiveButton("打开QQ", new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    //判断是否安装微信
+                    //判断是否安装QQ
                     if (VersionUtils.isQQClientAvailable()) {
                         VersionUtils.openApp(ContactUsActivity.this,"com.tencent.mobileqq");
                     } else {

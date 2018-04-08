@@ -173,6 +173,7 @@ public class LockPatternUtils {
             if (pattern == null) {
                 raf.setLength(0);
             } else {
+                 
                 raf.write(hash, 0, hash.length);
             }
             raf.close();

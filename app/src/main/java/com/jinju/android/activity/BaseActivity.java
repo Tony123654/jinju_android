@@ -20,7 +20,6 @@ public class BaseActivity extends Activity implements EasyPermissions.Permission
 		mApplication.insertActivity(this);
 		super.onCreate(savedInstanceState);
 	}
-
 	@Override
 	protected void onResume() {
 		super.onResume();

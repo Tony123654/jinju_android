@@ -1,7 +1,5 @@
 package com.jinju.android.adapter;
 
-import java.util.ArrayList;
-
 import android.content.Context;
 import android.text.TextUtils;
 import android.view.View;
@@ -13,6 +11,8 @@ import android.widget.TextView;
 import com.jinju.android.R;
 import com.jinju.android.api.Bank;
 import com.jinju.android.util.ImageUtils;
+
+import java.util.ArrayList;
 
 public class BankAdapter extends BaseAdapter {
 

@@ -15,7 +15,7 @@ public class NewbieGuideManager {
 
     private static final String TAG = "newbie_guide";
     public static final int TYPE_PROFIRE_GUIDE = 0;//button
-    public static final int TYPE_HOME_GUIDE = 1;//了解朵朵
+    public static final int TYPE_HOME_GUIDE = 1;//了解金桔
 
     private Activity mActivity;
     private NewbieGuide mNewbieGuide;

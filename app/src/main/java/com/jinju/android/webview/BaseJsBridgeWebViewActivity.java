@@ -344,7 +344,7 @@ public class BaseJsBridgeWebViewActivity extends BaseActivity {
             }
         });
         /**
-         *弹出modal模态窗口
+         * 弹出modal模态窗口
          */
         mWebView.registerHandler("modal", new BridgeHandler() {
 

@@ -153,6 +153,7 @@ public class LoanActivity extends BaseActivity{
 			regId = regId.replaceAll("\\+","");
 		}
 		Map<String, Object> datas = new HashMap<String, Object>();
+
 		datas.put("pageSize", AppConstant.DEFAULT_PAGE_SIZE);
 		datas.put("currentPage", currentPage);
 		datas.put("regId",regId);

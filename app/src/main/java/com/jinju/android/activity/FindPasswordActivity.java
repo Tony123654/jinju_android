@@ -197,6 +197,7 @@ public class FindPasswordActivity extends BaseActivity {
 				return;
 			}
 			String resetPassword = mEditResetPassword.getText().toString().trim();
+			//  isEmpty(resetPassword)
 			if (TextUtils.isEmpty(code)) {
 				AppUtils.showToast(FindPasswordActivity.this, R.string.password_empty);
 				return;
