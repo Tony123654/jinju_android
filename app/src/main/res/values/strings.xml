@@ -180,12 +180,12 @@
     <string name="home_notice_detail_title">公告</string>
     <string name="home_least_invest">%d元起购</string>
     <string name="home_deadline">期限%s</string>
-    <string name="home_sold">已售%s</string>
+    <string name="home_sold">%s</string>
     <string name="home_title">精品推荐</string>
     <string name="home_interest_bearing">当日计息</string>
     <string name="home_bank_depository">银行存管</string>
     <string name="home_project_transparent">项目透明</string>
-    <string name="home_recommend">推荐</string>
+    <string name="home_recommend">首页</string>
     <string name="home_withfund">融资炒股</string>
     <string name="home_withfund_desc">按月融资、按天融资、免费体验</string>
     <string name="home_loan">理财</string>
@@ -678,7 +678,8 @@
     <string name="financial_current_progress">已完成：%s</string>
     <string name="financial_product_amount"><![CDATA[总额：<font color="#212121">%s</font>元]]></string>
     <string name="financial_product_amount_mill"><![CDATA[总额<font color="#888A8A">%s</font>万元]]></string>
-    <string name="financial_has_funds_amount"><![CDATA[剩余：<font color="#212121">%s</font>元]]></string>
+    <!--<string name="financial_has_funds_amount"><![CDATA[剩余：<font color="#212121">%s</font>元]]></string>-->
+    <string name="financial_has_funds_amount"><![CDATA[剩余：<font color="#ec4137">%s</font>元]]></string>
     <string name="financial_has_funds_amount_mill"><![CDATA[剩余<font color="#ec4137">%s</font>万元]]></string>
     <string name="financial_invest_gift_desc">投资有礼</string>
     <string name="financial_activity_introduce_desc">活动介绍</string>
@@ -915,7 +916,7 @@
     <string name="transfer_total_income">预期本金利息收入</string>
     <string name="transfer_income">预期转让收入</string>
     <string name="transfer_product_info">原产品信息</string>
-    <string name="today_income">昨日收益（元）</string>
+    <string name="today_income">总资产（元）</string>
     <string name="total_invest">累计投资（元）</string>
     <string name="assets_detail">资产视图</string>
     <string name="my_loan">我的理财</string>
@@ -968,7 +969,7 @@
     <string name="transfer_protocol_title">转让协议</string>
     <string name="partially_completed">部成</string>
     <string name="reported">已报</string>
-    <string name="home_assets">我</string>
+    <string name="home_assets">我的</string>
     <string name="info_avatar">头像</string>
     <string name="info_nickname">昵称</string>
     <string name="info_memberid">金桔理财号</string>
@@ -1123,7 +1124,7 @@
     <string name="pull_to_refresh">下拉刷新</string>
     <string name="load_succeed">加载成功</string>
     <string name="load_fail">加载失败</string>
-    
+
     <!--提现记录-->
     <string name="withdraw_record_apply">待处理</string>
     <string name="withdraw_record_submit_bank">提交银行</string>

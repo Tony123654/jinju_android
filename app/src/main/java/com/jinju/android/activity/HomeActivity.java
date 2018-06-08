@@ -2,10 +2,8 @@ package com.jinju.android.activity;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
-import android.text.Html;
 import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -14,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -21,37 +20,47 @@ import android.widget.TextView;
 import com.allure.lbanners.LMBanners;
 import com.allure.lbanners.transformer.TransitionEffect;
 import com.allure.lbanners.utils.ScreenUtils;
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+import com.gongwen.marqueen.MarqueeFactory;
+import com.gongwen.marqueen.MarqueeView;
+import com.google.gson.Gson;
+import com.jinju.android.R;
 import com.jinju.android.adapter.HomeFinancialAdapter;
+import com.jinju.android.adapter.MyAdapter;
 import com.jinju.android.adapter.UrlImgAdapter;
+import com.jinju.android.api.Advert;
 import com.jinju.android.api.ButtonList;
 import com.jinju.android.api.HomeNotice;
+import com.jinju.android.api.Index;
+import com.jinju.android.api.MiddlePictureBean;
+import com.jinju.android.api.Product;
+import com.jinju.android.api.ReportListBean;
+import com.jinju.android.api.Response;
 import com.jinju.android.api.Tag;
 import com.jinju.android.api.WidgetLocation;
+import com.jinju.android.base.DdApplication;
 import com.jinju.android.constant.BroadcastType;
 import com.jinju.android.constant.MemberStep;
 import com.jinju.android.constant.ShowStatus;
 import com.jinju.android.constant.SrcType;
 import com.jinju.android.constant.UmengTouchType;
 import com.jinju.android.dialog.CustomRoundDialog;
+import com.jinju.android.manager.CommonManager;
 import com.jinju.android.manager.ConfigManager;
+import com.jinju.android.util.AppUtils;
 import com.jinju.android.util.DDJRCmdUtils;
+import com.jinju.android.util.ImageUtils;
 import com.jinju.android.util.LoadTitleUtils;
 import com.jinju.android.util.Utils;
 import com.jinju.android.util.ViewUtils;
 import com.jinju.android.webview.BaseJsBridgeWebViewActivity;
 import com.jinju.android.widget.FrameAnimationHeader;
 import com.jinju.android.widget.HomeListView;
-import com.gongwen.marqueen.MarqueeFactory;
-import com.gongwen.marqueen.MarqueeView;
-import com.jinju.android.R;
-import com.jinju.android.api.Advert;
-import com.jinju.android.api.Index;
-import com.jinju.android.api.Product;
-import com.jinju.android.api.Response;
-import com.jinju.android.base.DdApplication;
-import com.jinju.android.manager.CommonManager;
-import com.jinju.android.util.AppUtils;
-import com.jinju.android.util.ImageUtils;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
@@ -66,7 +75,8 @@ import java.util.TimerTask;
 
 
 /**
- * 推荐页面
+ * 首页页面
+ *
  */
 public class HomeActivity extends BaseFragmentActivity implements View.OnClickListener {
 
@@ -74,25 +84,27 @@ public class HomeActivity extends BaseFragmentActivity implements View.OnClickLi
     private TextView txtActivityTag;
     private TextView txtActivityTag_2;
     private TextView mTxtInterestRate;
-    private TextView mTxtAddInterest;
+//    private TextView mTxtAddInterest;
     private TextView mTxtProductHome;
     private LinearLayout mLayoutProduct;
     private LinearLayout mLayoutSelectProduct;
     private TextView mBtnFinancial;
-    private TextView mTxtLeastInvest;
+//    private TextView mTxtLeastInvest;
     private TextView mTxtDeadline;
-
+    private ArrayList list2;
     private Index mIndex;
+    private MiddlePictureBean mMiddlePictureBean;
     private List<Advert> mAdvertList;
     private List<Product> mProductList;
+//    private List<MiddlePictureBean> mMiddleList;
     private List<Product> mNoHeaderProductList;
     private List<ButtonList> mTopButtonList;
     private List<ButtonList> mBottomSlideList;
 
     private ImageView mIconNew;
-    private View mLayoutCompanyIntroduce;
-    private View mLayoutInviteFriends;
-    private ImageView mImgCompanyIntroduce, mImgInviteFriends;
+//    private View mLayoutCompanyIntroduce;
+//    private View mLayoutInviteFriends;
+//    private ImageView mImgCompanyIntroduce, mImgInviteFriends;
     //开售时间
     private List<Long> mSellTimeList = new ArrayList<>();
     //列表倒计时
@@ -121,19 +133,19 @@ public class HomeActivity extends BaseFragmentActivity implements View.OnClickLi
     private RelativeLayout mLayoutHomeNotice;
 
     private Handler mHandler = new Handler();
-    private TextView mTxtCompanyIntroduceTitle;
-    private TextView mTxtCompanyIntroduceDesc;
-    private TextView mTxtInviteFriendsTitle;
-    private TextView mTxtInviteFriendsDesc;
-    private LinearLayout mLayoutStepView;
-    private TextView txt_step_1;
-    private TextView txt_step_1_desc;
-    private TextView txt_step_2_desc;
-    private TextView txt_step_3_desc;
-    private ImageView img_step_1;
-    private ImageView img_step_2;
-    private TextView btn_step_state;
-
+//    private TextView mTxtCompanyIntroduceTitle;
+//    private TextView mTxtCompanyIntroduceDesc;
+//    private TextView mTxtInviteFriendsTitle;
+//    private TextView mTxtInviteFriendsDesc;
+//    private LinearLayout mLayoutStepView;
+//    private TextView txt_step_1;
+//    private TextView txt_step_1_desc;
+//    private TextView txt_step_2_desc;
+//    private TextView txt_step_3_desc;
+//    private ImageView img_step_1;
+//    private ImageView img_step_2;
+//    private TextView btn_step_state;
+RequestQueue requestQueue;
     private TextView mTxtDealAmount;
     private TextView mTxtEarnAmount;
     private LinearLayout mLayoutHorizontalScroll;
@@ -142,7 +154,27 @@ public class HomeActivity extends BaseFragmentActivity implements View.OnClickLi
     private SmartRefreshLayout refreshLayout;
     private LinearLayout mLayoutPlatformData;
     private Intent bottomIntent;
-    private LinearLayout ll_introduce_invite;
+//    private LinearLayout ll_introduce_invite;
+    private  ListView lv_report2;
+    private LinearLayout lytTag1;
+    private LinearLayout lytTag2;
+    private LinearLayout lytTag3;
+    private LinearLayout lytTag4;
+
+    private ImageView ivTag1;
+    private ImageView ivTag2;
+    private ImageView ivTag3;
+    private ImageView ivTag4;
+
+    private TextView tvTag1;
+    private TextView tvTag2;
+    private TextView tvTag3;
+    private TextView tvTag4;
+    private LinearLayout reportAcition;
+
+    private MiddlePictureBean middlePicture = new MiddlePictureBean();
+
+
 
     private WidgetLocation widgetLocation;
     private int[] location;
@@ -155,38 +187,13 @@ public class HomeActivity extends BaseFragmentActivity implements View.OnClickLi
 
         Intent intent = getIntent();
         mIndex = (Index) intent.getSerializableExtra("index");
-
+        mMiddlePictureBean=(MiddlePictureBean)intent.getSerializableExtra("middlePictureBean");
         mConfigManager = DdApplication.getConfigManager();
 
-        mLayoutCompanyIntroduce = findViewById(R.id.layout_company_introduce);    //了解金桔
-        ll_introduce_invite = (LinearLayout) findViewById(R.id.ll_introduce_invite);
-
-        mLayoutInviteFriends = findViewById(R.id.layout_invite_friends);
-        mImgCompanyIntroduce = (ImageView) findViewById(R.id.img_company_introduce);
-        mImgInviteFriends = (ImageView) findViewById(R.id.img_invite_friends);
-        mTxtCompanyIntroduceTitle = (TextView) findViewById(R.id.txt_company_introduce_title);
-        mTxtCompanyIntroduceDesc = (TextView) findViewById(R.id.txt_company_introduce_desc);
-        mTxtInviteFriendsTitle = (TextView) findViewById(R.id.txt_invite_friends_title);
-        mTxtInviteFriendsDesc = (TextView) findViewById(R.id.txt_invite_friends_desc);
-        mLayoutCompanyIntroduce.setOnClickListener(this);
-        mLayoutInviteFriends.setOnClickListener(this);
-
-        mLayoutStepView = (LinearLayout) findViewById(R.id.layout_step_view);
-        txt_step_1 = (TextView) findViewById(R.id.txt_step_1);
-        txt_step_1_desc = (TextView) findViewById(R.id.txt_step_1_desc);
-        txt_step_2_desc = (TextView) findViewById(R.id.txt_step_2_desc);
-        txt_step_3_desc = (TextView) findViewById(R.id.txt_step_3_desc);
-        img_step_1 = (ImageView) findViewById(R.id.img_step_1);
-        img_step_2 = (ImageView) findViewById(R.id.img_step_2);
-        btn_step_state = (TextView) findViewById(R.id.btn_step_state);
-        txt_step_1_desc.setText(Html.fromHtml(getResources().getString(R.string.home_cash_gift_desc)));
-        txt_step_2_desc.setText(Html.fromHtml(getResources().getString(R.string.home_exclusive_interest_decs)));
-        txt_step_3_desc.setText(Html.fromHtml(getResources().getString(R.string.home_get_gift_desc)));
-        mLayoutPlatformData = (LinearLayout) findViewById(R.id.layout_platform_data);//平台数据
-        mTxtDealAmount = (TextView) findViewById(R.id.txt_deal_amount);
-        mTxtEarnAmount = (TextView) findViewById(R.id.txt_earn_amount);
         mLayoutHorizontalScroll = (LinearLayout) findViewById(R.id.layout_horizontal_scroll);
-        mLayoutPlatformData.setOnClickListener(this);
+
+          reportAcition = (LinearLayout) findViewById(R.id.layout_report);
+          reportAcition.setOnClickListener(this);
 
         //设置刷新文本
         mLoadInfoList = mConfigManager.getLoadInfoList();
@@ -194,7 +201,6 @@ public class HomeActivity extends BaseFragmentActivity implements View.OnClickLi
         refreshLayout = (SmartRefreshLayout) findViewById(R.id.refreshLayout);
         refreshLayout.setRefreshHeader(new FrameAnimationHeader(this));
         refreshLayout.setOnRefreshListener(mOnRefreshListener);
-
         mProductList = new ArrayList<Product>();//所有的标
         mNoHeaderProductList = new ArrayList<Product>();//无首标
         mAdvertList = new ArrayList<Advert>();
@@ -208,19 +214,81 @@ public class HomeActivity extends BaseFragmentActivity implements View.OnClickLi
         mTextViewList.add(txtActivityTag);
         mTextViewList.add(txtActivityTag_2);
         mTxtInterestRate = (TextView) findViewById(R.id.txt_interest_rate);
-        mTxtAddInterest = (TextView) findViewById(R.id.txt_add_interest);
+//        mTxtAddInterest = (TextView) findViewById(R.id.txt_add_interest);
         mTxtProductHome = (TextView) findViewById(R.id.txt_product_home);
-        mLayoutProduct = (LinearLayout) findViewById(R.id.layout_product);
-        mTxtLeastInvest = (TextView) findViewById(R.id.txt_least_invest);
-        mTxtDeadline = (TextView) findViewById(R.id.txt_deadline);
+//        mLayoutProduct = (LinearLayout) findViewById(R.id.layout_product);
+//        mTxtLeastInvest = (TextView) findViewById(R.id.txt_least_invest);
+//        mTxtDeadline = (TextView) findViewById(R.id.txt_deadline);
         progressBar = (ProgressBar) findViewById(R.id.progress_bar);
         mTxtProgress = (TextView) findViewById(R.id.txt_progress);
         mImgFloatWindow = (ImageView) findViewById(R.id.img_float_window);
         mImgFloatWindow.setOnClickListener(this);
-        lv = (HomeListView) findViewById(R.id.product_list);
-        lv.setOnItemClickListener(mOnItemClickListener);
-        //设置去焦点，避免焦点总是在第一条
-        lv.setFocusable(false);
+//        lv = (HomeListView) findViewById(R.id.product_list);
+//        lv.setOnItemClickListener(mOnItemClickListener);
+//        //设置去焦点，避免焦点总是在第一条
+//        lv.setFocusable(false);
+
+        /**
+         *    媒体报道显示最近两条列表
+         */
+         lv_report2 = (ListView) findViewById(R.id.lv_report);
+
+//        requestQueue = Volley.newRequestQueue(HomeActivity.this);
+//        //创建一个请求
+//        //        String url = "http://api.m.mtime.cn/PageSubArea/TrailerList.api";
+//        String url = "http://dev.api.jinjulc.com/notice/media_list.json";
+//
+//        StringRequest stringRequest = new StringRequest(Request.Method.POST, url, new com.android.volley.Response.Listener<String>() {
+//            @Override
+//            public void onResponse(String s) {
+//                //                volley_result.setText(s);
+//                System.out.println("FFFFF:"+s);
+//
+//                Gson gson = new Gson();
+//
+//                list2 = new ArrayList<ReportListBean>();
+//
+//                ReportListBean reportListBean = gson.fromJson(String.valueOf(s), ReportListBean.class);
+//
+//
+//                if (reportListBean!=null){
+//                    List<ReportListBean.MediaListBean> reportListBeanMediaList = reportListBean.getMediaList();
+//                    list2.clear();
+//                    list2.addAll(reportListBeanMediaList);
+//                }
+//
+//                lv_report2.setAdapter(new MyAdapter(list2,ReportListActivity.this));
+//                lv_report2.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//                    @Override
+//                    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+//
+//                    }
+//                });
+//            }
+//
+//        }, new com.android.volley.Response.ErrorListener() {
+//            @Override
+//            public void onErrorResponse(VolleyError volleyError) {
+//                //                volley_result.setText("加载错误" + volleyError);
+//            }
+//        }) {
+//            @Override
+//            protected Map<String, String> getParams() throws AuthFailureError {
+//
+//                Map<String, String> map = new HashMap<>();
+//                // map.put("value1","param1");//传入参数
+//                map.put("currentPage","1");
+//                map.put("pageSize","20");
+//                map.put("signature","123456");
+//
+//                return map;
+//            }
+//        };
+//
+//
+//        requestQueue.add(stringRequest);
+//    }
+
 
         mLayoutSelectProduct = (LinearLayout) findViewById(R.id.layout_select_product);
         mLayoutSelectProduct.setOnClickListener(mLayoutSelectProductOnClickListener);
@@ -231,7 +299,7 @@ public class HomeActivity extends BaseFragmentActivity implements View.OnClickLi
         mIconNew = (ImageView) findViewById(R.id.icon_new);
 
         adapter = new HomeFinancialAdapter(this, mNoHeaderProductList);
-        lv.setAdapter(adapter);
+//        lv.setAdapter(adapter);
 
         //初始化公告栏
         initNoticeView();
@@ -240,7 +308,87 @@ public class HomeActivity extends BaseFragmentActivity implements View.OnClickLi
             setupView();
         }
 
+
+initData();
+
+
+
     }
+
+    private void initData() {
+
+        requestQueue = Volley.newRequestQueue(HomeActivity.this);
+        //创建一个请求
+        //        String url = "http://api.m.mtime.cn/PageSubArea/TrailerList.api";
+        String url = "http://dev.api.jinjulc.com/notice/media_list.json";
+
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, url, new com.android.volley.Response.Listener<String>() {
+            @Override
+            public void onResponse(String s) {
+                //                volley_result.setText(s);
+                System.out.println("FFFFF:"+s);
+
+                Gson gson = new Gson();
+
+                list2 = new ArrayList<ReportListBean>();
+
+                ReportListBean reportListBean = gson.fromJson(String.valueOf(s), ReportListBean.class);
+
+
+                if (reportListBean!=null){
+                    List<ReportListBean.MediaListBean> reportListBeanMediaList = reportListBean.getMediaList();
+                    list2.clear();
+//                    list2.addAll(reportListBeanMediaList);
+                    //  只显示最近的两条
+                    if (reportListBeanMediaList.size()==1){
+                    list2.add(reportListBeanMediaList.get(0));
+
+                    }else if (reportListBeanMediaList.size()==2){
+                        list2.add(reportListBeanMediaList.get(0));
+                    list2.add(reportListBeanMediaList.get(1));
+                    }
+                }
+
+                lv_report2.setAdapter(new MyAdapter(list2,HomeActivity.this));
+                lv_report2.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                                 Intent   intent = new Intent(HomeActivity.this, BaseJsBridgeWebViewActivity.class);
+                                            intent.putExtra("content", "");
+                                            startActivity(intent);
+
+
+
+
+                    }
+                });
+            }
+
+        }, new com.android.volley.Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError volleyError) {
+                //                volley_result.setText("加载错误" + volleyError);
+            }
+        }) {
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+
+                Map<String, String> map = new HashMap<>();
+                // map.put("value1","param1");//传入参数
+                map.put("currentPage","1");
+                map.put("pageSize","20");
+                map.put("signature","123456");
+
+                return map;
+            }
+        };
+
+
+        requestQueue.add(stringRequest);
+    }
+
+//    }
 
 
     @Override
@@ -306,11 +454,14 @@ public class HomeActivity extends BaseFragmentActivity implements View.OnClickLi
                 //是否有红包提醒
                 sendRedPacketRemindBroadcast();
                 //新手引导
-                beginnerGuidance();
+//                beginnerGuidance();
                 //底部滑动页
                 addBottomSlideView();
                 //首页页面
                 setupView();
+
+                //获取中间图片数据
+                getMiddlePicData();
 
             } else {
                 AppUtils.handleErrorResponse(HomeActivity.this, response);
@@ -320,6 +471,8 @@ public class HomeActivity extends BaseFragmentActivity implements View.OnClickLi
 
         }
     };
+
+
 
     private void setupView() {
         currentTrotList = mIndex.getNoticeList();
@@ -335,16 +488,16 @@ public class HomeActivity extends BaseFragmentActivity implements View.OnClickLi
         mTopButtonList = mIndex.getTopButtonList();//icon顶部信息
         if (mTopButtonList != null && mTopButtonList.size() > 0) {
             //设置首页图标大小
-            ViewUtils.setImageViewSize(this, mImgCompanyIntroduce, mImgInviteFriends);
+//            ViewUtils.setImageViewSize(this, mImgCompanyIntroduce, mImgInviteFriends);
             mBottomSlideList = mIndex.getBottomSlideList();//icon底部信息
-            mTxtCompanyIntroduceTitle.setText(mTopButtonList.get(0).getTitle());
-            mTxtCompanyIntroduceDesc.setText(mTopButtonList.get(0).getDesc());
-            ImageUtils.displayImage(mImgCompanyIntroduce, mTopButtonList.get(0).getPic());
-            if (mTopButtonList.size() > 1) {
-                mTxtInviteFriendsTitle.setText(mTopButtonList.get(1).getTitle());
-                mTxtInviteFriendsDesc.setText(mTopButtonList.get(1).getDesc());
-                ImageUtils.displayImage(mImgInviteFriends, mTopButtonList.get(1).getPic());
-            }
+//            mTxtCompanyIntroduceTitle.setText(mTopButtonList.get(0).getTitle());
+//            mTxtCompanyIntroduceDesc.setText(mTopButtonList.get(0).getDesc());
+//            ImageUtils.displayImage(mImgCompanyIntroduce, mTopButtonList.get(0).getPic());
+//            if (mTopButtonList.size() > 1) {
+//                mTxtInviteFriendsTitle.setText(mTopButtonList.get(1).getTitle());
+//                mTxtInviteFriendsDesc.setText(mTopButtonList.get(1).getDesc());
+//                ImageUtils.displayImage(mImgInviteFriends, mTopButtonList.get(1).getPic());
+//            }
 
         }
 
@@ -372,9 +525,9 @@ public class HomeActivity extends BaseFragmentActivity implements View.OnClickLi
             progressBar.setProgress(0);
             mTxtName.setText("");
             mTxtInterestRate.setText("");
-            mTxtAddInterest.setText("");
-            mTxtLeastInvest.setText("");
-            mTxtDeadline.setText("");
+//            mTxtAddInterest.setText("");
+//            mTxtLeastInvest.setText("");
+//            mTxtDeadline.setText("");
 
             adapter.notifyDataChanged(null, mSellTimeList);
             return;
@@ -386,26 +539,26 @@ public class HomeActivity extends BaseFragmentActivity implements View.OnClickLi
         mTxtName.setText(product.getName());
 //		mTxtLoanPeriod.setText(product.getLoanPeriodDesc());
 //		mTxtFundsAmount.setText(getString(R.string.money_number, DataUtils.convertCurrencyFormat(product.getHasFundsAmount())));
-        mTxtLeastInvest.setText(getString(R.string.home_least_invest, product.getLeastBuy() / 100));
-        mTxtDeadline.setText(getString(R.string.home_deadline, product.getLoanPeriodDesc()));
+//        mTxtLeastInvest.setText(getString(R.string.home_least_invest, product.getLeastBuy() / 100));
+//        mTxtDeadline.setText(getString(R.string.home_deadline, product.getLoanPeriodDesc()));
         progressBar.setProgress(product.getHasPercent());
         mTxtProgress.setText(getString(R.string.home_sold, product.getHasPercent() + "%"));
         //利息
         mTxtInterestRate.setText(product.getActualInterestRate());
 
         //加息
-        if (!TextUtils.isEmpty(product.getSubsidyInterestRate())) {
-            double SubsidyInterestRate = Double.parseDouble(product.getSubsidyInterestRate());
-
-            if (SubsidyInterestRate > 0) {
-                mTxtAddInterest.setText("+" + product.getSubsidyInterestRate() + "%");
-                mTxtAddInterest.setVisibility(View.VISIBLE);
-            } else {
-                mTxtAddInterest.setVisibility(View.GONE);
-            }
-        } else {
-            mTxtAddInterest.setVisibility(View.GONE);
-        }
+//        if (!TextUtils.isEmpty(product.getSubsidyInterestRate())) {
+//            double SubsidyInterestRate = Double.parseDouble(product.getSubsidyInterestRate());
+//
+//            if (SubsidyInterestRate > 0) {
+//                mTxtAddInterest.setText("+" + product.getSubsidyInterestRate() + "%");
+//                mTxtAddInterest.setVisibility(View.VISIBLE);
+//            } else {
+//                mTxtAddInterest.setVisibility(View.GONE);
+//            }
+//        } else {
+//            mTxtAddInterest.setVisibility(View.GONE);
+//        }
 
         //角标
         showStatus = product.getShowStatus();
@@ -425,9 +578,14 @@ public class HomeActivity extends BaseFragmentActivity implements View.OnClickLi
             setFinancialBtn(getString(R.string.financial_finished), false, showStatus);
         }
         //首页列表
-        setProductView();
+//        setProductView();
 
     }
+
+
+
+
+
 
     /**
      * 关于金桔布局尺寸获取
@@ -439,12 +597,12 @@ public class HomeActivity extends BaseFragmentActivity implements View.OnClickLi
             location = new int[2];
         }
         //获取坐标位置location[0]为x坐标，location[1]为y坐标
-        mLayoutCompanyIntroduce.getLocationOnScreen(location);
+//        mLayoutCompanyIntroduce.getLocationOnScreen(location);
 
         widgetLocation.setViewX(location[0]);
         widgetLocation.setViewY(location[1] + 15);
-        widgetLocation.setViewWidth(ll_introduce_invite.getWidth() / 2);
-        widgetLocation.setViewHeight(ll_introduce_invite.getHeight());
+//        widgetLocation.setViewWidth(ll_introduce_invite.getWidth() / 2);
+//        widgetLocation.setViewHeight(ll_introduce_invite.getHeight());
 
         if (widgetLocation.getViewWidth()>0&&widgetLocation.getViewHeight()>0) {
             if (!DdApplication.getVersionName().equals(mConfigManager.getFirstInstall())) {
@@ -452,6 +610,9 @@ public class HomeActivity extends BaseFragmentActivity implements View.OnClickLi
             }
         }
     }
+
+    //获取中间图片的控件
+
 
     /**
      * 公告滚动
@@ -645,9 +806,9 @@ public class HomeActivity extends BaseFragmentActivity implements View.OnClickLi
 
             MobclickAgent.onEvent(HomeActivity.this, UmengTouchType.RP101_5);
             Product product = mProductList.get(0);
-            Intent intent = new Intent(HomeActivity.this, FinancialDetailActivity.class);
-            intent.putExtra("id", product.getProductId());
-            startActivity(intent);
+//            Intent intent = new Intent(HomeActivity.this, FinancialDetailActivity.class);
+//            intent.putExtra("id", product.getProductId());
+//            startActivity(intent);
         }
     };
     //首标购买
@@ -675,6 +836,7 @@ public class HomeActivity extends BaseFragmentActivity implements View.OnClickLi
             if (MemberStep.COMPLETE == mMemberStep) {
                 //购买
                 Intent intent = new Intent(HomeActivity.this, FinancialConfirmActivity.class);
+//                Intent intent = new Intent(HomeActivity.this, FinancialDetailActivity.class);
                 intent.putExtra("srcId", financialId);
                 startActivity(intent);
             } else {
@@ -713,40 +875,40 @@ public class HomeActivity extends BaseFragmentActivity implements View.OnClickLi
     public void onClick(View v) {
         Intent intent;
         switch (v.getId()) {
-            case R.id.layout_company_introduce://公司介绍
-
-                if (mTopButtonList != null && mTopButtonList.size() > 0) {
-                    MobclickAgent.onEvent(HomeActivity.this, UmengTouchType.RP101_1);
-                    String linkUrl =  mTopButtonList.get(0).getLinkUrl();
-                    if (linkUrl.startsWith(DDJRCmdUtils.DDJR_OVERRIDE_SCHEMA)) {
-                        //点击webview上的控件，执行指定跳转
-                        DDJRCmdUtils.handleProtocol(HomeActivity.this, linkUrl);
-                    } else {
-                        intent = new Intent(this, BaseJsBridgeWebViewActivity.class);
-                        intent.putExtra("url", linkUrl);
-                        startActivity(intent);
-                    }
-
-                }
-
-                break;
-            case R.id.layout_invite_friends://邀请有礼
-
-                if (mTopButtonList != null && mTopButtonList.size() > 1) {
-                    MobclickAgent.onEvent(HomeActivity.this, UmengTouchType.RP101_3);
-                    String linkUrl = mTopButtonList.get(1).getLinkUrl();
-                    if (linkUrl.startsWith(DDJRCmdUtils.DDJR_OVERRIDE_SCHEMA)) {
-                        //点击webview上的控件，执行指定跳转
-                        DDJRCmdUtils.handleProtocol(HomeActivity.this,linkUrl);
-                    } else {
-                        intent = new Intent(this, BaseJsBridgeWebViewActivity.class);
-                        intent.putExtra("url", linkUrl);
-                        startActivity(intent);
-                    }
-
-
-                }
-                break;
+//            case R.id.layout_company_introduce://公司介绍
+//
+//                if (mTopButtonList != null && mTopButtonList.size() > 0) {
+//                    MobclickAgent.onEvent(HomeActivity.this, UmengTouchType.RP101_1);
+//                    String linkUrl =  mTopButtonList.get(0).getLinkUrl();
+//                    if (linkUrl.startsWith(DDJRCmdUtils.DDJR_OVERRIDE_SCHEMA)) {
+//                        //点击webview上的控件，执行指定跳转
+//                        DDJRCmdUtils.handleProtocol(HomeActivity.this, linkUrl);
+//                    } else {
+//                        intent = new Intent(this, BaseJsBridgeWebViewActivity.class);
+//                        intent.putExtra("url", linkUrl);
+//                        startActivity(intent);
+//                    }
+//
+//                }
+//
+//                break;
+//            case R.id.layout_invite_friends://邀请有礼
+//
+//                if (mTopButtonList != null && mTopButtonList.size() > 1) {
+//                    MobclickAgent.onEvent(HomeActivity.this, UmengTouchType.RP101_3);
+//                    String linkUrl = mTopButtonList.get(1).getLinkUrl();
+//                    if (linkUrl.startsWith(DDJRCmdUtils.DDJR_OVERRIDE_SCHEMA)) {
+//                        //点击webview上的控件，执行指定跳转
+//                        DDJRCmdUtils.handleProtocol(HomeActivity.this,linkUrl);
+//                    } else {
+//                        intent = new Intent(this, BaseJsBridgeWebViewActivity.class);
+//                        intent.putExtra("url", linkUrl);
+//                        startActivity(intent);
+//                    }
+//
+//
+//                }
+//                break;
 
             case R.id.img_float_window:
                 String floatType = mIndex.getFloatType();
@@ -774,19 +936,22 @@ public class HomeActivity extends BaseFragmentActivity implements View.OnClickLi
                 }
 
                 break;
-            case R.id.layout_platform_data:
-                if (mIndex != null) {
-                    String dataLinkUrl = mIndex.getDataLinkUrl();
-                    if (dataLinkUrl.startsWith(DDJRCmdUtils.DDJR_OVERRIDE_SCHEMA)) {
-                        //点击webview上的控件，执行指定跳转
-                        DDJRCmdUtils.handleProtocol(HomeActivity.this,dataLinkUrl);
-                    } else {
-                        intent = new Intent(HomeActivity.this, BaseJsBridgeWebViewActivity.class);
-                        intent.putExtra("url", dataLinkUrl);
-                        startActivity(intent);
-                    }
-                }
+            case R.id.layout_report:
+                startActivity(new Intent(this,ReportListActivity.class));
 
+//            case R.id.layout_platform_data:
+//                if (mIndex != null) {
+//                    String dataLinkUrl = mIndex.getDataLinkUrl();
+//                    if (dataLinkUrl.startsWith(DDJRCmdUtils.DDJR_OVERRIDE_SCHEMA)) {
+//                        //点击webview上的控件，执行指定跳转
+//                        DDJRCmdUtils.handleProtocol(HomeActivity.this,dataLinkUrl);
+//                    } else {
+//                        intent = new Intent(HomeActivity.this, BaseJsBridgeWebViewActivity.class);
+//                        intent.putExtra("url", dataLinkUrl);
+//                        startActivity(intent);
+//                    }
+//                }
+//
                 break;
             default:
                 break;
@@ -828,16 +993,11 @@ public class HomeActivity extends BaseFragmentActivity implements View.OnClickLi
         mLBanners.setVertical(false);//是否锤子播放
         mLBanners.setScrollDurtion(2000);//两页切换时间
         mLBanners.setCanLoop(true);//循环播放
-//		mLBanners.setSelectIndicatorRes(R.drawable.guide_indicator_select);//选中的原点
-//		mLBanners.setUnSelectUnIndicatorRes(R.drawable.guide_indicator_unselect);//未选中的原点
         //若自定义原点到底部的距离,默认20,必须在setIndicatorWidth之前调用
         mLBanners.setIndicatorBottomPadding(10);
         mLBanners.setIndicatorWidth(5);//原点默认为5dp
         mLBanners.setHoriZontalTransitionEffect(TransitionEffect.Default);//选中喜欢的样式
-//        mLBanners.setHoriZontalCustomTransformer(new ParallaxTransformer(R.id.id_image));//自定义样式
         mLBanners.setDurtion(5000);//轮播切换时间
-//        mLBanners.hideIndicatorLayout();//隐藏原点
-//        mLBanners.showIndicatorLayout();//显示原点
         mLBanners.setIndicatorPosition(LMBanners.IndicaTorPosition.BOTTOM_MID);//设置原点显示位置
 
         //网络图片
@@ -944,12 +1104,21 @@ public class HomeActivity extends BaseFragmentActivity implements View.OnClickLi
     }
 
     /**
-     * 底部滑动图片
+     * 获取中间图片数据
      */
+
+
+    private void getMiddlePicData() {
+
+
+
+    }
+
+
     private void addBottomSlideView() {
 
-        mTxtDealAmount.setText(mIndex.getTotalFinancial());
-        mTxtEarnAmount.setText(mIndex.getTotalInterest());
+//        mTxtDealAmount.setText(mIndex.getTotalFinancial());
+//        mTxtEarnAmount.setText(mIndex.getTotalInterest());
 
         if (mLayoutHorizontalScroll.getChildCount() > 0) {
             mLayoutHorizontalScroll.removeAllViews();
@@ -958,6 +1127,7 @@ public class HomeActivity extends BaseFragmentActivity implements View.OnClickLi
         if (mBottomSlideList != null) {
             for (int i = 0; i < mBottomSlideList.size(); i++) {
                 LinearLayout layout = new LinearLayout(this);
+
                 if (i == mBottomSlideList.size() - 1) {//最后一张图片不需要间隔
                     layout.setLayoutParams(new ViewGroup.LayoutParams(ViewUtils.dip2px(this, 145), ViewUtils.dip2px(this, 80)));
                 } else {
@@ -996,73 +1166,73 @@ public class HomeActivity extends BaseFragmentActivity implements View.OnClickLi
     /**
      * 新手指引
      */
-    private void beginnerGuidance() {
-        final int stepType = mIndex.getStepType();
-        if (stepType == 1) {
-            mLayoutStepView.setVisibility(View.VISIBLE);
-            txt_step_1.setText(R.string.home_register_give);
-            btn_step_state.setText(R.string.home_go_register);
-            txt_step_1_desc.setTextColor(Color.parseColor("#999999"));
-            txt_step_1_desc.setText(Html.fromHtml(getResources().getString(R.string.home_cash_gift_desc)));
-            txt_step_2_desc.setText(Html.fromHtml(getResources().getString(R.string.home_exclusive_interest_decs)));
-            txt_step_3_desc.setText(Html.fromHtml(getResources().getString(R.string.home_get_gift_desc)));
-            img_step_1.setImageResource(R.mipmap.icon_home_step_1);
-            img_step_2.setImageResource(R.mipmap.icon_home_step_2);
-        } else if (stepType == 2) {
-            mLayoutStepView.setVisibility(View.VISIBLE);
-            txt_step_1.setText(R.string.home_real_name);
-            txt_step_1_desc.setText(R.string.home_real_name_desc);
-            txt_step_1_desc.setTextColor(getResources().getColor(R.color.main_red));
-            btn_step_state.setText(R.string.home_go_real_name);
-            img_step_1.setImageResource(R.mipmap.icon_home_step_1);
-            img_step_2.setImageResource(R.mipmap.icon_home_step_2);
-        } else if (stepType == 3) {
-            mLayoutStepView.setVisibility(View.VISIBLE);
-            txt_step_1.setText(R.string.home_register_success);
-            txt_step_1_desc.setText(R.string.home_welcome);
-            txt_step_1_desc.setTextColor(getResources().getColor(R.color.main_red));
-            btn_step_state.setText(R.string.home_go_buy);
-            img_step_1.setImageResource(R.mipmap.icon_home_step_1_finish);
-            img_step_2.setImageResource(R.mipmap.icon_home_step_2_finish);
-        } else if (stepType == 4) {
-            mLayoutStepView.setVisibility(View.GONE);
-        }
-        btn_step_state.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (stepType == 1) {
-                    //没有登录
-                    if (!DdApplication.getConfigManager().isLogined()) {
-                        MobclickAgent.onEvent(HomeActivity.this, UmengTouchType.RP101_6);
-                        Intent intent = new Intent(HomeActivity.this, LoginInAdvanceActivity.class);
-                        intent.putExtra(SrcType.SRC_TYPE, SrcType.SRC_NORMAL);
-                        startActivity(intent);
-                    }
-                } else if (stepType == 2) {
-                    if (mProductList != null && mProductList.size() > 0) {
-                        Product product = mProductList.get(0);
-                        final long financialId = product.getProductId();
-                        final int mMemberStep = mIndex.getMemberStep();
-                        bindingBankStep(mMemberStep, financialId);
-                    }
-
-                } else if (stepType == 3) {
-                    if (mProductList != null && mProductList.size() > 0) {
-                        Product product = mProductList.get(0);
-                        final long financialId = product.getProductId();
-                        Intent intent = new Intent(HomeActivity.this, FinancialDetailActivity.class);
-                        intent.putExtra("id", financialId);
-                        startActivity(intent);
-                    } else {
-                        Intent intent = new Intent(HomeActivity.this, MainActivity.class);
-                        intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
-                        intent.putExtra("activityType", MainActivity.TAB_LOAN);
-                        startActivity(intent);
-                    }
-                }
-            }
-        });
-    }
+//    private void beginnerGuidance() {
+//        final int stepType = mIndex.getStepType();
+//        if (stepType == 1) {
+//            mLayoutStepView.setVisibility(View.VISIBLE);
+//            txt_step_1.setText(R.string.home_register_give);
+//            btn_step_state.setText(R.string.home_go_register);
+//            txt_step_1_desc.setTextColor(Color.parseColor("#999999"));
+//            txt_step_1_desc.setText(Html.fromHtml(getResources().getString(R.string.home_cash_gift_desc)));
+//            txt_step_2_desc.setText(Html.fromHtml(getResources().getString(R.string.home_exclusive_interest_decs)));
+//            txt_step_3_desc.setText(Html.fromHtml(getResources().getString(R.string.home_get_gift_desc)));
+//            img_step_1.setImageResource(R.mipmap.icon_home_step_1);
+//            img_step_2.setImageResource(R.mipmap.icon_home_step_2);
+//        } else if (stepType == 2) {
+//            mLayoutStepView.setVisibility(View.VISIBLE);
+//            txt_step_1.setText(R.string.home_real_name);
+//            txt_step_1_desc.setText(R.string.home_real_name_desc);
+//            txt_step_1_desc.setTextColor(getResources().getColor(R.color.main_red));
+//            btn_step_state.setText(R.string.home_go_real_name);
+//            img_step_1.setImageResource(R.mipmap.icon_home_step_1);
+//            img_step_2.setImageResource(R.mipmap.icon_home_step_2);
+//        } else if (stepType == 3) {
+//            mLayoutStepView.setVisibility(View.VISIBLE);
+//            txt_step_1.setText(R.string.home_register_success);
+//            txt_step_1_desc.setText(R.string.home_welcome);
+//            txt_step_1_desc.setTextColor(getResources().getColor(R.color.main_red));
+//            btn_step_state.setText(R.string.home_go_buy);
+//            img_step_1.setImageResource(R.mipmap.icon_home_step_1_finish);
+//            img_step_2.setImageResource(R.mipmap.icon_home_step_2_finish);
+//        } else if (stepType == 4) {
+//            mLayoutStepView.setVisibility(View.GONE);
+//        }
+//        btn_step_state.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if (stepType == 1) {
+//                    //没有登录
+//                    if (!DdApplication.getConfigManager().isLogined()) {
+//                        MobclickAgent.onEvent(HomeActivity.this, UmengTouchType.RP101_6);
+//                        Intent intent = new Intent(HomeActivity.this, LoginInAdvanceActivity.class);
+//                        intent.putExtra(SrcType.SRC_TYPE, SrcType.SRC_NORMAL);
+//                        startActivity(intent);
+//                    }
+//                } else if (stepType == 2) {
+//                    if (mProductList != null && mProductList.size() > 0) {
+//                        Product product = mProductList.get(0);
+//                        final long financialId = product.getProductId();
+//                        final int mMemberStep = mIndex.getMemberStep();
+//                        bindingBankStep(mMemberStep, financialId);
+//                    }
+//
+//                } else if (stepType == 3) {
+//                    if (mProductList != null && mProductList.size() > 0) {
+//                        Product product = mProductList.get(0);
+//                        final long financialId = product.getProductId();
+//                        Intent intent = new Intent(HomeActivity.this, FinancialDetailActivity.class);
+//                        intent.putExtra("id", financialId);
+//                        startActivity(intent);
+//                    } else {
+//                        Intent intent = new Intent(HomeActivity.this, MainActivity.class);
+//                        intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+//                        intent.putExtra("activityType", MainActivity.TAB_LOAN);
+//                        startActivity(intent);
+//                    }
+//                }
+//            }
+//        });
+//    }
 
     private void bindingBankStep(int mMemberStep, long financialId) {
         switch (mMemberStep) {

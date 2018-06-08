@@ -2,16 +2,18 @@ package com.jinju.android.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
-
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 
 import com.jinju.android.R;
 import com.jinju.android.adapter.DiscoverRecyclerAdapter;
+import com.jinju.android.adapter.WonderfulAdapter;
 import com.jinju.android.api.Discover;
+import com.jinju.android.api.FindBean;
 import com.jinju.android.api.Page;
 import com.jinju.android.api.Response;
 import com.jinju.android.base.DdApplication;
@@ -37,10 +39,13 @@ import java.util.Map;
 
 public class WonderfulActFragment extends BaseFragment {
 
-    private List<Discover> mWonderfulDiscoverList;
-    private RecyclerView mRecyclerView;
+    private  ArrayList<FindBean>    findBeans;
+    private List<Discover>          mWonderfulDiscoverList;
+    private RecyclerView            mRecyclerView;
     private DiscoverRecyclerAdapter discoverAdapter;
-    private View layout_empty;
+    private View                    layout_empty;
+    private ListView                wonderfulList;
+    private WonderfulAdapter wonderfulAdapter;
 
     private int mCurrentPage = 0;
     private int mTotalPage;
@@ -51,6 +56,7 @@ public class WonderfulActFragment extends BaseFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mWonderfulDiscoverList = new ArrayList<Discover>();
+        findBeans = new ArrayList<FindBean>();
     }
 
     @Override
@@ -78,7 +84,18 @@ public class WonderfulActFragment extends BaseFragment {
                 startActivity(intent);
             }
         });
-        mRecyclerView.setAdapter(discoverAdapter);
+
+//        FindWonderfulAdapter findWonderfulAdapter = new FindWonderfulAdapter();
+//        mLoadInfoList = DdApplication.getConfigManager().getLoadInfoList();
+//        refreshLayout = (SmartRefreshLayout) view.findViewById(R.id.refreshLayout);
+//        refreshLayout.setRefreshHeader(new FrameAnimationHeader(getActivity()));
+//        refreshLayout.setOnRefreshLoadmoreListener(mOnRefreshLoadmoreListener);
+//        layout_empty = view.findViewById(R.id.layout_empty);
+//         wonderfulList = (ListView) view.findViewById(R.id.lv_wonderful_list);
+//
+//
+//         wonderfulAdapter = new WonderfulAdapter(getActivity(),wonderfulList);
+//        wonderfulList.setAdapter(wonderfulAdapter);
 
         return view;
     }

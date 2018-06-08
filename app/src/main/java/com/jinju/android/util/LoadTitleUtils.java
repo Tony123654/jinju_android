@@ -30,7 +30,7 @@ public class LoadTitleUtils {
     }
   public static void setRefreshLayout(final RefreshLayout refreshLayout,int mCurrentPage,List<String> mLoadInfoList) {
 
-      refreshLayout.finishRefreshAnimation(setLoadTxt(mLoadInfoList));
+//      refreshLayout.finishRefreshAnimation(setLoadTxt(mLoadInfoList));
 
       mRefreshLayout = refreshLayout;
       if (mCurrentPage<=1) {//执行的是下拉刷新动作

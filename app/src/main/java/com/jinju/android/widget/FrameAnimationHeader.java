@@ -130,20 +130,33 @@ public class FrameAnimationHeader extends RelativeLayout  implements RefreshHead
         defaultDrawable.start();
     }
 
-    @Override
-    public void onRefreshFinishAnimation(String textTitle) {
-
+    public void onRefreshFinishAnimation(String textTitle){
         setTitleText(textTitle);
-        if (TextUtils.isEmpty(mTextString)) {
-            mTitleText.setText("刷新完成");
-        }
+                if (TextUtils.isEmpty(mTextString)) {
+                    mTitleText.setText("刷新完成");
+                }
 
-        finishDrawable.selectDrawable(0);
-        imgRefreshing.setVisibility(GONE);
-        refreshDrawable.stop();
-        imgFinish.setVisibility(VISIBLE);
-        finishDrawable.start();
+                finishDrawable.selectDrawable(0);
+                imgRefreshing.setVisibility(GONE);
+                refreshDrawable.stop();
+                imgFinish.setVisibility(VISIBLE);
+                finishDrawable.start();
     }
+
+//    @Override
+//    public void onRefreshFinishAnimation(String textTitle) {
+//
+//        setTitleText(textTitle);
+//        if (TextUtils.isEmpty(mTextString)) {
+//            mTitleText.setText("刷新完成");
+//        }
+//
+//        finishDrawable.selectDrawable(0);
+//        imgRefreshing.setVisibility(GONE);
+//        refreshDrawable.stop();
+//        imgFinish.setVisibility(VISIBLE);
+//        finishDrawable.start();
+//    }
 
     @NonNull
     @Override
@@ -215,8 +228,8 @@ public class FrameAnimationHeader extends RelativeLayout  implements RefreshHead
                 break;
             case ReleaseToRefresh:
                 break;
-            case ReleaseToTwoLevel:
-                break;
+//            case ReleaseToTwoLevel:
+//                break;
             case Loading:
                 break;
         }

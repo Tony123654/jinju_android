@@ -2,7 +2,8 @@ package com.jinju.android.constant;
 
 public final class ApiType {
 	//测试环境
-	public static final String LOAD_IMAGE = "/loading.json";
+//	public static final String LOAD_IMAGE = "/loading.json";
+	public static final String LOAD_IMAGE = "/index/ad_List.json";
 	public static final String GET_INDEX = "/index.json";
 	public static final String LOGIN = "/member/login.json";
 	public static final String CHECK_MOBILE_AVAILABLE = "/reg/check_mobile_available.json";
@@ -60,9 +61,11 @@ public final class ApiType {
 	public static final String SET_SALE_REMIND= "/financial/startsubscribe/set.json";//设置开售提醒
 	public static final String CANCEL_SALE_REMIND= "/financial/startsubscribe/cancel.json";//设置开售提醒
 	public static final String SUBMIT_FEEDBACK= "/myspace/msgfeedback/save_msg_Desc.json";//意见反馈
-	public static final String HOME_NOTICE_LIST= "/notice/notice_list.json";//首页公告
+//	public static final String HOME_NOTICE_LIST= "/notice/notice_list.json";//首页公告
+	public static final String HOME_NOTICE_LIST= "/index/notice_List.json";//首页公告
 	public static final String PRODUCT_INTRODUCE = "/financial/proInfo.json";//理财详情页的項目介绍
 	public static final String INVEST_RECORD = "/financial/financial_order_list_v2.2.json";//理财详情页的投资记录
+//	public static final String GET_DISCOVER_LIST = "/findActView/find_list.json";//发现页
 	public static final String GET_DISCOVER_LIST = "/findActView/find_list.json";//发现页
 	public static final String GET_SHARE_INFO = "/wechat/share.json";//原生获取分享信息
 

@@ -1,11 +1,5 @@
 package com.jinju.android.manager;
 
-import java.util.List;
-import java.util.Map;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import com.jinju.android.R;
 import com.jinju.android.api.Discover;
 import com.jinju.android.api.FinancialDetail;
@@ -34,6 +28,12 @@ import com.jinju.android.constant.HttpMethod;
 import com.jinju.android.interfaces.IManager;
 import com.jinju.android.manager.HttpManager.OnRequestFinishedListener;
 import com.jinju.android.util.AppUtils;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.List;
+import java.util.Map;
 
 public class LoanManager implements IManager {
 

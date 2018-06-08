@@ -116,7 +116,7 @@ public class MainActivity extends TabActivity {
         isLogout = intent.getBooleanExtra("logout", false);
         mIndex = (Index) intent.getSerializableExtra("index");
 
-        Intent homeIntent = new Intent(this, HomeActivity.class);            //推荐
+        Intent homeIntent = new Intent(this, HomeActivity.class);            //首页
         if (null != mIndex) {
             Bundle bundle = new Bundle();
             bundle.putSerializable("index", mIndex);

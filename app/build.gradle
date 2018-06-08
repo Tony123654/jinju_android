@@ -60,7 +60,6 @@ android {
         }
     }
 
-
     //渠道打包设置productFlavors
     productFlavors {
 
@@ -68,19 +67,19 @@ android {
         yingyongbao {}
         _360 {}
         baidu {}
-        meizu{}
-        nduo{}
-        oppo{}
-        leshi{}
-        huawei{}
-        anzhi{}
-        xiaomi{}
-        chuizi{}
-        sougou{}
-        youyi{}
-        vivo{}
-        mumayi{}
-        jrtt_xz{}
+        meizu {}
+        nduo {}
+        oppo {}
+        leshi {}
+        huawei {}
+        anzhi {}
+        xiaomi {}
+        chuizi {}
+        sougou {}
+        youyi {}
+        vivo {}
+        mumayi {}
+        jrtt_xz {}
         ddjr_zb {}
         _360_majia {}
         pphelp {}
@@ -96,6 +95,7 @@ android {
 
 dependencies {
     compile fileTree(include: '*.jar', dir: 'libs')
+    compile 'com.android.support.constraint:constraint-layout:1.1.0'
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
@@ -119,5 +119,13 @@ dependencies {
     compile project(':lm_banner_library')
     compile project(':marqueelibrary')
     compile 'com.android.support:design:24.+'
-    compile project(':SmartRefreshLayout')
+//    compile project(':SmartRefreshLayout')
+    compile 'com.zhy:okhttputils:2.3.8'
+    compile 'com.squareup.okio:okio:1.5.0'
+    compile 'com.squareup.okhttp3:okhttp-ws:3.4.2'
+    compile 'org.xutils:xutils:3.5.0'
+
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.4'
+    compile 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.4'
 }

@@ -40,194 +40,106 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="20dp">
+            <!--<RelativeLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:padding="20dp">-->
 
-                <TextView
-                    android:id="@+id/txt_verify_name"
-                    style="@style/custom_word_black_middle_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/bank_add_card"/>
+                <!--<TextView-->
+                    <!--android:id="@+id/txt_verify_name"-->
+                    <!--style="@style/custom_word_black_middle_text"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="@string/bank_add_card"/>-->
 
-                <TextView
-                    android:id="@+id/txt_bank_add_card"
-                    style="@style/custom_word_black_middle_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:text="@string/sms_verify_code"/>
+                <!--<TextView-->
+                    <!--android:id="@+id/txt_bank_add_card"-->
+                    <!--style="@style/custom_word_black_middle_text"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerHorizontal="true"-->
+                    <!--android:text="@string/sms_verify_code"/>-->
 
-                <TextView
-                    android:id="@+id/txt_trans_password"
-                    style="@style/custom_word_black_middle_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true"
-                    android:text="@string/my_withfund_trans_password"/>
+                <!--<TextView-->
+                    <!--android:id="@+id/txt_trans_password"-->
+                    <!--style="@style/custom_word_black_middle_text"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:layout_alignParentEnd="true"-->
+                    <!--android:text="@string/my_withfund_trans_password"/>-->
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/txt_verify_name"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginStart="30dp"
-                    android:layout_marginRight="30dp"
-                    android:layout_marginEnd="30dp"
-                    android:layout_marginTop="10dp">
+                <!--<RelativeLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_below="@id/txt_verify_name"-->
+                    <!--android:layout_marginLeft="30dp"-->
+                    <!--android:layout_marginStart="30dp"-->
+                    <!--android:layout_marginRight="30dp"-->
+                    <!--android:layout_marginEnd="30dp"-->
+                    <!--android:layout_marginTop="10dp">-->
 
-                    <ImageView
-                        android:id="@+id/img_verify_name"
-                        android:layout_width="7dp"
-                        android:layout_height="7dp"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentStart="true"
-                        android:src="@mipmap/icon_red"/>
+                    <!--<ImageView-->
+                        <!--android:id="@+id/img_verify_name"-->
+                        <!--android:layout_width="7dp"-->
+                        <!--android:layout_height="7dp"-->
+                        <!--android:layout_alignParentLeft="true"-->
+                        <!--android:layout_alignParentStart="true"-->
+                        <!--android:src="@mipmap/icon_red"/>-->
 
-                    <ImageView
-                        android:id="@+id/img_bank_add_card"
-                        android:layout_width="7dp"
-                        android:layout_height="7dp"
-                        android:layout_centerHorizontal="true"
-                        android:src="@mipmap/icon_gray"/>
+                    <!--<ImageView-->
+                        <!--android:id="@+id/img_bank_add_card"-->
+                        <!--android:layout_width="7dp"-->
+                        <!--android:layout_height="7dp"-->
+                        <!--android:layout_centerHorizontal="true"-->
+                        <!--android:src="@mipmap/icon_gray"/>-->
 
-                    <ImageView
-                        android:id="@+id/img_trans_password"
-                        android:layout_width="7dp"
-                        android:layout_height="7dp"
-                        android:layout_alignParentRight="true"
-                        android:layout_alignParentEnd="true"
-                        android:src="@mipmap/icon_gray"/>
+                    <!--<ImageView-->
+                        <!--android:id="@+id/img_trans_password"-->
+                        <!--android:layout_width="7dp"-->
+                        <!--android:layout_height="7dp"-->
+                        <!--android:layout_alignParentRight="true"-->
+                        <!--android:layout_alignParentEnd="true"-->
+                        <!--android:src="@mipmap/icon_gray"/>-->
 
-                    <View
-                        android:layout_width="wrap_content"
-                        android:layout_height="2dp"
-                        android:layout_toRightOf="@id/img_verify_name"
-                        android:layout_toEndOf="@id/img_verify_name"
-                        android:layout_toLeftOf="@id/img_bank_add_card"
-                        android:layout_toStartOf="@id/img_bank_add_card"
-                        android:layout_centerVertical="true"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:background="@color/separator"/>
+                    <!--<View-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="2dp"-->
+                        <!--android:layout_toRightOf="@id/img_verify_name"-->
+                        <!--android:layout_toEndOf="@id/img_verify_name"-->
+                        <!--android:layout_toLeftOf="@id/img_bank_add_card"-->
+                        <!--android:layout_toStartOf="@id/img_bank_add_card"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:layout_marginLeft="5dp"-->
+                        <!--android:layout_marginRight="5dp"-->
+                        <!--android:background="@color/separator"/>-->
 
-                    <View
-                        android:layout_width="wrap_content"
-                        android:layout_height="2dp"
-                        android:layout_toRightOf="@id/img_bank_add_card"
-                        android:layout_toEndOf="@id/img_bank_add_card"
-                        android:layout_toLeftOf="@id/img_trans_password"
-                        android:layout_toStartOf="@id/img_trans_password"
-                        android:layout_centerVertical="true"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:background="@color/separator"/>
-                </RelativeLayout>
-            </RelativeLayout>
+                    <!--<View-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="2dp"-->
+                        <!--android:layout_toRightOf="@id/img_bank_add_card"-->
+                        <!--android:layout_toEndOf="@id/img_bank_add_card"-->
+                        <!--android:layout_toLeftOf="@id/img_trans_password"-->
+                        <!--android:layout_toStartOf="@id/img_trans_password"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:layout_marginLeft="5dp"-->
+                        <!--android:layout_marginRight="5dp"-->
+                        <!--android:background="@color/separator"/>-->
+                <!--</RelativeLayout>-->
+            <!--</RelativeLayout>-->
 
-            <TextView
-                style="@style/custom_word_black_middle_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="18dp"
-                android:layout_marginBottom="15dp"
-                android:text="持卡人信息"/>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1px"
-                android:background="@color/separator"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:background="@color/white"
-                android:orientation="horizontal"
-                android:paddingLeft="41dp"
-                android:paddingRight="18dp"
-                android:gravity="center">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/icon_user_name"/>
-
-                <com.jinju.android.widget.WithClearEditText
-                    android:id="@id/edit_name"
-                    style="@style/custom_word_black_middle_edit"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:singleLine="true"
-                    android:background="@null"
-                    android:layout_marginLeft="19dp"
-                    android:maxLength="15"
-                    android:hint="@string/verify_name_hint"/>
-            </LinearLayout>
+            <!--<TextView-->
+                <!--style="@style/custom_word_black_middle_text"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="18dp"-->
+                <!--android:layout_marginBottom="15dp"-->
+                <!--android:text="持卡人信息"/>-->
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1px"
                 android:background="@color/separator"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:background="@color/white"
-                android:orientation="horizontal"
-                android:paddingLeft="40dp"
-                android:paddingRight="18dp"
-                android:gravity="center">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/icon_user_code"/>
-
-                <com.jinju.android.widget.WithClearEditText
-                    android:id="@id/edit_card"
-                    style="@style/custom_word_black_middle_edit"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:singleLine="true"
-                    android:background="@null"
-                    android:layout_marginLeft="18dp"
-                    android:maxLength="18"
-                    android:hint="@string/verify_card_hint"
-                    android:digits="1234567890xX"/>
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1px"
-                android:background="@color/separator"/>
-
-            <TextView
-                style="@style/custom_word_gray_small_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="18dp"
-                android:layout_marginRight="18dp"
-                android:layout_marginTop="10dp"
-                android:text="@string/verify_name_notify"/>
-
-            <TextView
-                style="@style/custom_word_black_middle_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="18dp"
-                android:layout_marginRight="18dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="15dp"
-                android:text="@string/confirm_bank_info"/>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1px"
-                android:background="@color/separator"/>
-
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
@@ -260,12 +172,11 @@
                     android:layout_alignParentRight="true"
                     android:layout_alignParentEnd="true" />
             </RelativeLayout>
-
             <View
-                android:layout_width="match_parent"
-                android:layout_height="1px"
-                android:background="@color/separator"/>
-
+                android:layout_width="1px"
+                android:layout_height="@dimen/space_12"
+                android:layout_gravity="center_vertical"
+                android:background="@color/color_line" />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
@@ -294,10 +205,73 @@
             </LinearLayout>
 
             <View
+                android:layout_width="1px"
+                android:layout_height="@dimen/space_12"
+                android:layout_gravity="center_vertical"
+                android:background="@color/color_line" />
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="1px"
-                android:background="@color/separator"/>
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="41dp"
+                android:paddingRight="18dp"
+                android:gravity="center">
 
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/icon_user_name"/>
+
+                <com.jinju.android.widget.WithClearEditText
+                    android:id="@id/edit_name"
+                    style="@style/custom_word_black_middle_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:singleLine="true"
+                    android:background="@null"
+                    android:layout_marginLeft="19dp"
+                    android:maxLength="15"
+                    android:hint="@string/verify_name_hint"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="@dimen/space_12"
+                android:layout_gravity="center_vertical"
+                android:background="@color/color_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="40dp"
+                android:paddingRight="18dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/icon_user_code"/>
+
+                <com.jinju.android.widget.WithClearEditText
+                    android:id="@id/edit_card"
+                    style="@style/custom_word_black_middle_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:singleLine="true"
+                    android:background="@null"
+                    android:layout_marginLeft="18dp"
+                    android:maxLength="18"
+                    android:hint="@string/verify_card_hint"
+                    android:digits="1234567890xX"/>
+            </LinearLayout>
+            <View
+                android:layout_width="1px"
+                android:layout_height="@dimen/space_12"
+                android:layout_gravity="center_vertical"
+                android:background="@color/color_line" />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
@@ -329,6 +303,51 @@
                 android:layout_width="match_parent"
                 android:layout_height="1px"
                 android:background="@color/separator"/>
+
+            <TextView
+                style="@style/custom_word_gray_small_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/verify_name_notify"/>
+
+            <!--<TextView-->
+                <!--style="@style/custom_word_black_middle_text"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="18dp"-->
+                <!--android:layout_marginRight="18dp"-->
+                <!--android:layout_marginTop="15dp"-->
+                <!--android:layout_marginBottom="15dp"-->
+                <!--android:text="@string/confirm_bank_info"/>-->
+
+            <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="1px"-->
+                <!--android:background="@color/separator"/>-->
+
+
+
+            <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="1px"-->
+                <!--android:background="@color/separator"/>-->
+
+
+
+            <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="1px"-->
+                <!--android:background="@color/separator"/>-->
+
+
+
+            <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="1px"-->
+                <!--android:background="@color/separator"/>-->
 
             <TextView
                 android:id="@id/txt_notice"

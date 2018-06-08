@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<!--   
+    根标签为animation-list，其中oneshot代表着是否只展示一遍，设置为false会不停的循环播放动画  
+    根标签下，通过item标签对动画中的每一个图片进行声明  
+    android:duration 表示展示所用的该图片的时间长度  
+ -->  
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android" android:oneshot="false">  
+    <item android:drawable="@drawable/preloader400000" android:duration="25"></item>  
+    <item android:drawable="@drawable/preloader400001" android:duration="25"></item>
+    <item android:drawable="@drawable/preloader400002" android:duration="25"></item>  
+    <item android:drawable="@drawable/preloader400003" android:duration="25"></item> 
+    <item android:drawable="@drawable/preloader400004" android:duration="25"></item>  
+    <item android:drawable="@drawable/preloader400005" android:duration="25"></item> 
+    <item android:drawable="@drawable/preloader400006" android:duration="25"></item>  
+    <item android:drawable="@drawable/preloader400007" android:duration="25"></item> 
+    <item android:drawable="@drawable/preloader400008" android:duration="25"></item>  
+    <item android:drawable="@drawable/preloader400009" android:duration="25"></item> 
+    <item android:drawable="@drawable/preloader400010" android:duration="25"></item>  
+    <item android:drawable="@drawable/preloader400011" android:duration="25"></item> 
+    <item android:drawable="@drawable/preloader400012" android:duration="25"></item>  
+    <item android:drawable="@drawable/preloader400013" android:duration="25"></item> 
+    <item android:drawable="@drawable/preloader400014" android:duration="25"></item>
+    <item android:drawable="@drawable/preloader400015" android:duration="25"></item>  
+    <item android:drawable="@drawable/preloader400016" android:duration="25"></item> 
+    <item android:drawable="@drawable/preloader400017" android:duration="25"></item>  
+    <item android:drawable="@drawable/preloader400018" android:duration="25"></item> 
+    <item android:drawable="@drawable/preloader400019" android:duration="25"></item>
+    <item android:drawable="@drawable/preloader400020" android:duration="25"></item>  
+    <item android:drawable="@drawable/preloader400021" android:duration="25"></item>
+    <item android:drawable="@drawable/preloader400022" android:duration="25"></item>  
+    <item android:drawable="@drawable/preloader400023" android:duration="25"></item> 
+    <item android:drawable="@drawable/preloader400024" android:duration="25"></item>  
+    <item android:drawable="@drawable/preloader400025" android:duration="25"></item> 
+    <item android:drawable="@drawable/preloader400026" android:duration="25"></item>  
+    <item android:drawable="@drawable/preloader400027" android:duration="25"></item> 
+    <item android:drawable="@drawable/preloader400028" android:duration="25"></item>  
+    <item android:drawable="@drawable/preloader400029" android:duration="25"></item> 
+    <item android:drawable="@drawable/preloader400030" android:duration="25"></item>  
+    <item android:drawable="@drawable/preloader400031" android:duration="25"></item> 
+    <item android:drawable="@drawable/preloader400032" android:duration="25"></item>  
+    <item android:drawable="@drawable/preloader400033" android:duration="25"></item> 
+    <item android:drawable="@drawable/preloader400034" android:duration="25"></item>
+    <item android:drawable="@drawable/preloader400035" android:duration="25"></item>  
+    <item android:drawable="@drawable/preloader400036" android:duration="25"></item> 
+    <item android:drawable="@drawable/preloader400037" android:duration="25"></item>  
+    <item android:drawable="@drawable/preloader400038" android:duration="25"></item> 
+    <item android:drawable="@drawable/preloader400039" android:duration="25"></item>    
+</animation-list>  

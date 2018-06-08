@@ -6,107 +6,112 @@
     android:layout_height="match_parent"
     android:background="@color/white">
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="10dp"
-            android:orientation="horizontal">
-            <!--第二名-->
+
+
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="20dp"-->
+            <!--android:layout_marginBottom="10dp"-->
+            <!--android:orientation="horizontal">-->
+            <!--&lt;!&ndash;第二名&ndash;&gt;-->
+            <!--<RelativeLayout-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:layout_weight="1">-->
+                <!--<ImageView-->
+                    <!--android:id="@+id/invest_two"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerHorizontal="true"-->
+                    <!--android:src="@mipmap/img_invest_two"/>-->
+                <!--<TextView-->
+                    <!--android:id="@+id/txt_user_phone_two"-->
+                    <!--style="@style/custom_word_black_middle_text"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_below="@id/invest_two"-->
+                    <!--android:layout_centerHorizontal="true"-->
+                    <!--android:layout_marginTop="10dp"-->
+                    <!--android:text="暂无"/>-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/txt_invest_amount_two"-->
+                        <!--style="@style/custom_word_black_middle_text"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_below="@id/txt_user_phone_two"-->
+                        <!--android:layout_centerHorizontal="true"-->
+                        <!--android:layout_marginTop="5dp" />-->
+            <!--</RelativeLayout>-->
+            <!--&lt;!&ndash;第一名 &ndash;&gt;-->
             <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_weight="1">
-                <ImageView
-                    android:id="@+id/invest_two"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:src="@mipmap/img_invest_two"/>
-                <TextView
-                    android:id="@+id/txt_user_phone_two"
-                    style="@style/custom_word_black_middle_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/invest_two"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="10dp"
-                    android:text="暂无"/>
-                    <TextView
-                        android:id="@+id/txt_invest_amount_two"
-                        style="@style/custom_word_black_middle_text"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/txt_user_phone_two"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="5dp" />
-            </RelativeLayout>
-            <!--第一名 -->
-            <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1">
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                >
                 <ImageView
                     android:id="@+id/invest_first"
+                    android:paddingLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@mipmap/img_invest_first"
-                    android:layout_centerHorizontal="true"/>
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/icon_back"
+                    />
                 <TextView
                     android:id="@+id/txt_user_phone_first"
-                    style="@style/custom_word_black_middle_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/invest_first"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
-                    android:text="暂无"/>
-                <TextView
-                    android:id="@+id/txt_invest_amount_first"
-                    style="@style/custom_word_black_middle_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/txt_user_phone_first"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="5dp" />
+                    android:text="投资记录"/>
             </RelativeLayout>
-            <!--第三名-->
-            <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_weight="1">
-                <ImageView
-                    android:id="@+id/invest_third"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/img_invest_third"
-                    android:layout_centerHorizontal="true"/>
-                <TextView
-                    android:id="@+id/txt_user_phone_third"
-                    style="@style/custom_word_black_middle_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/invest_third"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="10dp"
-                    android:text="暂无"/>
-                <TextView
-                    android:id="@+id/txt_invest_amount_third"
-                    style="@style/custom_word_black_middle_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/txt_user_phone_third"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="5dp" />
-            </RelativeLayout>
+                <!--<TextView-->
+                    <!--android:id="@+id/txt_invest_amount_first"-->
+                    <!--style="@style/custom_word_black_middle_text"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_below="@id/txt_user_phone_first"-->
+                    <!--android:layout_centerHorizontal="true"-->
+                    <!--android:layout_marginTop="5dp" />-->
+            <!--</RelativeLayout>-->
+            <!--&lt;!&ndash;第三名&ndash;&gt;-->
+            <!--<RelativeLayout-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:layout_weight="1">-->
+                <!--<ImageView-->
+                    <!--android:id="@+id/invest_third"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:src="@mipmap/img_invest_third"-->
+                    <!--android:layout_centerHorizontal="true"/>-->
+                <!--<TextView-->
+                    <!--android:id="@+id/txt_user_phone_third"-->
+                    <!--style="@style/custom_word_black_middle_text"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_below="@id/invest_third"-->
+                    <!--android:layout_centerHorizontal="true"-->
+                    <!--android:layout_marginTop="10dp"-->
+                    <!--android:text="暂无"/>-->
+                <!--<TextView-->
+                    <!--android:id="@+id/txt_invest_amount_third"-->
+                    <!--style="@style/custom_word_black_middle_text"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_below="@id/txt_user_phone_third"-->
+                    <!--android:layout_centerHorizontal="true"-->
+                    <!--android:layout_marginTop="5dp" />-->
+            <!--</RelativeLayout>-->
 
-        </LinearLayout>
+        <!--</LinearLayout>-->
         <View
             android:layout_width="match_parent"
             android:layout_height="10dp"

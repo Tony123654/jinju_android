@@ -3,11 +3,11 @@ package com.jinju.android.activity;
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Html;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -26,14 +26,11 @@ import com.jinju.android.manager.ConfigManager;
 import com.jinju.android.manager.UserManager.OnGetAccountFinishedListener;
 import com.jinju.android.util.AppUtils;
 import com.jinju.android.util.DataUtils;
-import com.jinju.android.util.TextShowUtils;
 import com.jinju.android.util.VersionUtils;
-import com.jinju.android.webview.BaseJsBridgeWebViewActivity;
 import com.jinju.android.widget.CircleImageView;
 import com.umeng.analytics.MobclickAgent;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -54,13 +51,13 @@ public class ProfileActivity extends BaseActivity implements OnClickListener {
     private RelativeLayout mBtnAbout;
     private RelativeLayout mLayoutTotalAsset;
     private RelativeLayout mBtnMessage;
-    private RelativeLayout rlMyLoan;
+    private LinearLayout rlMyLoan;
     private RelativeLayout rlAccountList;
     private RelativeLayout rlAutomaticBid;
     private RelativeLayout rlMyInvitation;
-    private RelativeLayout rlSettings;
-    private RelativeLayout mBtnCoupon;
-    private RelativeLayout mBtnBank;
+    private LinearLayout rlSettings;
+    private LinearLayout mBtnCoupon;
+    private LinearLayout mBtnBank;
     private RelativeLayout mBtnCallCenter;
     private RelativeLayout rlVersionUpdate;
 
@@ -106,19 +103,19 @@ public class ProfileActivity extends BaseActivity implements OnClickListener {
         mBtnCharge = (TextView) findViewById(R.id.btn_charge);
         mBtnCharge.setOnClickListener(mBtnChargeOnClickListener);
 
-        mBtnCoupon = (RelativeLayout) findViewById(R.id.btn_coupon);
+        mBtnCoupon = (LinearLayout) findViewById(R.id.btn_coupon);
         mBtnCoupon.setOnClickListener(mBtnCouponOnClickListener);
-        mTxtMyRedpacketDesc = (TextView) findViewById(R.id.txt_my_redpacket_desc);
-        mImgMyCoupon = (ImageView) findViewById(R.id.img_my_coupon);
+//        mTxtMyRedpacketDesc = (TextView) findViewById(R.id.txt_my_redpacket_desc);
+//        mImgMyCoupon = (ImageView) findViewById(R.id.img_my_coupon);
 
-        mBtnBank = (RelativeLayout) findViewById(R.id.btn_bank);
+        mBtnBank = (LinearLayout) findViewById(R.id.btn_bank);
         mBtnBank.setOnClickListener(mBtnBankOnClickListener);
 
-        mBtnAbout = (RelativeLayout) findViewById(R.id.btn_about);
-        mBtnAbout.setOnClickListener(mBtnAboutOnClickListener);
+//        mBtnAbout = (RelativeLayout) findViewById(R.id.btn_about);
+//        mBtnAbout.setOnClickListener(mBtnAboutOnClickListener);
 
-        mBtnCallCenter = (RelativeLayout) findViewById(R.id.btn_call_center);
-        mBtnCallCenter.setOnClickListener(mBtnCallCenterOnClickListener);
+//        mBtnCallCenter = (RelativeLayout) findViewById(R.id.btn_call_center);
+//        mBtnCallCenter.setOnClickListener(mBtnCallCenterOnClickListener);
 
         //头像设置
         CircleImageView mImgHead = (CircleImageView) findViewById(R.id.img_head);
@@ -129,29 +126,29 @@ public class ProfileActivity extends BaseActivity implements OnClickListener {
         mProgressDialog = AppUtils.createLoadingDialog(this);
         initViews();
 
-        setVersionHint();
+//        setVersionHint();
     }
 
     private void initViews() {
-        rlSettings = (RelativeLayout) findViewById(R.id.rl_settings);
-        rlMyLoan = (RelativeLayout) findViewById(R.id.rl_my_loan);
-        rlAccountList = (RelativeLayout) findViewById(R.id.rl_account_list);
-        rlAutomaticBid = (RelativeLayout) findViewById(R.id.rl_automatic_bid);
-        rlMyInvitation = (RelativeLayout) findViewById(R.id.rl_my_invitation);
-        rlVersionUpdate = (RelativeLayout) findViewById(R.id.rl_version_updating);
+        rlSettings = (LinearLayout) findViewById(R.id.rl_settings);
+        rlMyLoan = (LinearLayout) findViewById(R.id.rl_my_loan);
+//        rlAccountList = (RelativeLayout) findViewById(R.id.rl_account_list);
+//        rlAutomaticBid = (RelativeLayout) findViewById(R.id.rl_automatic_bid);
+//        rlMyInvitation = (RelativeLayout) findViewById(R.id.rl_my_invitation);
+//        rlVersionUpdate = (RelativeLayout) findViewById(R.id.rl_version_updating);
         mLayoutTotalAsset = (RelativeLayout) findViewById(R.id.layout_total_asset);
 
         mYuan = (TextView) findViewById(R.id.yuan);
         mTickName = (TextView) findViewById(R.id.tv_nickname);
-        mImgVersionUpdate = (ImageView) findViewById(R.id.img_version_update);
-        mTvVersionUpdate = (TextView) findViewById(R.id.tv_version_update_desc);
+//        mImgVersionUpdate = (ImageView) findViewById(R.id.img_version_update);
+//        mTvVersionUpdate = (TextView) findViewById(R.id.tv_version_update_desc);
 
         rlSettings.setOnClickListener(this);
         rlMyLoan.setOnClickListener(this);
-        rlAccountList.setOnClickListener(this);
-        rlAutomaticBid.setOnClickListener(this);
-        rlMyInvitation.setOnClickListener(this);
-        rlVersionUpdate.setOnClickListener(this);
+//        rlAccountList.setOnClickListener(this);
+//        rlAutomaticBid.setOnClickListener(this);
+//        rlMyInvitation.setOnClickListener(this);
+//        rlVersionUpdate.setOnClickListener(this);
         mLayoutTotalAsset.setOnClickListener(this);
 
     }
@@ -357,7 +354,7 @@ public class ProfileActivity extends BaseActivity implements OnClickListener {
             Intent intent = new Intent(ProfileActivity.this, RedPacketActivity.class);
             intent.putExtra("isValid", mAccount.getIsValid());
             startActivity(intent);
-            mImgMyCoupon.setImageResource(R.mipmap.icon_my_coupon);
+//            mImgMyCoupon.setImageResource(R.mipmap.icon_my_coupon);
         }
 
     };
@@ -380,29 +377,29 @@ public class ProfileActivity extends BaseActivity implements OnClickListener {
     /**
      * 关于我们
      */
-    private OnClickListener mBtnAboutOnClickListener = new OnClickListener() {
-
-        @Override
-        public void onClick(View v) {
-
-            Intent intent = new Intent(ProfileActivity.this, AboutActivity.class);
-            startActivity(intent);
-
-        }
-
-    };
+//    private OnClickListener mBtnAboutOnClickListener = new OnClickListener() {
+//
+//        @Override
+//        public void onClick(View v) {
+//
+//            Intent intent = new Intent(ProfileActivity.this, AboutActivity.class);
+//            startActivity(intent);
+//
+//        }
+//
+//    };
     /**
      * 客服中心
      */
-    private OnClickListener mBtnCallCenterOnClickListener = new OnClickListener() {
-
-        @Override
-        public void onClick(View v) {
-            Intent intent = new Intent(ProfileActivity.this, CallCenterActivity.class);
-            startActivity(intent);
-        }
-
-    };
+//    private OnClickListener mBtnCallCenterOnClickListener = new OnClickListener() {
+//
+//        @Override
+//        public void onClick(View v) {
+//            Intent intent = new Intent(ProfileActivity.this, CallCenterActivity.class);
+//            startActivity(intent);
+//        }
+//
+//    };
 
     /**
      * 公告
@@ -471,13 +468,13 @@ public class ProfileActivity extends BaseActivity implements OnClickListener {
                 //红包提示
                 String redPacketDesc = account.getRedPacketDesc();
                 if (!TextUtils.isEmpty(redPacketDesc)) {
-                    mTxtMyRedpacketDesc.setText(Html.fromHtml(TextShowUtils.oneColorHtmlText(redPacketDesc)));
-                    mImgMyCoupon.setImageResource(R.mipmap.icon_my_coupon_desc);    //红包点
+//                    mTxtMyRedpacketDesc.setText(Html.fromHtml(TextShowUtils.oneColorHtmlText(redPacketDesc)));
+//                    mImgMyCoupon.setImageResource(R.mipmap.icon_my_coupon_desc);    //红包点
                     mIntent.putExtra("redpacket", true);
                 } else {
-                    mTxtMyRedpacketDesc.setText("");
+//                    mTxtMyRedpacketDesc.setText("");
                     mIntent.putExtra("redpacket", false);
-                    mImgMyCoupon.setImageResource(R.mipmap.icon_my_coupon);
+//                    mImgMyCoupon.setImageResource(R.mipmap.icon_my_coupon);
                 }
 
 
@@ -515,25 +512,25 @@ public class ProfileActivity extends BaseActivity implements OnClickListener {
                 startActivity(mfIntent);
                 break;
 
-            case R.id.rl_account_list:  //资金流水
-                MobclickAgent.onEvent(ProfileActivity.this, UmengTouchType.RP111_1);
-                Intent alIntent = new Intent(ProfileActivity.this, FundAccountActivity.class);
-                startActivity(alIntent);
-                break;
-
-            case R.id.rl_automatic_bid: //自动投标
-                MobclickAgent.onEvent(ProfileActivity.this, UmengTouchType.RP105_7);
-                Intent abIntent = new Intent(ProfileActivity.this, AutomateActivity.class);
-                startActivity(abIntent);
-                break;
-
-            case R.id.rl_my_invitation: //我的邀请
-                if (mAccount.getInviteRecord() != null & mAccount.getInviteRecord().length() > 0) {
-                    Intent miIntent = new Intent(ProfileActivity.this, BaseJsBridgeWebViewActivity.class);
-                    miIntent.putExtra("url", mAccount.getInviteRecord());
-                    startActivity(miIntent);
-                }
-                break;
+//            case R.id.rl_account_list:  //资金流水
+//                MobclickAgent.onEvent(ProfileActivity.this, UmengTouchType.RP111_1);
+//                Intent alIntent = new Intent(ProfileActivity.this, FundAccountActivity.class);
+//                startActivity(alIntent);
+//                break;
+//
+//            case R.id.rl_automatic_bid: //自动投标
+//                MobclickAgent.onEvent(ProfileActivity.this, UmengTouchType.RP105_7);
+//                Intent abIntent = new Intent(ProfileActivity.this, AutomateActivity.class);
+//                startActivity(abIntent);
+//                break;
+//
+//            case R.id.rl_my_invitation: //我的邀请
+//                if (mAccount.getInviteRecord() != null & mAccount.getInviteRecord().length() > 0) {
+//                    Intent miIntent = new Intent(ProfileActivity.this, BaseJsBridgeWebViewActivity.class);
+//                    miIntent.putExtra("url", mAccount.getInviteRecord());
+//                    startActivity(miIntent);
+//                }
+//                break;
 
             case R.id.rl_settings:      //设置
                 MobclickAgent.onEvent(ProfileActivity.this, UmengTouchType.RP105_1);
@@ -541,26 +538,26 @@ public class ProfileActivity extends BaseActivity implements OnClickListener {
                 startActivity(setIntent);
                 break;
 
-            case R.id.rl_version_updating:      //版本升级
-                if (mConfigManager.getVersionUpdate()) {
-                    if (versionUpdate != null) {
-                        //版本更新弹窗
-                        String downLoadUrl = versionUpdate.getDownloadUrl();
-                        String downLoadContent = versionUpdate.getContent();
-                        String downLoadVersion = versionUpdate.getVersion();
-                        String downLoadFileSize = versionUpdate.getFilesize();
-                        String downLoadForceUpdate = versionUpdate.getForceUpdate();
-                        if (mUpdateDialog == null) {
-                            mUpdateDialog = new UpdateDialog(ProfileActivity.this);
-                            mUpdateDialog.initUpdateDialog(downLoadUrl, downLoadVersion, downLoadContent, downLoadForceUpdate, downLoadFileSize);
-                        }
-                        mUpdateDialog.show();
-                    }
-                } else {
-                    AppUtils.showToast(this, "当前已是最新版本");
-                }
-
-                break;
+//            case R.id.rl_version_updating:      //版本升级
+//                if (mConfigManager.getVersionUpdate()) {
+//                    if (versionUpdate != null) {
+//                        //版本更新弹窗
+//                        String downLoadUrl = versionUpdate.getDownloadUrl();
+//                        String downLoadContent = versionUpdate.getContent();
+//                        String downLoadVersion = versionUpdate.getVersion();
+//                        String downLoadFileSize = versionUpdate.getFilesize();
+//                        String downLoadForceUpdate = versionUpdate.getForceUpdate();
+//                        if (mUpdateDialog == null) {
+//                            mUpdateDialog = new UpdateDialog(ProfileActivity.this);
+//                            mUpdateDialog.initUpdateDialog(downLoadUrl, downLoadVersion, downLoadContent, downLoadForceUpdate, downLoadFileSize);
+//                        }
+//                        mUpdateDialog.show();
+//                    }
+//                } else {
+//                    AppUtils.showToast(this, "当前已是最新版本");
+//                }
+//
+//                break;
 
             default:
 
@@ -568,27 +565,27 @@ public class ProfileActivity extends BaseActivity implements OnClickListener {
         }
     }
 
-    private void setVersionHint() {
-        List<VersionUpdate> versionUpdateList = mConfigManager.getVersionUpdateList();
-
-        if (versionUpdateList != null) {
-            versionUpdate = versionUpdateList.get(0);
-            //需要更新的版本号
-            int version = Integer.valueOf(versionUpdate.getVersion().replaceAll("\\.", ""));
-            //本地的版本号
-            int localVersion = Integer.valueOf(DdApplication.getVersionName().replaceAll("\\.", ""));
-            if (version <= localVersion) {
-                mConfigManager.setVersionUpdate(false);
-            }
-        }
-        if (mConfigManager.getVersionUpdate()) {
-            if (versionUpdateList != null) {
-                mImgVersionUpdate.setImageResource(R.mipmap.icon_version_update_dot);
-                mTvVersionUpdate.setText("发现新版本V" + versionUpdate.getVersion());
-            }
-        } else {
-            mTvVersionUpdate.setText("当前已是最新版本");
-            mImgVersionUpdate.setImageResource(R.mipmap.icon_version_update);
-        }
-    }
+//    private void setVersionHint() {
+//        List<VersionUpdate> versionUpdateList = mConfigManager.getVersionUpdateList();
+//
+//        if (versionUpdateList != null) {
+//            versionUpdate = versionUpdateList.get(0);
+//            //需要更新的版本号
+//            int version = Integer.valueOf(versionUpdate.getVersion().replaceAll("\\.", ""));
+//            //本地的版本号
+//            int localVersion = Integer.valueOf(DdApplication.getVersionName().replaceAll("\\.", ""));
+//            if (version <= localVersion) {
+//                mConfigManager.setVersionUpdate(false);
+//            }
+//        }
+//        if (mConfigManager.getVersionUpdate()) {
+//            if (versionUpdateList != null) {
+//                mImgVersionUpdate.setImageResource(R.mipmap.icon_version_update_dot);
+//                mTvVersionUpdate.setText("发现新版本V" + versionUpdate.getVersion());
+//            }
+//        } else {
+//            mTvVersionUpdate.setText("当前已是最新版本");
+//            mImgVersionUpdate.setImageResource(R.mipmap.icon_version_update);
+//        }
+//    }
 }

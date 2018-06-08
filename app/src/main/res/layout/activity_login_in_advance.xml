@@ -58,9 +58,10 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="@mipmap/img_edit_white_bg"
+       android:background="#fff"
         android:gravity="center_vertical"
         android:orientation="horizontal" >
+        <!--android:background="@mipmap/img_edit_white_bg"-->
 
         <TextView
             android:layout_weight="2"

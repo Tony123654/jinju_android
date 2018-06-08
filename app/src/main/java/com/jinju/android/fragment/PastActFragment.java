@@ -18,7 +18,6 @@ import com.jinju.android.constant.AppConstant;
 import com.jinju.android.manager.LoanManager;
 import com.jinju.android.util.AppUtils;
 import com.jinju.android.util.LoadTitleUtils;
-import com.jinju.android.util.VersionUtils;
 import com.jinju.android.webview.BaseJsBridgeWebViewActivity;
 import com.jinju.android.widget.FrameAnimationHeader;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
@@ -100,8 +99,8 @@ public class PastActFragment extends BaseFragment {
         Map<String, Object> datas = new HashMap<String, Object>();
         datas.put("pageSize", AppConstant.DEFAULT_PAGE_SIZE);
         datas.put("currentPage", currentPage);
-        datas.put("iv", VersionUtils.getVersionName());
-
+//        datas.put("iv", VersionUtils.getVersionName());
+        datas.put("signature","123456");
         /**
          * 加载数据
          */

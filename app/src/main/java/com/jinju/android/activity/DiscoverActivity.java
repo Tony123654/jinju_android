@@ -11,8 +11,6 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.jinju.android.R;
@@ -26,9 +24,7 @@ import com.jinju.android.fragment.WonderfulActFragment;
 import com.jinju.android.manager.LoanManager;
 import com.jinju.android.util.AppUtils;
 import com.jinju.android.util.DDJRCmdUtils;
-import com.jinju.android.util.ImageUtils;
 import com.jinju.android.util.VersionUtils;
-import com.jinju.android.util.ViewUtils;
 import com.jinju.android.webview.BaseJsBridgeWebViewActivity;
 
 import java.lang.reflect.Field;
@@ -46,10 +42,10 @@ public class DiscoverActivity extends AppCompatActivity implements View.OnClickL
 
 
     //顶部布局内容
-    private ImageView discoverImg1;
-    private ImageView discoverImg2;
-    private ImageView discoverImg3;
-    private ImageView discoverImg4;
+//    private ImageView discoverImg1;
+//    private ImageView discoverImg2;
+//    private ImageView discoverImg3;
+//    private ImageView discoverImg4;
 
     private List<Discover> mDiscoverTopImgList; //用来存放Top布局数据
     private List<Fragment> mFragmentList;
@@ -106,41 +102,41 @@ public class DiscoverActivity extends AppCompatActivity implements View.OnClickL
         mDiscoverTopImgList = new ArrayList<Discover>();
 
         //Top四张图
-        discoverImg1 = (ImageView) findViewById(R.id.discover_top_pic1);
-        discoverImg2 = (ImageView) findViewById(R.id.discover_top_pic2);
-        discoverImg3 = (ImageView) findViewById(R.id.discover_top_pic3);
-        discoverImg4 = (ImageView) findViewById(R.id.discover_top_pic4);
-        //Top四布局 and 监听
-        discoverImg1.setOnClickListener(this);
-        discoverImg2.setOnClickListener(this);
-        discoverImg3.setOnClickListener(this);
-        discoverImg4.setOnClickListener(this);
+//        discoverImg1 = (ImageView) findViewById(R.id.discover_top_pic1);
+//        discoverImg2 = (ImageView) findViewById(R.id.discover_top_pic2);
+//        discoverImg3 = (ImageView) findViewById(R.id.discover_top_pic3);
+//        discoverImg4 = (ImageView) findViewById(R.id.discover_top_pic4);
+//        //Top四布局 and 监听
+//        discoverImg1.setOnClickListener(this);
+//        discoverImg2.setOnClickListener(this);
+//        discoverImg3.setOnClickListener(this);
+//        discoverImg4.setOnClickListener(this);
 
 
         //屏幕宽度
-        int headerWidth = ViewUtils.getScreenWidth(DiscoverActivity.this);
-        int imageWidth = (headerWidth - ViewUtils.dip2px(DiscoverActivity.this, 36)) / 2;
-        ViewGroup.LayoutParams params = discoverImg1.getLayoutParams();
-        params.width = imageWidth;
-        params.height = imageWidth * 7 / 17;
-        discoverImg1.setLayoutParams(params);
-        discoverImg2.setLayoutParams(params);
-        discoverImg3.setLayoutParams(params);
-        discoverImg4.setLayoutParams(params);
+//        int headerWidth = ViewUtils.getScreenWidth(DiscoverActivity.this);
+//        int imageWidth = (headerWidth - ViewUtils.dip2px(DiscoverActivity.this, 36)) / 2;
+//        ViewGroup.LayoutParams params = discoverImg1.getLayoutParams();
+//        params.width = imageWidth;
+//        params.height = imageWidth * 7 / 17;
+//        discoverImg1.setLayoutParams(params);
+//        discoverImg2.setLayoutParams(params);
+//        discoverImg3.setLayoutParams(params);
+//        discoverImg4.setLayoutParams(params);
 
     }
 
     /**
      * 顶部图片展示
      */
-    private void setupView() {
-        if (mDiscoverTopImgList != null && mDiscoverTopImgList.size() > 0) {
-            ImageUtils.discoverDisplayImage(discoverImg1, mDiscoverTopImgList.get(0).getPic());
-            ImageUtils.discoverDisplayImage(discoverImg2, mDiscoverTopImgList.get(1).getPic());
-            ImageUtils.discoverDisplayImage(discoverImg3, mDiscoverTopImgList.get(2).getPic());
-            ImageUtils.discoverDisplayImage(discoverImg4, mDiscoverTopImgList.get(3).getPic());
-        }
-    }
+//    private void setupView() {
+//        if (mDiscoverTopImgList != null && mDiscoverTopImgList.size() > 0) {
+//            ImageUtils.discoverDisplayImage(discoverImg1, mDiscoverTopImgList.get(0).getPic());
+//            ImageUtils.discoverDisplayImage(discoverImg2, mDiscoverTopImgList.get(1).getPic());
+//            ImageUtils.discoverDisplayImage(discoverImg3, mDiscoverTopImgList.get(2).getPic());
+//            ImageUtils.discoverDisplayImage(discoverImg4, mDiscoverTopImgList.get(3).getPic());
+//        }
+//    }
 
     /**
      * 加载数据
@@ -163,7 +159,7 @@ public class DiscoverActivity extends AppCompatActivity implements View.OnClickL
             if (response.isSuccess()) {
                 //顶部四图片的数据
                 mDiscoverTopImgList.addAll(mDiscoverTopImg);
-                setupView();
+//                setupView();
 
             } else {
                 AppUtils.handleErrorResponse(DiscoverActivity.this, response);

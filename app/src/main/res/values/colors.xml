@@ -81,4 +81,435 @@
 	<color name="loanAmount">#FFBF51</color>
 	<color name="amountFrozen">#D9D9D9</color>
 	<color name="backCircle">#F0F0F0</color>
-</resources>
+
+
+
+		<color name="red_back1">#ff5346</color>
+		<color name="color_ffd4">#ffd4d4</color>
+		<color name="color_FFF52735">#FFF52735</color>
+		<color name="ca">#cacaca</color>
+		<color name="gray_default">#eeeeee</color>
+		<color name="background_default">#f9f9ff</color>
+		<color name="shl_gold">#ffeb7e10</color>
+		<color name="gray_text">#ff666666</color>
+		<color name="gray_dark_text">#ff262626</color>
+		<color name="dark_text">#ff333333</color>
+		<color name="button_text_color_normal">@color/dark_text</color>
+		<color name="button_text_color_disabled">#ffcecece</color>
+		<color name="edit_text_border_color">#ffabacad</color>
+		<color name="possible_result_points">#c0ffff00</color>
+		<color name="viewfinder_frame">#ff000000</color>
+		<color name="viewfinder_laser">#ffff0000</color>
+		<color name="viewfinder_mask">#60000000</color>
+		<color name="result_image_border">#ffffffff</color>
+		<color name="result_minor_text">#ffc0c0c0</color>
+		<color name="result_points">#c000ff00</color>
+		<color name="result_text">#ffffffff</color>
+		<color name="result_view">#b0000000</color>
+		<color name="product_list_bg_color">#fff1f2f3</color>
+		<color name="product_list_bg_select_color">#ffeeeeee</color>
+		<color name="product_list_sort_btn_pressed">#ff000000</color>
+		<color name="product_list_sort_btn_normal">#ff87888c</color>
+		<color name="lightwhite">#fff</color>
+		<color name="navpage">#FFE1E8EB</color>
+		<color name="bg_color">#f6f2f1</color>
+		<!-- 底色 -->
+		<color name="divider_color">#11000000</color>
+		<color name="msg_color">#FFFFFFFF</color>
+		<color name="bottomcolor">#f4f4f4</color>
+		<color name="dialog_bg">#2c2c2c</color>
+		<color name="ivory">#fffff0</color>
+		<!-- 象牙色 -->
+		<color name="lightyellow">#ffffe0</color>
+		<!-- 亮黄色 -->
+		<color name="yellow">#ffff00</color>
+		<!-- 黄色 -->
+		<color name="snow">#fffafa</color>
+		<!-- 雪白色 -->
+		<color name="floralwhite">#fffaf0</color>
+		<!-- 花白色 -->
+		<color name="lemonchiffon">#fffacd</color>
+		<!-- 柠檬绸色 -->
+		<color name="cornk">#fff8dc</color>
+		<!-- 米绸色 -->
+		<color name="seaShell">#fff5ee</color>
+		<!-- 海贝色 -->
+		<color name="lavenderblush">#fff0f5</color>
+		<!-- 淡紫红 -->
+		<color name="papayawhip">#ffefd5</color>
+		<!-- 番木色 -->
+		<color name="blanchedalmond">#ffebcd</color>
+		<!-- 白杏色 -->
+		<color name="mistyrose">#ffe4e1</color>
+		<!-- 浅玫瑰色 -->
+		<color name="bisque">#ffe4c4</color>
+		<!-- 桔黄色 -->
+		<color name="moccasin">#ffe4b5</color>
+		<!-- 鹿皮色 -->
+		<color name="navajowhite">#ffdead</color>
+		<!-- 纳瓦白 -->
+		<color name="peachpuff">#ffdab9</color>
+		<!-- 桃色 -->
+		<color name="golds">#ffd700</color>
+		<!-- 金色 -->
+		<!-- 粉红色 -->
+		<color name="lightpink">#ffb6c1</color>
+
+		<!-- 金黄色 -->
+		<color name="goldyellow">#ff9428</color>
+		<!-- 亮粉红色 -->
+		<!-- 橙色 -->
+		<color name="lightsalmon">#ffa07a</color>
+		<!-- 亮肉色 -->
+		<color name="darkorange">#ff8c00</color>
+		<!-- 暗桔黄色 -->
+		<color name="coral">#ff7f50</color>
+		<!-- 珊瑚色 -->
+		<color name="hotpink">#ff69b4</color>
+		<!-- 热粉红色 -->
+		<color name="tomato">#ff6347</color>
+		<!-- 西红柿色 -->
+		<color name="orangered">#ff4500</color>
+		<!-- 红橙色 -->
+		<color name="deeppink">#ff1493</color>
+		<!-- 深粉红色 -->
+		<color name="fuchsia">#ff00ff</color>
+		<!-- 紫红色 -->
+		<color name="magenta">#ff00ff</color>
+		<!-- 红紫色 -->
+		<!-- 红色 -->
+		<color name="oldlace">#fdf5e6</color>
+		<!-- 老花色 -->
+		<color name="lightgoldenrodyellow">#fafad2</color>
+		<!-- 亮金黄色 -->
+		<color name="linen">#faf0e6</color>
+		<!-- 亚麻色 -->
+		<color name="antiquewhite">#faebd7</color>
+		<!-- 古董白 -->
+		<color name="salmon">#fa8072</color>
+		<!-- 鲜肉色 -->
+		<color name="ghostwhite">#f8f8ff</color>
+		<!-- 幽灵白 -->
+		<color name="mintcream">#f5fffa</color>
+		<!-- 薄荷色 -->
+		<color name="whitesmoke">#f5f5f5</color>
+		<!-- 烟白色 -->
+		<color name="beige">#f5f5dc</color>
+		<!-- 米色 -->
+		<color name="wheat">#f5deb3</color>
+		<!-- 浅黄色 -->
+		<color name="sandybrown">#f4a460</color>
+		<!-- 沙褐色 -->
+		<color name="azure">#f0ffff</color>
+		<!-- 天蓝色 -->
+		<color name="honeydew">#f0fff0</color>
+		<!-- 蜜色 -->
+		<color name="aliceblue">#f0f8ff</color>
+		<!-- 艾利斯兰 -->
+		<color name="khaki">#f0e68c</color>
+		<!-- 黄褐色 -->
+		<color name="lightcoral">#f08080</color>
+		<!-- 亮珊瑚色 -->
+		<color name="palegoldenrod">#eee8aa</color>
+		<!-- 苍麒麟色 -->
+		<color name="violet">#ee82ee</color>
+		<!-- 紫罗兰色 -->
+		<color name="darksalmon">#e9967a</color>
+		<!-- 暗肉色 -->
+		<color name="lavender">#e6e6fa</color>
+		<!-- 淡紫色 -->
+		<color name="lightcyan">#e0ffff</color>
+		<!-- 亮青色 -->
+		<color name="burlywood">#deb887</color>
+		<!-- 实木色 -->
+		<color name="plum">#dda0dd</color>
+		<!-- 洋李色 -->
+		<color name="gainsboro">#dcdcdc</color>
+		<!-- 淡灰色 -->
+		<color name="crimson">#dc143c</color>
+		<!-- 暗深红色 -->
+		<color name="palevioletred">#db7093</color>
+		<!-- 苍紫罗兰色 -->
+		<color name="goldenrod">#daa520</color>
+		<!-- 金麒麟色 -->
+		<color name="orchid">#da70d6</color>
+		<!-- 淡紫色 -->
+		<color name="thistle">#d8bfd8</color>
+		<!-- 蓟色 -->
+		<color name="lightgray">#d3d3d3</color>
+		<!-- 亮灰色 -->
+		<color name="lightgrey">#d3d3d3</color>
+		<!-- 亮灰色 -->
+		<color name="tan">#d2b48c</color>
+		<!-- 茶色 -->
+		<color name="chocolate">#d2691e</color>
+		<!-- 巧可力色 -->
+		<color name="peru">#cd853f</color>
+		<!-- 秘鲁色 -->
+		<color name="indianred">#cd5c5c</color>
+		<!-- 印第安红 -->
+		<color name="mediumvioletred">#c71585</color>
+		<!-- 中紫罗兰色 -->
+		<color name="silver">#c0c0c0</color>
+		<!-- 银色 -->
+		<color name="darkkhaki">#bdb76b</color>
+		<!-- 暗黄褐色 -->
+		<color name="rosybrown">#bc8f8f</color>
+		<!-- 褐玫瑰红 -->
+		<color name="mediumorchid">#ba55d3</color>
+		<!-- 中粉紫色 -->
+		<color name="darkgoldenrod">#b8860b</color>
+		<!-- 暗金黄色 -->
+		<color name="firebrick">#b22222</color>
+		<!-- 火砖色 -->
+		<color name="powderblue">#b0e0e6</color>
+		<!-- 粉蓝色 -->
+		<color name="lightsteelblue">#b0c4de</color>
+		<!-- 亮钢兰色 -->
+		<color name="paleturquoise">#afeeee</color>
+		<!-- 苍宝石绿 -->
+		<color name="greenyellow">#adff2f</color>
+		<!-- 黄绿色 -->
+		<color name="lightblue">#add8e6</color>
+		<!-- 亮蓝色 -->
+		<color name="darkgray">#a9a9a9</color>
+		<!-- 暗灰色 -->
+		<color name="darkgrey">#a9a9a9</color>
+		<!-- 暗灰色 -->
+		<!-- 褐色 -->
+		<color name="sienna">#a0522d</color>
+		<!-- 赭色 -->
+		<color name="darkorchid">#9932cc</color>
+		<!-- 暗紫色 -->
+		<color name="palegreen">#98fb98</color>
+		<!-- 苍绿色 -->
+		<color name="darkviolet">#9400d3</color>
+		<!-- 暗紫罗兰色 -->
+		<color name="mediumpurple">#9370db</color>
+		<!-- 中紫色 -->
+		<color name="lightgreen">#90ee90</color>
+		<!-- 亮绿色 -->
+		<color name="darkseagreen">#8fbc8f</color>
+		<!-- 暗海兰色 -->
+		<color name="saddlebrown">#8b4513</color>
+		<!-- 重褐色 -->
+		<color name="darkmagenta">#8b008b</color>
+		<!-- 暗洋红 -->
+		<color name="darkred">#8b0000</color>
+		<!-- 暗红色 -->
+		<color name="blueviolet">#8a2be2</color>
+		<!-- 紫罗兰蓝色 -->
+		<color name="lightskyblue">#87cefa</color>
+		<!-- 亮天蓝色 -->
+		<color name="skyblue">#87ceeb</color>
+		<!-- 天蓝色 -->
+		<!-- 灰色 -->
+		<color name="grey">#808080</color>
+		<!-- 灰色 -->
+		<color name="olive">#808000</color>
+		<!-- 橄榄色 -->
+		<color name="purple">#800080</color>
+		<!-- 紫色 -->
+		<color name="maroon">#800000</color>
+		<!-- 粟色 -->
+		<color name="aquamarine">#7fffd4</color>
+		<!-- 碧绿色 -->
+		<color name="chartreuse">#7fff00</color>
+		<!-- 黄绿色 -->
+		<color name="lawngreen">#7cfc00</color>
+		<!-- 草绿色 -->
+		<color name="mediumslateblue">#7b68ee</color>
+		<!-- 中暗蓝色 -->
+		<color name="lightslategray">#778899</color>
+		<!-- 亮蓝灰 -->
+		<color name="lightslategrey">#778899</color>
+		<!-- 亮蓝灰 -->
+		<color name="slategray">#708090</color>
+		<!-- 灰石色 -->
+		<color name="slategrey">#708090</color>
+		<!-- 灰石色 -->
+		<color name="olivedrab">#6b8e23</color>
+		<!-- 深绿褐色 -->
+		<color name="slateblue">#6a5acd</color>
+		<!-- 石蓝色 -->
+		<color name="dimgray">#696969</color>
+		<!-- 暗灰色 -->
+		<color name="dimgrey">#696969</color>
+		<!-- 暗灰色 -->
+		<color name="mediumaquamarine">#66cdaa</color>
+		<!-- 中绿色 -->
+		<color name="cornflowerblue">#6495ed</color>
+		<!-- 菊兰色 -->
+		<color name="cadetblue">#5f9ea0</color>
+		<!-- 军兰色 -->
+		<color name="darkolivegreen">#556b2f</color>
+		<!-- 暗橄榄绿 -->
+		<color name="indigo">#4b0082</color>
+		<!-- 靛青色 -->
+		<color name="mediumturquoise">#48d1cc</color>
+		<!-- 中绿宝石 -->
+		<color name="darkslateblue">#483d8b</color>
+		<!-- 暗灰蓝色 -->
+		<color name="steelblue">#4682b4</color>
+		<!-- 钢兰色 -->
+		<color name="royalblue">#4169e1</color>
+		<!-- 皇家蓝 -->
+		<color name="turquoise">#40e0d0</color>
+		<!-- 青绿色 -->
+		<color name="mediumseagreen">#3cb371</color>
+		<!-- 中海蓝 -->
+		<color name="limegreen">#32cd32</color>
+		<!-- 橙绿色 -->
+		<color name="darkslategray">#2f4f4f</color>
+		<!-- 暗瓦灰色 -->
+		<color name="darkslategrey">#2f4f4f</color>
+		<!-- 暗瓦灰色 -->
+		<color name="seagreen">#2e8b57</color>
+		<!-- 海绿色 -->
+		<color name="forestgreen">#228b22</color>
+		<!-- 森林绿 -->
+		<color name="lightseagreen">#20b2aa</color>
+		<!-- 亮海蓝色 -->
+		<color name="dodgerblue">#1e90ff</color>
+		<!-- 闪兰色 -->
+		<color name="midnightblue">#191970</color>
+		<!-- 中灰兰色 -->
+		<color name="aqua">#00ffff</color>
+		<!-- 浅绿色 -->
+		<color name="cyan">#00ffff</color>
+		<!-- 青色 -->
+		<color name="springgreen">#00ff7f</color>
+		<!-- 春绿色 -->
+		<color name="lime">#00ff00</color>
+		<!-- 成功绿色 -->
+		<color name="okgreen">#9AE798</color>
+
+		<!-- 酸橙色 -->
+		<color name="mediumspringgreen">#00fa9a</color>
+		<!-- 中春绿色 -->
+		<color name="darkturquoise">#00ced1</color>
+		<!-- 暗宝石绿 -->
+		<color name="deepskyblue">#00bfff</color>
+		<!-- 深天蓝色 -->
+		<color name="darkcyan">#008b8b</color>
+		<!-- 暗青色 -->
+		<color name="teal">#008080</color>
+		<!-- 水鸭色 -->
+		<!-- 绿色 -->
+		<color name="darkgreen">#006400</color>
+		<!-- 暗绿色 -->
+		<!-- 蓝色 -->
+		<color name="mediumblue">#0000cd</color>
+		<!-- 中兰色 -->
+		<color name="darkblue">#00008b</color>
+		<!-- 暗蓝色 -->
+		<color name="navy">#000080</color>
+		<!-- 海军色 -->
+
+		<!-- 楼主黄 -->
+		<color name="louzhuyellow">#F39800</color>
+		<!-- 楼主黄 -->
+		<color name="loulan">#88abda</color>
+		<!-- 黑色 -->
+		<!-- 透明 -->
+		<!-- 正文黑 -->
+		<color name="zw_black">#3b3b3b</color>
+		<!-- 附文灰 -->
+		<color name="fw_gray">#797979</color>
+		<color name="press_gray">#f7f7f7</color>
+		<!-- 红色 -->
+		<color name="psd_red">#ff0000</color>
+		<!-- 标题黑 -->
+
+		<color name="defalut_cloor">#f9f9ff</color>
+		<color name="defalut_cloor_r">#f9f9ff</color>
+		<!-- 字体色调 -->
+		<color name="text_yellow">#ffad39</color>
+		<!-- 标题黑 -->
+		<color name="grayddd_color">#ddd</color>
+		<color name="select_text_color">#333</color>
+		<color name="text_gray">#666</color>
+		<color name="noselect_text_color">#999</color>
+		<color name="selector_text_color_red">#f15d52</color>
+		<color name="main_tab_select_text_color">#fff</color>
+		<color name="main_tab_text_color">#f8aea9</color>
+		<color name="jine">#f15d52</color>
+		<color name="header_normal">#ffe74c3c</color>
+		<color name="header_pressed">#ffc0392b</color>
+
+		<item name="abc_search_url_text_selected" type="color">@*android:color/black</item>
+		<item name="abc_search_url_text_pressed" type="color">@*android:color/black</item>
+		<color name="text_color">#FFFFFF</color>
+		<color name="gray_bg">#ffeeeeec</color>
+		<color name="gray_bg_2">#fff1f1f1</color>
+		<color name="gray_txt">#ffaaaaaa</color>
+		<color name="text_field_pressed">#ffededed</color>
+		<color name="color_3">#ff333333</color>
+		<color name="color_4">#ff444444</color>
+		<color name="color_6">#ff666666</color>
+		<color name="color_7">#ff777777</color>
+		<color name="color_8">#ff888888</color>
+		<color name="color_9">#ff999999</color>
+		<color name="color_9a">#ff9a9a9a</color>
+		<color name="color_b">#ffbbbbbb</color>
+		<color name="color_d2">#ffd2d2d2</color>
+		<color name="color_f7">#fff7f7f7</color>
+		<color name="color_f6">#fff6f6f6</color>
+		<color name="color_f5">#f9f9ff</color>
+		<color name="color_f3">#f3f3f3</color>
+		<color name="color_5">#ff555555</color>
+		<color name="color_ef">#ffefefef</color>
+		<color name="color_e">#ffeeeeee</color>
+		<color name="color_ec">#ffececec</color>
+		<color name="color_e9">#ffe9e9e9</color>
+		<color name="color_888">#888888</color>
+		<color name="color_333">#333</color>
+		<color name="color_9d">#9d9d9d</color>
+		<color name="color_222">#222222</color>
+		<color name="color_777">#777</color>
+		<color name="color_666">#666</color>
+		<color name="color_zi">#FFAB8FF1</color>
+
+		<color name="color_cecece">#cecece</color>
+		<color name="color_d4">#d4d4d4</color>
+		<color name="color_444">#444</color>
+		<color name="color_b0">#b0b0b0</color>
+		<color name="color_555">#555</color>
+		<color name="color_999">#999</color>
+		<color name="color_fff">#666</color>
+		<color name="color_000">#000000</color>
+		<color name="color_CCC">#CCCCCC</color>
+		<color name="color_AAA">#AAAAAA</color>
+		<color name="color_959">#959595</color>
+		<color name="color_ddd">#ddd</color>
+		<color name="color_d0">#d0cfcf</color>
+		<color name="color_2a2a2a">#2a2a2a</color>
+		<color name="color_a2a2a2">#a2a2a2</color>
+		<color name="translucent_background">#90000000</color>
+		<color name="color_red_r">#FF4A00</color>
+		<color name="color_jb_left">#e9d2a2</color>
+		<color name="color_jb_right">#c9af7c</color>
+		<color name="color_yellow">#fff7eb</color>
+		<color name="color_main">#FF4A00</color>
+		<color name="color_line">#dcdcdc</color>
+		<color name="color_f0">#f0f0f0</color>
+		<color name="e7">#e7e7e7</color>
+		<color name="color_f9">#f9f9f9</color>
+		<color name="color_d8">#d8d8d8</color>
+		<color name="color_aaaaaa">#aaaaaa</color>
+		<!-- 字体标准红-->
+		<color name="color_red_starderd">#ff7976</color>
+		<color name="color_fa">#FF4A00</color>
+		<color name="color_blue_button">#23b7c6</color>
+
+		<color name="color_text_blue">#4A82E1</color>
+		<color name="color_text_huang">#FF9000</color>
+
+		<color name="color_add_shopcar_button">#ff7d7a</color>
+		<color name="color_text_red">#FF4A00</color>
+		<color name="color_text_red_f7">#ff7d7a</color>
+		<color name="color_text_jin">#c9af7c</color>
+		<color name="transparent_background">#e0000000</color> 
+		<color name="ef">#efeff4</color> 
+
+	</resources>

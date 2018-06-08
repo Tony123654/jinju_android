@@ -73,12 +73,12 @@ public class InvestRecordFragment extends BaseFragment {
     }
 
     private void initView() {
-        txtUserPhoneFirst = (TextView) mView.findViewById(R.id.txt_user_phone_first);
-        txtUserPhoneTwo = (TextView) mView.findViewById(R.id.txt_user_phone_two);
-        txtUserPhoneThird = (TextView)  mView.findViewById(R.id.txt_user_phone_third);
-        txtInvestAmountFirst = (TextView) mView.findViewById(R.id.txt_invest_amount_first);
-        txtInvestAmountTwo = (TextView) mView.findViewById(R.id.txt_invest_amount_two);
-        txtInvestAmountThird = (TextView) mView.findViewById(R.id.txt_invest_amount_third);
+//        txtUserPhoneFirst = (TextView) mView.findViewById(R.id.txt_user_phone_first);
+//        txtUserPhoneTwo = (TextView) mView.findViewById(R.id.txt_user_phone_two);
+//        txtUserPhoneThird = (TextView)  mView.findViewById(R.id.txt_user_phone_third);
+//        txtInvestAmountFirst = (TextView) mView.findViewById(R.id.txt_invest_amount_first);
+//        txtInvestAmountTwo = (TextView) mView.findViewById(R.id.txt_invest_amount_two);
+//        txtInvestAmountThird = (TextView) mView.findViewById(R.id.txt_invest_amount_third);
         mInvestRecordList = new ArrayList<InvestRecord>();
         mInvestRecordAdapter = new InvestRecordAdapter(mContext,mInvestRecordList);
 

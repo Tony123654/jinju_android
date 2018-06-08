@@ -11,11 +11,15 @@ public final class AppConstant {
     //预测环境
 //    public static final String APP_WEB_URL = "https://www.duoduojr.cn/preapp2";
 //    测试环境
-    public static final String APP_WEB_URL = "http://dev.duoduojr.cn/app2";
+//    public static final String APP_WEB_URL = "http://dev.duoduojr.cn/app2";
+//    public static final String APP_WEB_URL = "http://47.96.78.79:8080";
+    public static final String APP_WEB_URL = "http://dev.api.jinjulc.com/";
+//    测试环境注册服务协议地址：http://dev.jinjulc.com/apphtml/register/registerProtocol.html
 
 
 //    真实环境
 //	public static final String APP_WEB_URL = "https://www.duoduojr.cn/app2";
+//	public static final String APP_WEB_URL = "http://api2.jinjulc.com";
 
     public static final String DOWNLOAD_WEB_URL = APP_WEB_URL + "/download/trade.json";
     public static final String AGREEMENT_WEB_URL = APP_WEB_URL + "/agreement.json";

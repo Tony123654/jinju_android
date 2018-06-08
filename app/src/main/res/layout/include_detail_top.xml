@@ -43,12 +43,12 @@
                             android:textSize="20sp"
                             android:textColor="@color/white"
                             android:text="@string/percent_unit"/>
-                        <TextView
-                            android:id="@+id/txt_add_interest"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="20sp"
-                            android:textColor="@color/white" />
+                        <!--<TextView-->
+                            <!--android:id="@+id/txt_add_interest"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:textSize="20sp"-->
+                            <!--android:textColor="@color/white" />-->
                     </LinearLayout>
                         <!--期限 起购-->
                     <RelativeLayout
@@ -100,7 +100,7 @@
                             android:layout_marginTop="10dp"
                             android:layout_marginBottom="5dp"
                             android:layout_gravity="right"/>
-                        <com.jinju.android.widget.MagicProgressBar
+                        <com.jinju.android.api.IncreaseProgressBar
                             xmlns:magicProgress="http://schemas.android.com/apk/res-auto"
                             android:id="@+id/progress_bar"
                             style="?android:attr/progressBarStyleHorizontal"
